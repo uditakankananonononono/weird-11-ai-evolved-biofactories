@@ -1,0 +1,24 @@
+{
+ "ledger": "W11 GSMM panel accessions (Amendment A1, locked 2026-09-26 20:15 IST before download)",
+ "entries": [
+  {
+   "accession": "BiGG:iML1515",
+   "file": "data/models/iML1515.xml.gz",
+   "url": "http://bigg.ucsd.edu/static/models/iML1515.xml.gz",
+   "sha256_gz": "2555e0f7e55a8cb8e770b9bb29cdaeb5db171941c414e7a232ff2d8e0228e308",
+   "sha256_xml": "9c772d44ca43350e40dc7ee86c7aa148796856be1eea45e5406c6df8f7dcde28",
+   "citation": "Monk et al. 2017, Nat Biotechnol 35:904-908, DOI 10.1038/nbt.3956",
+   "role": "primary host GSMM (E. coli K-12 MG1655)",
+   "fetched_at": "2026-09-26T20:13:00+05:30"
+  },
+  {
+   "accession": "SysBioChalmers/yeast-GEM:v8.6.2",
+   "file": "data/models/yeast-GEM-v8.xml",
+   "url": "https://raw.githubusercontent.com/SysBioChalmers/yeast-GEM/v8.6.2/model/yeast-GEM.xml",
+   "sha256_xml": "c728b09d849b744ec7640cbf15776d40fb2d9cbd0b76a840a8661b626c1bd4be",
+   "citation": "Lu et al. 2019, Nat Commun 10:1786, DOI 10.1038/s41467-019-11581-3",
+   "role": "secondary host GSMM (S. cerevisiae S288c; H3 robustness arm only)",
+   "fetched_at": "2026-09-26T20:13:00+05:30"
+  }
+ ]
+}

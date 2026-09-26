@@ -1,0 +1,26 @@
+{
+ "status": "citations locked (Amendment A1); pathway reaction lists to be encoded and locked here BEFORE first search run",
+ "targets": [
+  {
+   "id": "14BDO",
+   "name": "1,4-butanediol",
+   "class": "non-natural industrial diol",
+   "benchmark_citation": "Yim et al. 2011, Nat Chem Biol 7:445-452, DOI 10.1038/nchembio.580",
+   "host": "iML1515"
+  },
+  {
+   "id": "ISOBUTANOL",
+   "name": "isobutanol",
+   "class": "branched-chain higher alcohol",
+   "benchmark_citation": "Atsumi, Hanai & Liao 2008, Nature 451:86-89, DOI 10.1038/nature06450",
+   "host": "iML1515"
+  },
+  {
+   "id": "LYCOPENE",
+   "name": "lycopene",
+   "class": "isoprenoid/tetraterpene",
+   "benchmark_citation": "Alper, Miyaoku & Stephanopoulos 2005, Nat Biotechnol 23:612-616, DOI 10.1038/nbt1083",
+   "host": "iML1515"
+  }
+ ]
+}
