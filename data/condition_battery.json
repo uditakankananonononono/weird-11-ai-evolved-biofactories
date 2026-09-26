@@ -1,0 +1,86 @@
+{
+ "locked": "2026-09-26 20:25 IST, BEFORE first search run (pre-reg: stability battery locked before search)",
+ "applies_to": "iML1515 (primary host); yeast arm battery locked separately before any yeast run",
+ "base_condition": {
+  "id": "GLC_AEROBIC",
+  "medium": "M9 minimal, glucose aerobic",
+  "bounds": {
+   "EX_glc__D_e": -10.0,
+   "EX_o2_e": -1000.0
+  },
+  "note": "standard iML1515 reference condition; all other exchanges default"
+ },
+ "battery": [
+  {
+   "id": "GLC_LOW",
+   "bounds": {
+    "EX_glc__D_e": -2.0,
+    "EX_o2_e": -1000.0
+   },
+   "kind": "nutrient shift"
+  },
+  {
+   "id": "GLC_MID",
+   "bounds": {
+    "EX_glc__D_e": -5.0,
+    "EX_o2_e": -1000.0
+   },
+   "kind": "nutrient shift"
+  },
+  {
+   "id": "ANAEROBIC",
+   "bounds": {
+    "EX_glc__D_e": -10.0,
+    "EX_o2_e": 0.0
+   },
+   "kind": "nutrient shift"
+  },
+  {
+   "id": "GLYCEROL",
+   "bounds": {
+    "EX_glc__D_e": 0.0,
+    "EX_glyc_e": -10.0,
+    "EX_o2_e": -1000.0
+   },
+   "kind": "carbon shift"
+  },
+  {
+   "id": "ACETATE",
+   "bounds": {
+    "EX_glc__D_e": 0.0,
+    "EX_ac_e": -10.0,
+    "EX_o2_e": -1000.0
+   },
+   "kind": "carbon shift"
+  },
+  {
+   "id": "GLC_PERT_MINUS20",
+   "bounds": {
+    "EX_glc__D_e": -8.0,
+    "EX_o2_e": -1000.0
+   },
+   "kind": "uptake perturbation"
+  },
+  {
+   "id": "GLC_PERT_PLUS20",
+   "bounds": {
+    "EX_glc__D_e": -12.0,
+    "EX_o2_e": -1000.0
+   },
+   "kind": "uptake perturbation"
+  },
+  {
+   "id": "O2_PERT_MINUS50",
+   "bounds": {
+    "EX_glc__D_e": -10.0,
+    "EX_o2_e": -500.0
+   },
+   "kind": "uptake perturbation"
+  }
+ ],
+ "enzyme_capacity_perturbation": {
+  "kind": "enzyme-capacity perturbation",
+  "rule": "heterologous enzyme total flux-sum capped at 90% and 75% of its nominal optimal value (two levels), implemented as a linear constraint on the heterologous reaction set per design"
+ },
+ "pass_rule": "flux retention >= 80% of nominal GLC_AEROBIC product flux in ALL battery conditions (pre-reg locked)"
+}
