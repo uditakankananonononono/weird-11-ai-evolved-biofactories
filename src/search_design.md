@@ -22,3 +22,11 @@ Within PRE-REGISTRATION framework (metrics, battery, gates already locked). This
 
 ## Amendment 2026-09-26 22:13 IST (metric-interpretation fix, locked BEFORE battery re-evaluation)
 First battery evaluation (results/battery_eval.json v1) showed ALL architectures fail with retention 0 on GLC_LOW/GLC_MID/ACETATE/ANAEROBIC: growth was fixed at 50% of the GLC_AEROBIC max (0.438/h) in every condition, which is at or above the condition-achievable max under carbon shifts - no architecture can pass, so the battery gives no selection gradient and H3 is untestable. Fix (metric bug, new locked amendment per standing rule): in battery conditions, biomass is fixed at 50% of the CONDITION-SPECIFIC FBA max; nominal retention denominator remains GLC_AEROBIC at 50% of its max. Pass rule (>=80% retention in all 9) unchanged. Envelope benchmarks (results/benchmark_flux.json) unaffected (single base condition).
+
+## Amendment 2026-09-26 23:09 IST — POOL V2 (locked BEFORE any pool-v2 evaluation)
+Redirect from the H3 pool-v1 honest negative: add host-level robustness levers (target-independent, applied to all three targets) so multi-condition selection has a gradient to work with. Knockout blocks = reaction bounds set to (0,0); reaction IDs verified live in iML1515 23:08 IST.
+- ko_ackApta (ACKr + PTAr off): acetate overflow reduction; classic production-strain lever (e.g. De Mey et al. 2007, Biotechnol Prog - provenance label: literature-motivated engineering choice, not a claimed route).
+- ko_pflB (PFL off): formate overflow removal; NADH rerouting lever (same provenance label).
+- ko_ldhA (LDH_D off): lactate overflow removal (same provenance label).
+- cofeed_glycerol (EX_glyc_e lb -4 alongside glucose): co-utilization feed block (same provenance label).
+v1 target-specific blocks unchanged. Pool v2 genome space: 2^4 host x 2^2 target = 64 genomes per target; exhaustive enumeration (192 total) again strictly dominates the stochastic EA at this size. Nominal-condition (GLC_AEROBIC, g=0.5) evaluation is metric-independent and may run immediately; battery re-evaluation waits for the pending metric-redesign amendment.

@@ -1,0 +1,201 @@
+{
+ "amendment": "23:09 IST pool v2",
+ "metric": "nominal g=0.5 pFBA-equal FBA",
+ "results": {
+  "14BDO": [
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "routeA_kgd": false,
+     "routeB_sucd": false
+    },
+    "flux": 6.4956,
+    "growth_max": 1.0877
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "routeA_kgd": false,
+     "routeB_sucd": true
+    },
+    "flux": 6.4956,
+    "growth_max": 1.0877
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "routeA_kgd": true,
+     "routeB_sucd": false
+    },
+    "flux": 6.4956,
+    "growth_max": 1.0877
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "routeA_kgd": true,
+     "routeB_sucd": true
+    },
+    "flux": 6.4956,
+    "growth_max": 1.0877
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": true,
+     "cofeed_glycerol": true,
+     "routeA_kgd": false,
+     "routeB_sucd": false
+    },
+    "flux": 6.4956,
+    "growth_max": 1.0877
+   },
+   {
+    "...": "total 64 genomes"
+   }
+  ],
+  "ISOBUTANOL": [
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "adh_nadh": true,
+     "adh_nadph": false
+    },
+    "flux": 6.4975,
+    "growth_max": 1.0877
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "adh_nadh": true,
+     "adh_nadph": true
+    },
+    "flux": 6.4975,
+    "growth_max": 1.0877
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": true,
+     "cofeed_glycerol": true,
+     "adh_nadh": true,
+     "adh_nadph": false
+    },
+    "flux": 6.4975,
+    "growth_max": 1.0877
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": true,
+     "cofeed_glycerol": true,
+     "adh_nadh": true,
+     "adh_nadph": true
+    },
+    "flux": 6.4975,
+    "growth_max": 1.0877
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": true,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "adh_nadh": true,
+     "adh_nadph": false
+    },
+    "flux": 6.4975,
+    "growth_max": 1.0877
+   },
+   {
+    "...": "total 64 genomes"
+   }
+  ],
+  "LYCOPENE": [
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "dxs_push": false,
+     "idi_push": true
+    },
+    "flux": 0.7298,
+    "growth_max": 0.863
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "dxs_push": true,
+     "idi_push": true
+    },
+    "flux": 0.7298,
+    "growth_max": 0.863
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": true,
+     "cofeed_glycerol": true,
+     "dxs_push": false,
+     "idi_push": true
+    },
+    "flux": 0.7298,
+    "growth_max": 0.863
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": true,
+     "cofeed_glycerol": true,
+     "dxs_push": true,
+     "idi_push": true
+    },
+    "flux": 0.7298,
+    "growth_max": 0.863
+   },
+   {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": true,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "dxs_push": false,
+     "idi_push": true
+    },
+    "flux": 0.7298,
+    "growth_max": 0.863
+   },
+   {
+    "...": "total 64 genomes"
+   }
+  ]
+ }
+}
