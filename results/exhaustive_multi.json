@@ -1,0 +1,119 @@
+{
+ "note": "exhaustive over pool v1 (4 genomes/target); fitness = nominal x min battery retention",
+ "targets": {
+  "14BDO": [
+   {
+    "genome": {
+     "routeA_kgd": false,
+     "routeB_sucd": false
+    },
+    "fitness": 0.924,
+    "min_retention": 0.175,
+    "battery_pass_80": false
+   },
+   {
+    "genome": {
+     "routeA_kgd": false,
+     "routeB_sucd": true
+    },
+    "fitness": 0.924,
+    "min_retention": 0.175,
+    "battery_pass_80": false
+   },
+   {
+    "genome": {
+     "routeA_kgd": true,
+     "routeB_sucd": false
+    },
+    "fitness": 0.924,
+    "min_retention": 0.175,
+    "battery_pass_80": false
+   },
+   {
+    "genome": {
+     "routeA_kgd": true,
+     "routeB_sucd": true
+    },
+    "fitness": 0.924,
+    "min_retention": 0.175,
+    "battery_pass_80": false
+   }
+  ],
+  "ISOBUTANOL": [
+   {
+    "genome": {
+     "adh_nadh": false,
+     "adh_nadph": false
+    },
+    "fitness": 0.0,
+    "min_retention": 0.0,
+    "battery_pass_80": false
+   },
+   {
+    "genome": {
+     "adh_nadh": false,
+     "adh_nadph": true
+    },
+    "fitness": 0.9142,
+    "min_retention": 0.176,
+    "battery_pass_80": false
+   },
+   {
+    "genome": {
+     "adh_nadh": true,
+     "adh_nadph": false
+    },
+    "fitness": 0.9245,
+    "min_retention": 0.176,
+    "battery_pass_80": false
+   },
+   {
+    "genome": {
+     "adh_nadh": true,
+     "adh_nadph": true
+    },
+    "fitness": 0.9245,
+    "min_retention": 0.176,
+    "battery_pass_80": false
+   }
+  ],
+  "LYCOPENE": [
+   {
+    "genome": {
+     "dxs_push": false,
+     "idi_push": false
+    },
+    "fitness": 0.0861,
+    "min_retention": 0.176,
+    "battery_pass_80": false
+   },
+   {
+    "genome": {
+     "dxs_push": false,
+     "idi_push": true
+    },
+    "fitness": 0.0,
+    "min_retention": 0.0,
+    "battery_pass_80": false
+   },
+   {
+    "genome": {
+     "dxs_push": true,
+     "idi_push": false
+    },
+    "fitness": 0.1486,
+    "min_retention": 0.27,
+    "battery_pass_80": false
+   },
+   {
+    "genome": {
+     "dxs_push": true,
+     "idi_push": true
+    },
+    "fitness": 0.0,
+    "min_retention": 0.0,
+    "battery_pass_80": false
+   }
+  ]
+ }
+}
