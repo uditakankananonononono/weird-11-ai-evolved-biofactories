@@ -1,0 +1,192 @@
+{
+ "14BDO__EA_best": {
+  "genome": {
+   "routeA_kgd": true,
+   "routeB_sucd": true
+  },
+  "nominal": 5.2672,
+  "conditions": {
+   "GLC_AEROBIC": {
+    "flux": 5.2672
+   },
+   "GLC_LOW": {
+    "flux": 0.924
+   },
+   "GLC_MID": {
+    "flux": 2.5527
+   },
+   "ANAEROBIC": {
+    "flux": 6.762
+   },
+   "GLYCEROL": {
+    "flux": 2.9457
+   },
+   "ACETATE": {
+    "flux": 1.2791
+   },
+   "GLC_PERT_MINUS20": {
+    "flux": 4.1814
+   },
+   "GLC_PERT_PLUS20": {
+    "flux": 6.3529
+   },
+   "O2_PERT_MINUS50": {
+    "flux": 5.2672
+   }
+  },
+  "retention": {
+   "GLC_LOW": 0.175,
+   "GLC_MID": 0.485,
+   "ANAEROBIC": 1.284,
+   "GLYCEROL": 0.559,
+   "ACETATE": 0.243,
+   "GLC_PERT_MINUS20": 0.794,
+   "GLC_PERT_PLUS20": 1.206,
+   "O2_PERT_MINUS50": 1.0
+  },
+  "battery_pass": false
+ },
+ "ISOBUTANOL__EA_best": {
+  "genome": {
+   "adh_nadh": true,
+   "adh_nadph": true
+  },
+  "nominal": 5.2391,
+  "conditions": {
+   "GLC_AEROBIC": {
+    "flux": 5.2391
+   },
+   "GLC_LOW": {
+    "flux": 0.9245
+   },
+   "GLC_MID": {
+    "flux": 2.5425
+   },
+   "ANAEROBIC": {
+    "flux": 9.07
+   },
+   "GLYCEROL": {
+    "flux": 2.98
+   },
+   "ACETATE": {
+    "flux": 1.284
+   },
+   "GLC_PERT_MINUS20": {
+    "flux": 4.1604
+   },
+   "GLC_PERT_PLUS20": {
+    "flux": 6.3178
+   },
+   "O2_PERT_MINUS50": {
+    "flux": 5.2391
+   }
+  },
+  "retention": {
+   "GLC_LOW": 0.176,
+   "GLC_MID": 0.485,
+   "ANAEROBIC": 1.731,
+   "GLYCEROL": 0.569,
+   "ACETATE": 0.245,
+   "GLC_PERT_MINUS20": 0.794,
+   "GLC_PERT_PLUS20": 1.206,
+   "O2_PERT_MINUS50": 1.0
+  },
+  "battery_pass": false
+ },
+ "LYCOPENE__EA_best": {
+  "genome": {
+   "dxs_push": true,
+   "idi_push": true
+  },
+  "nominal": 0.6127,
+  "conditions": {
+   "GLC_AEROBIC": {
+    "flux": 0.6127
+   },
+   "GLC_LOW": {
+    "flux": 0.0,
+    "note": "no growth under condition"
+   },
+   "GLC_MID": {
+    "flux": 0.3616
+   },
+   "ANAEROBIC": {
+    "flux": 0.3311
+   },
+   "GLYCEROL": {
+    "flux": 0.4
+   },
+   "ACETATE": {
+    "flux": 0.0,
+    "note": "no growth under condition"
+   },
+   "GLC_PERT_MINUS20": {
+    "flux": 0.5123
+   },
+   "GLC_PERT_PLUS20": {
+    "flux": 0.7131
+   },
+   "O2_PERT_MINUS50": {
+    "flux": 0.6127
+   }
+  },
+  "retention": {
+   "GLC_LOW": 0.0,
+   "GLC_MID": 0.59,
+   "ANAEROBIC": 0.54,
+   "GLYCEROL": 0.653,
+   "ACETATE": 0.0,
+   "GLC_PERT_MINUS20": 0.836,
+   "GLC_PERT_PLUS20": 1.164,
+   "O2_PERT_MINUS50": 1.0
+  },
+  "battery_pass": false
+ },
+ "14BDO__tail_only": {
+  "genome": {
+   "routeA_kgd": false,
+   "routeB_sucd": false
+  },
+  "nominal": 5.2672,
+  "conditions": {
+   "GLC_AEROBIC": {
+    "flux": 5.2672
+   },
+   "GLC_LOW": {
+    "flux": 0.924
+   },
+   "GLC_MID": {
+    "flux": 2.5527
+   },
+   "ANAEROBIC": {
+    "flux": 3.7244
+   },
+   "GLYCEROL": {
+    "flux": 2.9457
+   },
+   "ACETATE": {
+    "flux": 1.2791
+   },
+   "GLC_PERT_MINUS20": {
+    "flux": 4.1814
+   },
+   "GLC_PERT_PLUS20": {
+    "flux": 6.3529
+   },
+   "O2_PERT_MINUS50": {
+    "flux": 5.2672
+   }
+  },
+  "retention": {
+   "GLC_LOW": 0.175,
+   "GLC_MID": 0.485,
+   "ANAEROBIC": 0.707,
+   "GLYCEROL": 0.559,
+   "ACETATE": 0.243,
+   "GLC_PERT_MINUS20": 0.794,
+   "GLC_PERT_PLUS20": 1.206,
+   "O2_PERT_MINUS50": 1.0
+  },
+  "battery_pass": false
+ }
+}

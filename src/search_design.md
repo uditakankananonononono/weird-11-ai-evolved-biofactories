@@ -19,3 +19,6 @@ Within PRE-REGISTRATION framework (metrics, battery, gates already locked). This
 
 ## Termination honesty
 - If no architecture beats the envelope: honest negative, redirect in-project (new operator/pool expansion) per standing rule.
+
+## Amendment 2026-09-26 22:13 IST (metric-interpretation fix, locked BEFORE battery re-evaluation)
+First battery evaluation (results/battery_eval.json v1) showed ALL architectures fail with retention 0 on GLC_LOW/GLC_MID/ACETATE/ANAEROBIC: growth was fixed at 50% of the GLC_AEROBIC max (0.438/h) in every condition, which is at or above the condition-achievable max under carbon shifts - no architecture can pass, so the battery gives no selection gradient and H3 is untestable. Fix (metric bug, new locked amendment per standing rule): in battery conditions, biomass is fixed at 50% of the CONDITION-SPECIFIC FBA max; nominal retention denominator remains GLC_AEROBIC at 50% of its max. Pass rule (>=80% retention in all 9) unchanged. Envelope benchmarks (results/benchmark_flux.json) unaffected (single base condition).
