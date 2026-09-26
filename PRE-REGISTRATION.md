@@ -39,3 +39,23 @@ To be filled by amendment BEFORE any download: 2-4 target products spanning dist
 
 ## Novelty lead
 The primary claim is non-obvious architecture discovery (H2), not prediction accuracy. Search operators, condition batteries, and acceptance criteria are fixed here so that any discovered motif is a genuine output of the locked search, not a post-hoc rationalization.
+
+---
+
+# AMENDMENT A1 — Target/host panel (locked 2026-09-26 20:15 IST, BEFORE any download, model build, or target-specific outcome inspection)
+
+## Hosts (locked)
+- PRIMARY: Escherichia coli K-12 MG1655 — GSMM iML1515 (Monk et al. 2017, Nature Biotechnology 35:904-908, DOI 10.1038/nbt.3956; BiGG model id iML1515). Accession + sha256 to be ledgered at download.
+- SECONDARY (H3 cross-host robustness arm only): Saccharomyces cerevisiae S288c — GSMM Yeast8 (Lu et al. 2019, Nature Communications 10:1786, DOI 10.1038/s41467-019-11581-3; SysBioChalmers/yeast-GEM repository). No literature benchmark on the yeast arm; comparative robustness only (multi- vs single-condition selection, per H3).
+
+## Targets (locked; 3 spanning distinct chemistry classes, H1 requires >=2)
+1. 1,4-butanediol (non-natural industrial diol) in E. coli. Benchmark: Yim et al. 2011, Nature Chemical Biology 7:445-452, DOI 10.1038/nchembio.580 — the Genomatica engineered pathway, re-evaluated in iML1515 under identical uptake bounds as primary quantitative comparator; published titer as provenance anchor.
+2. Isobutanol (branched-chain higher alcohol) in E. coli. Benchmark: Atsumi, Hanai & Liao 2008, Nature 451:86-89, DOI 10.1038/nature06450 — keto-acid (Ehrlich-2-ketoacid) engineered pathway, same re-evaluation rule.
+3. Lycopene (isoprenoid/tetraterpene) in E. coli. Benchmark: Alper, Miyaoku & Stephanopoulos 2005, Nature Biotechnology 23:612-616, DOI 10.1038/nbt1083 — systematic-knockout overproducer, same re-evaluation rule.
+
+## Rules fixed here
+- Benchmark pathway definitions (reaction lists per the cited papers) are locked in data/benchmarks.json at download time with DOI + accession provenance; any later correction is a new dated amendment.
+- Uptake bounds per condition battery are locked in code BEFORE first search run and recorded with hashes.
+- Random-architecture null and single-condition ablation per the main pre-registration.
+
+# PROCESS NOTE (not a gate change): ChatGPT judge rounds resumed per user WhatsApp 2026-09-26 16:11 IST; minimum 10 rounds/project with the novelty-producing-round rule of 17:00 IST applies. The 13:52 freeze line above is historical.
