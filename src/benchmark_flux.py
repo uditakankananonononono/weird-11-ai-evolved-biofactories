@@ -75,32 +75,34 @@ def build_LYCOPENE(m):
 
 BUILDERS = {'14BDO': build_14BDO, 'ISOBUTANOL': build_ISOBUTANOL, 'LYCOPENE': build_LYCOPENE}
 
-out = {'locked_metric': 'production envelope: product flux (mmol/gDW/h) at pFBA-optimal growth-constrained solutions',
-       'operationalization': ('growth fixed at locked fractions [1.0, 0.9, 0.75, 0.5, 0.25, 0.0] of FBA max; product maximized at each; '
-                              'pFBA tie-break (0.999). At 100% max growth all three pathways carry zero flux '
-                              '(verified 2026-09-26): production competes with biomass, so the envelope is the comparator.'),
-       'growth_fractions': [1.0, 0.9, 0.75, 0.5, 0.25, 0.0],
-       'base_condition': BASE, 'model': MODEL, 'cobra': cobra.__version__,
-       'run_at': datetime.datetime.now().isoformat(timespec='seconds'), 'targets': {}}
-FRACS = [1.0, 0.9, 0.75, 0.5, 0.25, 0.0]
-for tid, build in BUILDERS.items():
-    m = cobra.io.read_sbml_model(MODEL)
-    for ex, b in BASE.items(): m.reactions.get_by_id(ex).lower_bound = b
-    prod = build(m)
-    bio = m.reactions.get_by_id('BIOMASS_Ec_iML1515_core_75p37M')
-    gmax = m.slim_optimize()
-    env = {}
-    for frac in FRACS:
-        with m:
-            bio.lower_bound = frac * gmax
-            m.objective = m.reactions.get_by_id(prod)
-            pmax = m.slim_optimize()
-            m.reactions.get_by_id(prod).lower_bound = 0.999 * pmax
-            sol = cobra.flux_analysis.pfba(m)
-            env[str(frac)] = {'max_product_flux': round(float(pmax), 6),
-                              'product_flux_pfba': round(float(sol.fluxes[prod]), 6),
-                              'status': sol.status}
-    out['targets'][tid] = {'product_boundary': prod, 'max_growth_per_h': round(float(gmax), 6), 'envelope': env}
-    print(tid, out['targets'][tid])
-with open('results/benchmark_flux.json', 'w') as f: json.dump(out, f, indent=1)
-print('written results/benchmark_flux.json')
+if __name__ == '__main__':
+    out = {'locked_metric': 'production envelope: product flux (mmol/gDW/h) at pFBA-optimal growth-constrained solutions',
+           'operationalization': ('growth fixed at locked fractions [1.0, 0.9, 0.75, 0.5, 0.25, 0.0] of FBA max; product maximized at each; '
+                                  'pFBA tie-break (0.999). At 100% max growth all three pathways carry zero flux '
+                                  '(verified 2026-09-26): production competes with biomass, so the envelope is the comparator.'),
+           'growth_fractions': [1.0, 0.9, 0.75, 0.5, 0.25, 0.0],
+           'base_condition': BASE, 'model': MODEL, 'cobra': cobra.__version__,
+           'run_at': datetime.datetime.now().isoformat(timespec='seconds'), 'targets': {}}
+    FRACS = [1.0, 0.9, 0.75, 0.5, 0.25, 0.0]
+    for tid, build in BUILDERS.items():
+        m = cobra.io.read_sbml_model(MODEL)
+        for ex, b in BASE.items(): m.reactions.get_by_id(ex).lower_bound = b
+        prod = build(m)
+        bio = m.reactions.get_by_id('BIOMASS_Ec_iML1515_core_75p37M')
+        gmax = m.slim_optimize()
+        env = {}
+        for frac in FRACS:
+            with m:
+                bio.lower_bound = frac * gmax
+                m.objective = m.reactions.get_by_id(prod)
+                pmax = m.slim_optimize()
+                m.reactions.get_by_id(prod).lower_bound = 0.999 * pmax
+                sol = cobra.flux_analysis.pfba(m)
+                env[str(frac)] = {'max_product_flux': round(float(pmax), 6),
+                                  'product_flux_pfba': round(float(sol.fluxes[prod]), 6),
+                                  'status': sol.status}
+        out['targets'][tid] = {'product_boundary': prod, 'max_growth_per_h': round(float(gmax), 6), 'envelope': env}
+        print(tid, out['targets'][tid])
+    with open('results/benchmark_flux.json', 'w') as f: json.dump(out, f, indent=1)
+    print('written results/benchmark_flux.json')
+

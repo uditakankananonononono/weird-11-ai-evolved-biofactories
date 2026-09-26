@@ -15,7 +15,7 @@
  },
  "model": "data/models/iML1515.xml.gz",
  "cobra": "0.32.1",
- "run_at": "2026-09-26T20:54:21",
+ "run_at": "2026-09-26T21:27:33",
  "targets": {
   "14BDO": {
    "product_boundary": "EX_14bdo_e",
