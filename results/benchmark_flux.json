@@ -1,0 +1,129 @@
+{
+ "locked_metric": "production envelope: product flux (mmol/gDW/h) at pFBA-optimal growth-constrained solutions",
+ "operationalization": "growth fixed at locked fractions [1.0, 0.9, 0.75, 0.5, 0.25, 0.0] of FBA max; product maximized at each; pFBA tie-break (0.999). At 100% max growth all three pathways carry zero flux (verified 2026-09-26): production competes with biomass, so the envelope is the comparator.",
+ "growth_fractions": [
+  1.0,
+  0.9,
+  0.75,
+  0.5,
+  0.25,
+  0.0
+ ],
+ "base_condition": {
+  "EX_glc__D_e": -10.0,
+  "EX_o2_e": -1000.0
+ },
+ "model": "data/models/iML1515.xml.gz",
+ "cobra": "0.32.1",
+ "run_at": "2026-09-26T20:54:21",
+ "targets": {
+  "14BDO": {
+   "product_boundary": "EX_14bdo_e",
+   "max_growth_per_h": 0.876997,
+   "envelope": {
+    "1.0": {
+     "max_product_flux": 0.0,
+     "product_flux_pfba": -0.0,
+     "status": "optimal"
+    },
+    "0.9": {
+     "max_product_flux": 1.059727,
+     "product_flux_pfba": 1.059727,
+     "status": "optimal"
+    },
+    "0.75": {
+     "max_product_flux": 2.649318,
+     "product_flux_pfba": 2.649318,
+     "status": "optimal"
+    },
+    "0.5": {
+     "max_product_flux": 5.267159,
+     "product_flux_pfba": 5.267159,
+     "status": "optimal"
+    },
+    "0.25": {
+     "max_product_flux": 7.878177,
+     "product_flux_pfba": 7.878177,
+     "status": "optimal"
+    },
+    "0.0": {
+     "max_product_flux": 10.354667,
+     "product_flux_pfba": 10.354667,
+     "status": "optimal"
+    }
+   }
+  },
+  "ISOBUTANOL": {
+   "product_boundary": "EX_ibut_e",
+   "max_growth_per_h": 0.876997,
+   "envelope": {
+    "1.0": {
+     "max_product_flux": -0.0,
+     "product_flux_pfba": 0.0,
+     "status": "optimal"
+    },
+    "0.9": {
+     "max_product_flux": 1.04782,
+     "product_flux_pfba": 1.04782,
+     "status": "optimal"
+    },
+    "0.75": {
+     "max_product_flux": 2.619551,
+     "product_flux_pfba": 2.619551,
+     "status": "optimal"
+    },
+    "0.5": {
+     "max_product_flux": 5.239101,
+     "product_flux_pfba": 5.239101,
+     "status": "optimal"
+    },
+    "0.25": {
+     "max_product_flux": 7.812807,
+     "product_flux_pfba": 7.812807,
+     "status": "optimal"
+    },
+    "0.0": {
+     "max_product_flux": 10.0,
+     "product_flux_pfba": 10.0,
+     "status": "optimal"
+    }
+   }
+  },
+  "LYCOPENE": {
+   "product_boundary": "DM_lyco_c",
+   "max_growth_per_h": 0.876997,
+   "envelope": {
+    "1.0": {
+     "max_product_flux": 0.0,
+     "product_flux_pfba": 0.0,
+     "status": "optimal"
+    },
+    "0.9": {
+     "max_product_flux": 0.097548,
+     "product_flux_pfba": 0.097548,
+     "status": "optimal"
+    },
+    "0.75": {
+     "max_product_flux": 0.24387,
+     "product_flux_pfba": 0.24387,
+     "status": "optimal"
+    },
+    "0.5": {
+     "max_product_flux": 0.487741,
+     "product_flux_pfba": 0.487741,
+     "status": "optimal"
+    },
+    "0.25": {
+     "max_product_flux": 0.730794,
+     "product_flux_pfba": 0.730794,
+     "status": "optimal"
+    },
+    "0.0": {
+     "max_product_flux": 0.970323,
+     "product_flux_pfba": 0.970323,
+     "status": "optimal"
+    }
+   }
+  }
+ }
+}
