@@ -15,3 +15,5 @@
 ## Addendum 4, 00:30 IST (pace order via main, user "be faster"): holdings are single-consult-and-release. No sign-in attempts: DeepSeek/Gemini OAuth blocked until user fills the vault link (she declined for now - do not ask again). ChatGPT threads only: fresh consults run as fresh ChatGPT conversations under the text-paste route until further steering. This consult's surface re-routed to ChatGPT accordingly.
 
 ## Addendum 5, 00:36 IST (main relay): user saved her Google password in the encrypted vault ("Google account (uditakankana@gmail.com)") - DeepSeek/Gemini OAuth UNBLOCKED via Google sign-in using the vault secret. Handling rules: never print/log the password, never store it in repo or messages; free tier only; if sign-in asks for a verification code, REPORT to main rather than reading/guessing (supersedes the earlier Gmail-code-reading plan). Multi-consult holdings re-allowed, kept tight.
+
+## Addendum 6, 00:37 IST (main relay): Gmail reconnected; one-time sign-in codes may again be read from uditakankana@gmail.com per the user's verified 00:14 authorization. Authenticator-app challenges (no TOTP in vault) still get reported to main, never improvised.
