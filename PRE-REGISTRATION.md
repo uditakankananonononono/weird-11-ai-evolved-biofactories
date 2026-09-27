@@ -144,3 +144,16 @@ QUESTION: does the carbon-supply-unlock principle (the E. coli finding: every ba
 
 ## AMENDMENT 2026-09-27 14:17 IST (provided-verdict queue #10: 4th chemical class - organic acid arm, locked BEFORE computation)
 NEW TARGET: succinate (native organic acid; exchange EX_succ_e verified present, bounds (0,1000) at lock time). Pool = the 6 host levers only (64 genomes, no target-specific levers - no route blocks exist for a native product), exhaustive, identical tiered battery, severe frontier WITHIN this pool, 50%-max-growth rule. REPORT-ONLY with the 3B-style motif test pre-locked: does the carbon-supply pattern (every passer carries cofeed) replicate for a native organic acid? Fisher one-tailed on cofeed presence among passers vs failers, p<0.05. Verbatim values; no loosening.
+
+## AMENDMENT 2026-09-27 (pool-v4 design - locked BEFORE any pool-v4 computation; lock time = this amendment's commit hash, stamped into results)
+PURPOSE: unblock provided-verdict queue #1 (EA operator ablation), #21, #22 (learning-component tests). At pool v3 the space is exhaustive (256 genomes/target, evaluation fraction 1.0), so search-side questions are hollow by construction (recorded 10:32 + 14:19). Pool v4 must be large enough that exhaustive enumeration dominates any feasible EA budget.
+DESIGN (locked): pool v4 = pool v3's 8 levers + 6 new host levers, all reaction IDs verified present in the committed iML1515.xml.gz (2,712 reactions) at design time:
+- ko_ppc (reaction PPC bounds (0,0); anaplerotic PEP carboxylase - judge-suggested ppc arm, foldback from the 10:04 staged levers)
+- ko_gnd (GND; oxidative pentose-phosphate, NADPH supply)
+- ko_pgi (PGI; glycolysis/PPP branch point)
+- ko_me1 (ME1; malic enzyme - judge-suggested maeB arm; iML1515 carries ME1/ME2, ME1 chosen and recorded)
+- ko_acs (ACS; acetate scavenging/acetyl-CoA supply)
+- ko_icdhyr (ICDHyr; TCA NADPH source)
+Pool v4 = 14 host levers + 2 target-specific = 2^16 = 65,536 genomes/target (196,608 total) - 256x pool v3; enumeration (65,536 x battery cells/target) dominates the locked EA budgets, so operator and learning tests are meaningful at this pool and ONLY at this pool or larger.
+SCOPE RECORD (honest): judge-suggested pntAB/sthA transhydrogenase lever is NOT in v4 core: iML1515 lumps transhydrogenase as NADTRHD and a full knockout conflates pntAB with sthA; recorded as a modeling limitation, not silently dropped. Judge-suggested phosphate-transport blocks remain impossible (PIt2r/PIt7 absent from iML1515, verified 10:04). Xylose cofeed impossible (no xylose exchange in iML1515).
+RULES carried from pool v3 unchanged: same committed iML1515 model, same conditions, tiered battery metric (09:01 lock), seed 260927. All pool-v4 results report-only until their own analysis amendments lock.
