@@ -1,0 +1,223 @@
+\section{Evidence appendix: matched comparisons and failed battery}
+\subsection{Envelope as the baseline, not a titer prediction}
+The production-envelope values come from the committed iML1515 optimization output and are expressed as mmol/gDW/h. The six growth fractions were fixed in the design; the model's maximum under the base condition is 0.876997 h$^{-1}$. These are in-silico flux optima, not measured titers, rates in a reactor, or feasible yields at every imposed growth rate. The exact source is \texttt{results/benchmark\_flux.json}.
+\begin{table}[!htbp]\centering\small\caption{Committed matched-growth envelope. Cells are rounded to three decimals from the JSON max-product-flux values; growth is a fraction of the model maximum.}\begin{tabular}{lrrrrrr}\hline Target & 1.0 & 0.9 & 0.75 & 0.5 & 0.25 & 0.0 \\\hline
+1,4-BDO & 0.000 & 1.060 & 2.649 & 5.267 & 7.878 & 10.355 \\
+Isobutanol & 0.000 & 1.048 & 2.620 & 5.239 & 7.813 & 10.000 \\
+Lycopene & 0.000 & 0.098 & 0.244 & 0.488 & 0.731 & 0.970 \\
+\hline\end{tabular}\end{table}
+\subsection{Exhaustion of the first search space}
+Pool v1 has four possible genomes per target. The committed exhaustive multi-condition enumeration therefore covers the whole pool and is more decisive for this pool than stochastic algorithm rankings. The largest minimum-retention value in each pool is shown below. Every target fails the locked 0.8 retention across the nine-condition battery. That result says this battery is unsatisfiable with the modeled carbon constraint; it cannot be recast as an architecture win.
+\begin{table}[!htbp]\centering\small\caption{Exhaustive pool-v1 results from \texttt{results/exhaustive\_multi.json}; all battery passes are false.}\begin{tabular}{lrrl}\hline Target & genomes & best minimum retention & 0.8 gate \\\hline
+1,4-BDO & 4 & 0.175 & fail \\
+Isobutanol & 4 & 0.176 & fail \\
+Lycopene & 4 & 0.270 & fail \\
+\hline\end{tabular}\end{table}
+\subsection{Nominal pool-v2 flux and the matched-feed caveat}
+The committed v2 output displays a subset of candidate genomes and identifies a total of 64 genomes per target. The maxima below are verified in the displayed rows and the manuscript's existing v2 account; these JSON files alone do not expose all 64 individual records. The co-feed is active in the top rows, so the comparison with the published benchmark under glucose-only conditions is not feed-matched and cannot establish H1 improvement over a baseline with the same carbon supply.\begin{table}[!htbp]\centering\small\caption{Nominal modeled flux at $g=0.5$, \texttt{results/exhaustive\_nominal\_v2.json}; comparison benchmark comes from \texttt{results/benchmark\_flux.json}. A matched glycerol-feed benchmark remains pending.}\begin{tabular}{lrrl}\hline Target & glucose-only benchmark & pool-v2 top & top co-feed \\\hline
+1,4-BDO & 5.267 & 6.496 & yes \\
+Isobutanol & 5.239 & 6.497 & yes \\
+Lycopene & 0.488 & 0.730 & yes \\
+\hline\end{tabular}\end{table}
+\subsection{Visual record of the failed v1 robustness gate}
+\begin{figure}[ht]\centering\small\begin{tabular}{lrl}\hline Target & best retained & Retention on a common 0--1 scale \\\hline
+1,4-BDO & 0.175 & \textcolor{paperblue}{\rule{1.22cm}{5pt}} \\
+Isobutanol & 0.176 & \textcolor{paperblue}{\rule{1.23cm}{5pt}} \\
+Lycopene & 0.270 & \textcolor{paperblue}{\rule{1.89cm}{5pt}} \\
+Locked threshold & 0.800 & \textcolor{black}{\rule{5.60cm}{5pt}} \\\hline\end{tabular}\caption{Each target is below the original 0.8 threshold, even at its best v1 genome. The threshold was not retroactively lowered. Source: \texttt{results/exhaustive\_multi.json}.}\end{figure}
+\subsection{Pending gates, without imputed results}
+\begin{itemize}\item \textbf{[PENDING]} dated battery-redesign amendment and execution against a feasible condition-matched benchmark.
+\item \textbf{[PENDING]} published-route baseline with the same glycerol co-feed, uptake bounds, and matched growth used in pool v2.
+\item \textbf{[PENDING]} independently repeated 1000-seed random-architecture null and larger reaction pool evaluation.
+\item \textbf{[PENDING]} Yeast8 cross-host replication and wet-lab validation; neither is claimed here.
+\end{itemize}
+\section{Internal artifact references}
+\begin{enumerate}\item \texttt{results/benchmark\_flux.json}: locked flux envelopes.\item \texttt{results/exhaustive\_multi.json}: full v1 pool under the first battery.\item \texttt{results/exhaustive\_nominal\_v2.json}: nominal pool-v2 subset and total counts.\item \texttt{results/battery\_eval.json}: condition-resolved pool-v1 checks.\item \texttt{paper/main.tex}: hypotheses, methods, negatives and caveats.\end{enumerate}
+
+\section{Condition-resolved battery evidence}
+\subsection{Interpreting retention against the nominal baseline}
+The locked original denominator is each architecture's nominal glucose-aerobic flux; condition-specific growth is fixed to half the maximum in that condition. Retention above one is possible because some perturbations improve the modeled product flux relative to the nominal condition; this does not rescue a pass requiring all conditions to exceed 0.8. The condition-resolved rows below are recorded in \texttt{results/battery\_eval.json}. The three best EA architectures are compared without claiming that the EA discovered a novel robust solution.
+\begin{table}[!htbp]\centering\small\caption{Condition-level retention ratios for the best pool-v1 EA architecture for each target. All entries are from the committed battery evaluation; the original 0.8 all-condition rule is unchanged.}\begin{tabular}{lrrr}\hline Condition & 1,4-BDO & Isobutanol & Lycopene \\\hline
+Low glucose & 0.175 & 0.176 & 0.000 \\
+Mid glucose & 0.485 & 0.485 & 0.590 \\
+Anaerobic & 1.284 & 1.731 & 0.540 \\
+Glycerol & 0.559 & 0.569 & 0.653 \\
+Acetate & 0.243 & 0.245 & 0.000 \\
+Glucose $-20\%$ & 0.794 & 0.794 & 0.836 \\
+Glucose $+20\%$ & 1.206 & 1.206 & 1.164 \\
+Oxygen $-50\%$ & 1.000 & 1.000 & 1.000 \\
+\hline\end{tabular}\end{table}
+\subsection{A named comparator: tail-only 1,4-BDO}
+The tail-only architecture is an explicit four-step hypothesis in the main paper, not a demonstrated robust factory. The repository's battery file records its condition-level retention separately from the nominal EA winner. Both face the same severe low-glucose and acetate constraints. The table does not infer a causal GABA-shunt mechanism beyond the model pathway accounting already discussed in the manuscript.
+\begin{table}[!htbp]\centering\small\caption{Two 1,4-BDO pool-v1 designs under the same battery (\texttt{results/battery\_eval.json}).}\begin{tabular}{lrr}\hline Condition & EA best & Tail-only \\\hline
+Low glucose & 0.175 & 0.175 \\
+Mid glucose & 0.485 & 0.485 \\
+Anaerobic & 1.284 & 0.707 \\
+Glycerol & 0.559 & 0.559 \\
+Acetate & 0.243 & 0.243 \\
+Glucose $-20\%$ & 0.794 & 0.794 \\
+Glucose $+20\%$ & 1.206 & 1.206 \\
+Oxygen $-50\%$ & 1.000 & 1.000 \\
+\hline\end{tabular}\end{table}
+\subsection{Why this table cannot establish industrial robustness}
+Model retention is a steady-state flux ratio, not time-to-failure, genetic stability, titre, productivity in a fermenter, or viability after perturbation. The original condition list includes a larger carbon-input change in the low-glucose arm; the all-condition criterion is therefore structurally stringent against a fixed nominal denominator. The redesigned gate was later committed and executed separately; none of the rows above is relabeled after seeing it.
+
+\section{Locked reaction provenance and search-space size}
+\subsection{Published-route benchmark definitions}
+The published-route comparator is entered as explicit reaction lists in \texttt{data/benchmarks.json}. Those citations identify pathway sources, while flux values in this manuscript come from the model run, not from physical measurements in the cited papers. The counts below are the entries in each locked pathway description; an overexpression instruction is not identical to a new heterologous reaction.\begin{table}[!htbp]\centering\small\caption{Pathway definitions and bibliographic identifiers transcribed from \texttt{data/benchmarks.json}.}\begin{tabular}{p{2cm}rp{6.6cm}}\hline Target & listed steps & Locked benchmark citation \\\hline
+1,4-BDO & 5 & Yim et al. 2011, Nat Chem Biol 7:445-452, DOI 10.1038/nchembio.580 \\
+Isobutanol & 5 & Atsumi, Hanai \& Liao 2008, Nature 451:86-89, DOI 10.1038/nature06450 \\
+Lycopene & 4 & Alper, Miyaoku \& Stephanopoulos 2005, Nat Biotechnol 23:612-616, DOI 10.1038/nbt1083 \\
+\hline\end{tabular}\end{table}
+\subsection{What is fixed versus selectable}
+The pool file identifies always-on core reaction blocks separately from two selectable alternatives per target. The four-genome exhaustive v1 search is $2^2$ for each target; it does not establish that the real metabolic search space has only four architectures. A block derived from an engineering search idea must not be misrepresented as a published wet-lab route.
+\begin{table}[!htbp]\centering\small\caption{Searchable reaction blocks and fixed core entries from \texttt{data/reaction\_pool.json}.}\begin{tabular}{lp{4.1cm}p{5cm}}\hline Target & core always on & searchable block names \\\hline
+14BDO & BDO2, BDO3, BDO4, BDO5 & routeA\_kgd, routeB\_sucd \\
+ISOBUTANOL & ALSS, KIVD & adh\_nadh, adh\_nadph \\
+LYCOPENE & CRTE, CRTB, CRTI & dxs\_push, idi\_push \\
+\hline\end{tabular}\end{table}
+\subsection{Search-design variants and attribution}\begin{itemize}
+\item The isobutanol NADPH alcohol-dehydrogenase variant is labeled in the committed pool as a search-design engineering choice, not a literature-verified Atsumi route.
+\item The lycopene IDI push is likewise a search-design choice, not a literature-verified Alper route.
+\item The pool-v2 glycerol co-feed changes resource availability. Flux improvements under co-feeding require the same feed in the published-route comparator before attributing a win to an evolved architecture.
+\end{itemize}
+
+\section{Stress battery input bounds and interpretive limits}
+\subsection{The conditions as executed}
+The locked battery file \texttt{data/condition\_battery.json} specifies uptake lower bounds in mmol/gDW/h; zero oxygen denotes anaerobiosis, and negative uptake bounds allow substrate import. The table lists the exact input perturbations. It is a reproducibility aid, not evidence that a laboratory cell reached those fluxes.\begin{table}[!htbp]\centering\small\caption{Eight non-nominal stress conditions in the locked battery; nominal glucose-aerobic baseline appears in the main Methods. A dash means no explicit bound for that exchange in the condition record.}\begin{tabular}{lrrrr}\hline Condition & glucose & oxygen & glycerol & acetate \\\hline
+GLC\_LOW & -2.0 & -1000.0 & -- & -- \\
+GLC\_MID & -5.0 & -1000.0 & -- & -- \\
+ANAEROBIC & -10.0 & 0.0 & -- & -- \\
+GLYCEROL & 0.0 & -1000.0 & -10.0 & -- \\
+ACETATE & 0.0 & -1000.0 & -- & -10.0 \\
+GLC\_PERT\_MINUS20 & -8.0 & -1000.0 & -- & -- \\
+GLC\_PERT\_PLUS20 & -12.0 & -1000.0 & -- & -- \\
+O2\_PERT\_MINUS50 & -10.0 & -500.0 & -- & -- \\
+\hline\end{tabular}\end{table}
+\subsection{Why no ``real-world robustness'' claim follows}
+The low-glucose arm fixes glucose uptake to $-2$ rather than $-10$ mmol/gDW/h at nominal conditions. Its carbon limitation alone makes the same nominal-flux fraction hard to retain, independently of architecture search. The glycerol and acetate arms change the sole carbon source, while anaerobic and oxygen-halving arms alter oxygen availability. This battery measures a model's flux ratio under those exact bounds. It does not measure serial-passage stability, process-scale reactor performance, enzyme expression, or strain viability. [PENDING: pre-locked condition-matched comparator and experimentally tractable robustness validation.]
+
+\section{Single-condition search seed ledger}
+\subsection{Reproducibility of the matched-growth recovery}
+Fifteen committed search records in \texttt{results/ea\_runs.jsonl} cover five seeds for each of three targets. The column below is the best modeled flux returned at the nominal midpoint $g=0.5$, not an independent wet-lab replicate. Repetition across seeds shows the algorithm can recover a value matching the locked pathway envelope in this small pool; it does not distinguish the stochastic search from exhaustive enumeration and cannot support a new route-performance claim.\begin{table}[!htbp]\centering\small\caption{All fifteen single-condition runs, directly transcribed from the committed JSONL file. Flux in mmol/gDW/h; numerical agreement with the benchmark does not imply a novel design.}\begin{tabular}{lrrp{5cm}}\hline Target & seed & best flux & selected search blocks \\\hline
+14BDO & 260926 & 5.2672 & routeA\_kgd, routeB\_sucd \\
+14BDO & 260927 & 5.2672 & routeA\_kgd \\
+14BDO & 260928 & 5.2672 & routeA\_kgd \\
+14BDO & 260929 & 5.2672 & routeA\_kgd, routeB\_sucd \\
+14BDO & 260930 & 5.2672 & none \\
+ISOBUTANOL & 260926 & 5.2391 & adh\_nadh \\
+ISOBUTANOL & 260927 & 5.2391 & adh\_nadh, adh\_nadph \\
+ISOBUTANOL & 260928 & 5.2391 & adh\_nadh \\
+ISOBUTANOL & 260929 & 5.2391 & adh\_nadh, adh\_nadph \\
+ISOBUTANOL & 260930 & 5.2391 & adh\_nadh, adh\_nadph \\
+LYCOPENE & 260926 & 0.4877 & dxs\_push, idi\_push \\
+LYCOPENE & 260927 & 0.4877 & dxs\_push \\
+LYCOPENE & 260928 & 0.4877 & idi\_push \\
+LYCOPENE & 260929 & 0.4877 & dxs\_push, idi\_push \\
+LYCOPENE & 260930 & 0.4877 & none \\
+\hline\end{tabular}\end{table}
+\subsection{Interpretation of ties}
+A repeated maximum may be shared by several genomes in the same restricted reaction pool. A route-block switch that has no effect on the numerical maximum under a particular fixed-growth FBA setting is not proof that the enzyme is unnecessary under every condition. Tail-only BDO remains a separate model-derived hypothesis and still fails the original all-condition robustness battery. [PENDING: a larger, independently sourced reaction pool and a matched-feed comparator evaluated on the same carbon uptake budget.]
+
+\section{Observed stress-battery retention matrix}
+\subsection{Readout for the four tested genomes}
+The committed \texttt{results/battery\_eval.json} records an eight-perturbation retention vector for each selected genome. This is not the original route-envelope ledger: one genome selected for lycopene has a nominal flux of 0.6127 in this battery file, whereas the published-route benchmark at $g=0.5$ is 0.4877. Those two values have different genome contexts and must not be conflated. The battery file records product flux divided by that genome's nominal product flux. Values above 1 are possible because a perturbation can increase the model optimum. The 80\% gate is a conjunction: one failed row fails the genome.\begin{table}[!htbp]\centering\scriptsize\caption{Every non-nominal retention entry for each genome, directly transcribed from the committed battery file. The omitted nominal baseline is 1.000 by definition.}\begin{tabular}{lrrrr}\hline Condition & BDO EA best & isobutanol EA best & lycopene EA best & BDO tail-only \\\hline
+GLC\_LOW & 0.175 & 0.176 & 0.000 & 0.175 \\
+GLC\_MID & 0.485 & 0.485 & 0.590 & 0.485 \\
+ANAEROBIC & 1.284 & 1.731 & 0.540 & 0.707 \\
+GLYCEROL & 0.559 & 0.569 & 0.653 & 0.559 \\
+ACETATE & 0.243 & 0.245 & 0.000 & 0.243 \\
+GLC\_PERT\_MINUS20 & 0.794 & 0.794 & 0.836 & 0.794 \\
+GLC\_PERT\_PLUS20 & 1.206 & 1.206 & 1.164 & 1.206 \\
+O2\_PERT\_MINUS50 & 1.000 & 1.000 & 1.000 & 1.000 \\
+\hline\end{tabular}\end{table}
+\subsection{Discriminating tail-only from the benchmark under stress}
+The nominal BDO flux is 5.2672 for both tested architectures, but anaerobic retention is 1.284 for the EA best and 0.707 for the tail-only variant. Thus nominal equality does not imply stress equivalence. Both fail the nine-condition battery because glucose and acetate limits remain below 0.8. The high anaerobic value in the EA best is a relative model optimum, not a statement that real anaerobic production exceeds aerobic production. [PENDING: verify the flux assignments experimentally and re-test against a feasible, prospectively locked stress metric.]
+
+\subsection{Exhaustive v1 genome audit}
+Only two optional blocks per target were evaluated in the original pool; the four combinations per target were exhaustively tested. Fitness in the committed result is nominal flux multiplied by the minimum retention, so a nonzero fitness is not a battery pass. The table below lists all 12 genomes rather than selecting the best row. In particular, even the best minimum-retention row per target misses the required 0.8; a stochastic search over these same two bits could not find a passing genome.\begin{table}[!htbp]\centering\small\caption{Full v1 search space from \texttt{results/exhaustive\_multi.json}; each two-bit code follows that target's block order shown in the text. Fitness units inherit product-flux units; retention is dimensionless.}\begin{tabular}{llrrc}\hline Target & block bitmask & fitness & minimum retention & all-nine pass? \\\hline
+\multicolumn{5}{l}{14BDO: bit order routeA\_kgd, routeB\_sucd}\\
+14BDO & 00 & 0.9240 & 0.175 & no\\
+14BDO & 01 & 0.9240 & 0.175 & no\\
+14BDO & 10 & 0.9240 & 0.175 & no\\
+14BDO & 11 & 0.9240 & 0.175 & no\\
+\multicolumn{5}{l}{ISOBUTANOL: bit order adh\_nadh, adh\_nadph}\\
+ISOBUTANOL & 00 & 0.0000 & 0.000 & no\\
+ISOBUTANOL & 01 & 0.9142 & 0.176 & no\\
+ISOBUTANOL & 10 & 0.9245 & 0.176 & no\\
+ISOBUTANOL & 11 & 0.9245 & 0.176 & no\\
+\multicolumn{5}{l}{LYCOPENE: bit order dxs\_push, idi\_push}\\
+LYCOPENE & 00 & 0.0861 & 0.176 & no\\
+LYCOPENE & 01 & 0.0000 & 0.000 & no\\
+LYCOPENE & 10 & 0.1486 & 0.270 & no\\
+LYCOPENE & 11 & 0.0000 & 0.000 & no\\
+\hline\end{tabular}\end{table}
+The lycopene bitmasks 01 and 11 have recorded zero fitness, while 10 yields the best v1 fitness of 0.1486 but only 0.270 minimum retention. The zero values should not be recast as independent failed wet-lab strains. [PENDING: a revised battery with a prospectively specified achievable reference and a larger reaction pool.]
+
+\section{Locked benchmark transformation ledger}
+\subsection{Why each published-route baseline is auditable}
+\texttt{data/benchmarks.json} was locked before the first search run. The baseline is the encoded route inside iML1515 under the stated bounds, not a measured titer copied from Yim, Atsumi or Alper. Each listed transformation below is the ledger's description, not an independent verification of the cited paper's experimental implementation. The entries distinguish native steps, added heterologous reactions and regulatory pushes. Where a substrate label or stoichiometric detail is missing from the source ledger, this table does not invent it.\begin{table}[!htbp]\centering\scriptsize\caption{All 14 locked pathway-step entries. Substrate/product strings and enzyme labels are transcribed from \texttt{data/benchmarks.json}; the Alper dxs entry is a native overexpression rather than a new reaction.}\begin{tabular}{p{1.4cm}rp{2.5cm}p{2.5cm}p{3.4cm}}\hline Target & step & substrate & product & enzyme and recorded role \\\hline
+14BDO & 1 & alpha-ketoglutarate & succinate semialdehyde + CO2 & alpha-ketoglutarate decarboxylase (kgd, Mycobacterium sp.) (listed route) \\
+14BDO & 2 & succinate semialdehyde & 4-hydroxybutyrate & 4-hydroxybutyrate dehydrogenase (4hbD, P. gingivalis / E. coli gabD-repurposed) (listed route) \\
+14BDO & 3 & 4-hydroxybutyrate + acetyl-CoA & 4-hydroxybutyryl-CoA + acetate & CoA transferase (cat2, Porphyromonas sp.) (listed route) \\
+14BDO & 4 & 4-hydroxybutyryl-CoA & 4-hydroxybutyraldehyde + CoA & CoA-acylating aldehyde dehydrogenase (bld/ALD, Clostridium sp.) (listed route) \\
+14BDO & 5 & 4-hydroxybutyraldehyde & 1,4-butanediol & alcohol dehydrogenase (adhE2, Clostridium acetobutylicum) (listed route) \\
+ISOBUTANOL & 1 & 2 pyruvate & 2-acetolactate + CO2 & acetolactate synthase (alsS, Bacillus subtilis) (listed route) \\
+ISOBUTANOL & 2 & 2-acetolactate & 2,3-dihydroxy-3-methylbutanoate & ketol-acid reductoisomerase (ilvC, E. coli native) (native) \\
+ISOBUTANOL & 3 & 2,3-dihydroxy-3-methylbutanoate & 2-ketoisovalerate & dihydroxy-acid dehydratase (ilvD, E. coli native) (native) \\
+ISOBUTANOL & 4 & 2-ketoisovalerate & isobutyraldehyde + CO2 & ketoisovalerate decarboxylase (kivd, Lactococcus lactis) (listed route) \\
+ISOBUTANOL & 5 & isobutyraldehyde & isobutanol & alcohol dehydrogenase (adhA, L. lactis) (listed route) \\
+LYCOPENE & 1 & IPP + DMAPP + G3P-derived FPP & geranylgeranyl-PP & GGPP synthase (crtE, Pantoea ananatis) (listed route) \\
+LYCOPENE & 2 & 2 GGPP & phytoene & phytoene synthase (crtB, P. ananatis) (listed route) \\
+LYCOPENE & 3 & phytoene & lycopene & phytoene desaturase (crtI, P. ananatis) (listed route) \\
+LYCOPENE & 0 & pyruvate + G3P & DXP (MEP entry) & 1-deoxy-D-xylulose-5-P synthase (dxs, E. coli native, overexpressed) (native) \\
+\hline\end{tabular}\end{table}
+\subsection{Route-specific interpretation}
+The 1,4-BDO benchmark lists five transformations, but the search pool keeps four downstream BDO reactions always on and varies two upstream blocks. Removing both upstream blocks in the model leaves endogenous succinate-semialdehyde supply; that is a model-mechanism interpretation, not a four-enzyme strain built in the lab. The isobutanol steps 2 and 3 are annotated as native \emph{E. coli} valine-pathway reactions, whereas its search pool's NADPH alcohol-dehydrogenase variant is an engineering choice rather than an Atsumi route. The lycopene list has three crt enzymes and a separate native dxs push (step 0); the idi push in the search pool is not in the published-route ledger. These distinctions prevent an apparent search win from being manufactured by changing what the benchmark means. [PENDING: physical route construction and matched-growth, matched-feed measurements.]
+
+\section{Pool-v2 nominal enumeration: what was stored}
+\subsection{The output is a top-five extract, not all 192 rows}
+The code in \texttt{src/exhaustive\_nominal\_v2.py} enumerated four binary host levers (16 combinations) times two binary target blocks (four combinations) for each of three products: 64 genome evaluations per target, 192 in all. The committed result JSON does \emph{not} store all 192 rows. For each product it retains the five top records plus a ``total 64 genomes'' sentinel. Thus the paper can audit the winning settings and the reported size, but cannot reconstruct the full flux distribution, count every tie, or prove the reported worst-case flux from this truncated file alone. The five retained records per target all have glycerol co-feed enabled. Under the executed code, that switch permits glycerol uptake down to $-4$ mmol/gDW/h while glucose also remains available. This is additional carbon, not a controlled architecture-only performance test.
+\begin{table}[!htbp]\centering\small\caption{All fifteen stored top-five rows from committed \texttt{results/exhaustive\_nominal\_v2.json}. The compact bit order for host levers is ackA-pta, pflB, ldhA, glycerol; the final two bits are the target-specific blocks. Flux is the model value at 50\% maximum growth under each genome.}\begin{tabular}{lrrrr}\hline Target & rank in stored top five & host bits & target bits & flux \\\hline
+14BDO & 1 & 0001 & 00 & 6.4956 \\
+14BDO & 2 & 0001 & 01 & 6.4956 \\
+14BDO & 3 & 0001 & 10 & 6.4956 \\
+14BDO & 4 & 0001 & 11 & 6.4956 \\
+14BDO & 5 & 0011 & 00 & 6.4956 \\
+ISOBUTANOL & 1 & 0001 & 10 & 6.4975 \\
+ISOBUTANOL & 2 & 0001 & 11 & 6.4975 \\
+ISOBUTANOL & 3 & 0011 & 10 & 6.4975 \\
+ISOBUTANOL & 4 & 0011 & 11 & 6.4975 \\
+ISOBUTANOL & 5 & 0101 & 10 & 6.4975 \\
+LYCOPENE & 1 & 0001 & 01 & 0.7298 \\
+LYCOPENE & 2 & 0001 & 11 & 0.7298 \\
+LYCOPENE & 3 & 0011 & 01 & 0.7298 \\
+LYCOPENE & 4 & 0011 & 11 & 0.7298 \\
+LYCOPENE & 5 & 0101 & 01 & 0.7298 \\
+\hline\end{tabular}\end{table}
+\subsection{The fair counterfactual was executed later}
+The baseline values in \texttt{results/benchmark\_flux.json} used glucose uptake $-10$ and no additional glycerol; the v2 winners switch on glycerol. A ratio of v2 winner flux to that baseline therefore answers ``what if extra feed is supplied,'' not ``did architecture search outperform the published route under equal feed.'' The code enumerates all combinations but retains only a top-five extract per target, not the full distribution. The subsequent equal-feed published-route computation is now committed in \texttt{results/ecofeed\_rebaseline\_null.json} and audited below: its matched-feed ratio is 1.00 on all three targets. [PENDING: retain all 192 pool-v2 per-genome records for an independent distribution audit.]
+
+\section{Tiered battery redesign: satisfiable, but no H3 advantage}
+\subsection{What the dated redesign replaces}
+The original nine-condition absolute-retention conjunction fails every pool-v1 genome under severe substrate limitation. The September 27, 09:01 locked amendment separates three mild perturbations from five severe regime shifts. The mild leg still requires each product-flux ratio against nominal to be at least 0.8. For the severe leg, each product flux is divided by the best of the 64 pool-v2 genomes \emph{in the same target and condition}; each must also reach at least 0.8. The score is an equal-weight mean of the two leg averages, with pass requiring both hard legs. This is a different, prospective question, not retroactive passage of the old battery. The revised denominator depends on the same restricted pool, so $R_{\rm tiered}=1$ is a within-pool frontier position, not an industrial robustness guarantee.
+\subsection{Frontiers, pass counts, and the selection tie}
+The committed \texttt{results/battery\_tiered\_v2.json} stores five severe-condition frontiers per target, the pass count over 64 genomes, a top-five extract, and selected best-by-score and best-by-nominal genomes. It does not store all 192 per-genome vectors.\begin{table}[!htbp]\centering\small\caption{Pool-relative severe frontiers (model flux, mmol/gDW/h) and two-hard-leg pass counts. From committed tiered battery JSON.}\begin{tabular}{lrrrrrr}\hline target & GLC low & GLC mid & anaerobic & glycerol & acetate & pass/64 \\\hline
+14BDO & 2.1641 & 3.7848 & 8.9972 & 2.9457 & 2.5205 & 16/64 \\
+ISOBUTANOL & 2.1893 & 3.8048 & 11.8476 & 2.9800 & 2.5498 & 18/64 \\
+LYCOPENE & 0.3270 & 0.4783 & 0.3886 & 0.4000 & 0.3603 & 18/64 \\
+\hline\end{tabular}\end{table}
+\begin{table}[!htbp]\centering\small\caption{Best-by-tiered genomes and the exact mild/severe readouts. Every target's same genome also appears as best-by-nominal in the committed JSON, so this is a tie between selection criteria, not demonstrated H3 superiority. Genome switches are in the order ackA-pta, pflB, ldhA, glycerol, then target-specific blocks.}\begin{tabular}{lp{3.1cm}rrrrr}\hline target & genome bits & nominal & mild minimum & severe minimum & $R_{\rm tiered}$ & best-mode tie? \\\hline
+14BDO & 010101 & 6.4956 & 0.8328 & 1.0000 & 1.0000 & yes\\
+ISOBUTANOL & 010110 & 6.4975 & 0.8340 & 0.9999 & 1.0000 & yes\\
+LYCOPENE & 000101 & 0.7298 & 0.8624 & 1.0000 & 1.0000 & yes\\
+\hline\end{tabular}\end{table}
+\subsection{Interpretation and remaining evidence}
+At least sixteen of 64 genomes per target now pass both hard legs, so the metric has a nonzero selection gradient in this restricted pool. But the best-by-nominal and best-by-$R_{\rm tiered}$ choices coincide for all three targets. The locked H3 hypothesis that multi-condition selection improves pass rates over single-condition selection is therefore not demonstrated by this enumeration; no two-proportion advantage or seed-calibrated evolutionary-versus-random win is reported. The peak nominal fluxes rely on extra glycerol; the subsequently committed matched-feed published-route comparator ties them on every target. The larger-pool falsification is audited below. [PENDING: a seed-calibrated multi-condition versus single-condition search comparison and full per-genome vectors.]
+
+
+\section{Equal-feed and larger-pool falsification audit}
+\subsection{Equal-feed comparator and random null}
+The originally reported pool-v2 nominal exceedances compared a glycerol co-fed candidate against published routes without the added feed. The later committed \texttt{results/ecofeed\_rebaseline\_null.json} makes the comparator symmetric. For 1,4-BDO, isobutanol, and lycopene respectively, the best pool-v2 nominal flux and matched-feed benchmark-route flux are 6.4956 versus 6.4956, 6.4975 versus 6.4975, and 0.7298 versus 0.7298 mmol/gDW/h. Thus $E^{\mathrm{cofeed}}=1.00$ for every target. This retracts the purported 23--50\% architectural flux advantage: it was entirely a carbon-supply comparison artifact. A 1000-draw uniform-random genome null recovered each nominal optimum; nominal search does not beat this random comparator in the 64-genome pool. These are descriptive controls, not a new positive gate.
+\subsection{Pool-v3 tiered battery, second H3 negative}
+The locked September 27 10:04 amendment introduced two binary host levers, \texttt{ko\_adhE} and \texttt{ko\_tpiA}, expanding the pool to 256 genomes per target. Committed \texttt{results/battery\_tiered\_v3.json} records battery pass counts of 32/256, 60/256, and 22/256 for 1,4-BDO, isobutanol, and lycopene. For each target, the highest nominal-flux genome is also the highest tiered-score genome; the locked requirement for diverging selections in at least two targets is therefore not met. The same result file records no battery-passing four-or-fewer-heterologous-enzyme 1,4-BDO design: the robust-minimal-architecture H2 redirect also fails. These negatives do not erase the nominal-only tail architecture or the nonzero within-pool robustness gradients, but neither licenses a flux-win or search-superiority claim. [PENDING: held-out 3-HP motif-enrichment outcome and cross-host validation.]

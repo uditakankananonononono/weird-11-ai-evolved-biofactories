@@ -4,8 +4,11 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
 \title{AI-evolved biological factories: constraint-based evolutionary search for robust metabolic architectures in \emph{E. coli}}
-\author{}
 \date{September 26, 2026}
+\usepackage{color}
+\definecolor{paperblue}{rgb}{0.149,0.337,0.537}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\textcolor{paperblue}{Evidence-locked working manuscript}}\fancyfoot[C]{\thepage}\setlength{\headheight}{15pt}
 \begin{document}
 \maketitle
 
@@ -108,4 +111,6 @@ The battery was redesigned and locked as a dated amendment on 2026-09-27 before 
 \section{Next steps}
 (1) DONE: co-feed re-baseline ($E^{\mathrm{cofeed}} = 1.00$ on all targets) and the 1000-draw random null (recovers the optimum; nominal search trivial at this size). (2) DONE under the 10:04 amendment: pool-v3 expansion and H2-RMA redirect, both falsified as recorded above. (3) Held-out 3-HP target arm (3B, locked 10:04): construct the malonyl-CoA reductase route, run the identical tiered battery on the 64-genome host-lever pool, Fisher exact test on co-feed + pflB motif enrichment. (4) Yeast8 cross-host arm for the robustness principle.
 
+\clearpage
+\input{evidence_appendix}
 \end{document}
