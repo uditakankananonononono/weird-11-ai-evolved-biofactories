@@ -1,0 +1,375 @@
+{
+ "14BDO": {
+  "genome": {
+   "ko_ackApta": false,
+   "ko_pflB": true,
+   "ko_ldhA": false,
+   "cofeed_glycerol": true,
+   "ko_adhE": false,
+   "ko_tpiA": false,
+   "routeA_kgd": false,
+   "routeB_sucd": true
+  },
+  "cells": [
+   {
+    "gfrac": 0.4,
+    "gly": -2.0,
+    "glc": -8.0,
+    "nominal": 5.75,
+    "mild_min": 1.0,
+    "sev_min": 0.707,
+    "survives": false
+   },
+   {
+    "gfrac": 0.4,
+    "gly": -2.0,
+    "glc": -10.0,
+    "nominal": 7.051,
+    "mild_min": 1.0,
+    "sev_min": 0.879,
+    "survives": true
+   },
+   {
+    "gfrac": 0.4,
+    "gly": -4.0,
+    "glc": -8.0,
+    "nominal": 6.49,
+    "mild_min": 1.0,
+    "sev_min": 0.811,
+    "survives": true
+   },
+   {
+    "gfrac": 0.4,
+    "gly": -4.0,
+    "glc": -10.0,
+    "nominal": 7.791,
+    "mild_min": 1.0,
+    "sev_min": 0.983,
+    "survives": true
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -2.0,
+    "glc": -8.0,
+    "nominal": 4.796,
+    "mild_min": 1.0,
+    "sev_min": 0.676,
+    "survives": false
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -2.0,
+    "glc": -10.0,
+    "nominal": 5.881,
+    "mild_min": 1.0,
+    "sev_min": 0.837,
+    "survives": true
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -4.0,
+    "glc": -8.0,
+    "nominal": 5.41,
+    "mild_min": 1.0,
+    "sev_min": 0.778,
+    "survives": false
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -4.0,
+    "glc": -10.0,
+    "nominal": 6.496,
+    "mild_min": 1.0,
+    "sev_min": 0.938,
+    "survives": true
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -2.0,
+    "glc": -8.0,
+    "nominal": 3.841,
+    "mild_min": 1.0,
+    "sev_min": 0.646,
+    "survives": false
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -2.0,
+    "glc": -10.0,
+    "nominal": 4.712,
+    "mild_min": 1.0,
+    "sev_min": 0.795,
+    "survives": false
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -4.0,
+    "glc": -8.0,
+    "nominal": 4.33,
+    "mild_min": 1.0,
+    "sev_min": 0.744,
+    "survives": false
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -4.0,
+    "glc": -10.0,
+    "nominal": 5.2,
+    "mild_min": 1.0,
+    "sev_min": 0.893,
+    "survives": true
+   }
+  ],
+  "survival": 6,
+  "of": 12
+ },
+ "ISOBUTANOL": {
+  "genome": {
+   "ko_ackApta": false,
+   "ko_pflB": true,
+   "ko_ldhA": false,
+   "cofeed_glycerol": true,
+   "ko_adhE": true,
+   "ko_tpiA": false,
+   "adh_nadh": true,
+   "adh_nadph": false
+  },
+  "cells": [
+   {
+    "gfrac": 0.4,
+    "gly": -2.0,
+    "glc": -8.0,
+    "nominal": 5.748,
+    "mild_min": 1.0,
+    "sev_min": 0.75,
+    "survives": false
+   },
+   {
+    "gfrac": 0.4,
+    "gly": -2.0,
+    "glc": -10.0,
+    "nominal": 7.042,
+    "mild_min": 1.0,
+    "sev_min": 0.91,
+    "survives": true
+   },
+   {
+    "gfrac": 0.4,
+    "gly": -4.0,
+    "glc": -8.0,
+    "nominal": 6.503,
+    "mild_min": 1.0,
+    "sev_min": 0.844,
+    "survives": true
+   },
+   {
+    "gfrac": 0.4,
+    "gly": -4.0,
+    "glc": -10.0,
+    "nominal": 7.797,
+    "mild_min": 1.0,
+    "sev_min": 1.004,
+    "survives": true
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -2.0,
+    "glc": -8.0,
+    "nominal": 4.79,
+    "mild_min": 1.0,
+    "sev_min": 0.745,
+    "survives": false
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -2.0,
+    "glc": -10.0,
+    "nominal": 5.868,
+    "mild_min": 1.0,
+    "sev_min": 0.904,
+    "survives": true
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -4.0,
+    "glc": -8.0,
+    "nominal": 5.419,
+    "mild_min": 1.0,
+    "sev_min": 0.839,
+    "survives": true
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -4.0,
+    "glc": -10.0,
+    "nominal": 6.498,
+    "mild_min": 1.0,
+    "sev_min": 0.997,
+    "survives": true
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -2.0,
+    "glc": -8.0,
+    "nominal": 3.832,
+    "mild_min": 1.0,
+    "sev_min": 0.741,
+    "survives": false
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -2.0,
+    "glc": -10.0,
+    "nominal": 4.695,
+    "mild_min": 1.0,
+    "sev_min": 0.897,
+    "survives": true
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -4.0,
+    "glc": -8.0,
+    "nominal": 4.335,
+    "mild_min": 1.0,
+    "sev_min": 0.794,
+    "survives": false
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -4.0,
+    "glc": -10.0,
+    "nominal": 5.198,
+    "mild_min": 1.0,
+    "sev_min": 0.99,
+    "survives": true
+   }
+  ],
+  "survival": 8,
+  "of": 12
+ },
+ "LYCOPENE": {
+  "genome": {
+   "ko_ackApta": false,
+   "ko_pflB": false,
+   "ko_ldhA": false,
+   "cofeed_glycerol": true,
+   "ko_adhE": false,
+   "ko_tpiA": false,
+   "dxs_push": false,
+   "idi_push": true
+  },
+  "cells": [
+   {
+    "gfrac": 0.4,
+    "gly": -2.0,
+    "glc": -8.0,
+    "nominal": 0.635,
+    "mild_min": 1.0,
+    "sev_min": 0.806,
+    "survives": true
+   },
+   {
+    "gfrac": 0.4,
+    "gly": -2.0,
+    "glc": -10.0,
+    "nominal": 0.756,
+    "mild_min": 1.0,
+    "sev_min": 0.982,
+    "survives": true
+   },
+   {
+    "gfrac": 0.4,
+    "gly": -4.0,
+    "glc": -8.0,
+    "nominal": 0.705,
+    "mild_min": 1.0,
+    "sev_min": 0.887,
+    "survives": true
+   },
+   {
+    "gfrac": 0.4,
+    "gly": -4.0,
+    "glc": -10.0,
+    "nominal": 0.826,
+    "mild_min": 1.0,
+    "sev_min": 1.071,
+    "survives": true
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -2.0,
+    "glc": -8.0,
+    "nominal": 0.571,
+    "mild_min": 1.0,
+    "sev_min": 0.779,
+    "survives": false
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -2.0,
+    "glc": -10.0,
+    "nominal": 0.671,
+    "mild_min": 1.0,
+    "sev_min": 0.925,
+    "survives": true
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -4.0,
+    "glc": -8.0,
+    "nominal": 0.629,
+    "mild_min": 1.0,
+    "sev_min": 0.847,
+    "survives": true
+   },
+   {
+    "gfrac": 0.5,
+    "gly": -4.0,
+    "glc": -10.0,
+    "nominal": 0.73,
+    "mild_min": 1.0,
+    "sev_min": 1.0,
+    "survives": true
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -2.0,
+    "glc": -8.0,
+    "nominal": 0.507,
+    "mild_min": 1.0,
+    "sev_min": 0.752,
+    "survives": false
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -2.0,
+    "glc": -10.0,
+    "nominal": 0.587,
+    "mild_min": 1.0,
+    "sev_min": 0.869,
+    "survives": true
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -4.0,
+    "glc": -8.0,
+    "nominal": 0.554,
+    "mild_min": 1.0,
+    "sev_min": 0.806,
+    "survives": true
+   },
+   {
+    "gfrac": 0.6,
+    "gly": -4.0,
+    "glc": -10.0,
+    "nominal": 0.634,
+    "mild_min": 1.0,
+    "sev_min": 0.929,
+    "survives": true
+   }
+  ],
+  "survival": 10,
+  "of": 12
+ },
+ "_rule": "amendment 13:33 IST; severe legs scored vs committed pool-v3 frontiers (single-genome cells have no within-cell frontier) - recorded here"
+}

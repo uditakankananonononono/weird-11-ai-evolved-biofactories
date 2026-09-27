@@ -132,3 +132,6 @@ The per-architecture rationale subsection as first committed (03b5707) stated "n
 
 ## AMENDMENT 2026-09-27 13:33 IST (provided-verdict queue #4: FBA sensitivity - locked BEFORE computation)
 QUESTION: do the three committed battery winners survive perturbation of the locked FBA assumptions? Locked design: for each target's best_by_R_tiered genome (committed in results/battery_tiered_v3.json), re-evaluate nominal flux and R_tiered under a locked 3x2x2 grid: biomass fraction {0.4, 0.5, 0.6} x glycerol co-feed uptake {-2, -4} (only where cofeed ON) x glucose base {-8, -10}. SURVIVAL RULE (locked): a winner survives a grid cell if it still passes both hard legs in that cell; report survival fraction per target verbatim. No re-optimization of genomes; no pool changes; perturbations of the locked constants only.
+
+## NOTE 2026-09-27 13:34 IST (sensitivity execution detail, recorded at commit)
+The 13:33 amendment did not specify the severe-leg frontier for single-genome grid cells. Executed choice: severe legs scored against the COMMITTED pool-v3 frontier per target/condition (battery_tiered_v3.json), since a single-genome cell has no within-cell frontier. Recorded in results/h_fba_sensitivity.json under _rule.
