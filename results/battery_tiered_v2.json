@@ -1,0 +1,662 @@
+{
+ "amendment": "2026-09-27 09:01 IST tiered battery (locked pre-evaluation)",
+ "mild": [
+  "GLC_PERT_MINUS20",
+  "GLC_PERT_PLUS20",
+  "O2_PERT_MINUS50"
+ ],
+ "severe": [
+  "GLC_LOW",
+  "GLC_MID",
+  "ANAEROBIC",
+  "GLYCEROL",
+  "ACETATE"
+ ],
+ "results": {
+  "14BDO": {
+   "frontier_severe": {
+    "GLC_LOW": 2.1641,
+    "GLC_MID": 3.7848,
+    "ANAEROBIC": 8.9972,
+    "GLYCEROL": 2.9457,
+    "ACETATE": 2.5205
+   },
+   "n_pass": 16,
+   "best_by_R_tiered": {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": true,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "routeA_kgd": false,
+     "routeB_sucd": true
+    },
+    "nominal": 6.4956,
+    "mild_retention": {
+     "GLC_PERT_MINUS20": 0.8328,
+     "GLC_PERT_PLUS20": 1.1672,
+     "O2_PERT_MINUS50": 1.0
+    },
+    "severe_relative": {
+     "GLC_LOW": 1.0,
+     "GLC_MID": 1.0,
+     "ANAEROBIC": 1.0,
+     "GLYCEROL": 1.0,
+     "ACETATE": 1.0
+    },
+    "R_pert": 1.0,
+    "R_shift": 1.0,
+    "R_tiered": 1.0,
+    "mild_leg_pass": true,
+    "severe_leg_pass": true,
+    "battery_pass": true
+   },
+   "best_by_nominal": {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": true,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "routeA_kgd": false,
+     "routeB_sucd": true
+    },
+    "nominal": 6.4956,
+    "mild_retention": {
+     "GLC_PERT_MINUS20": 0.8328,
+     "GLC_PERT_PLUS20": 1.1672,
+     "O2_PERT_MINUS50": 1.0
+    },
+    "severe_relative": {
+     "GLC_LOW": 1.0,
+     "GLC_MID": 1.0,
+     "ANAEROBIC": 1.0,
+     "GLYCEROL": 1.0,
+     "ACETATE": 1.0
+    },
+    "R_pert": 1.0,
+    "R_shift": 1.0,
+    "R_tiered": 1.0,
+    "mild_leg_pass": true,
+    "severe_leg_pass": true,
+    "battery_pass": true
+   },
+   "top5": [
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "nominal": 6.4956,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.8328,
+      "GLC_PERT_PLUS20": 1.1672,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 1.0,
+      "ANAEROBIC": 1.0,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "nominal": 6.4956,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.8328,
+      "GLC_PERT_PLUS20": 1.1672,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 1.0,
+      "ANAEROBIC": 1.0,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "nominal": 6.4956,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.8328,
+      "GLC_PERT_PLUS20": 1.1672,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 1.0,
+      "ANAEROBIC": 1.0,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "nominal": 6.4956,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.8328,
+      "GLC_PERT_PLUS20": 1.1672,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 1.0,
+      "ANAEROBIC": 1.0,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "nominal": 6.4956,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.8328,
+      "GLC_PERT_PLUS20": 1.1672,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 1.0,
+      "ANAEROBIC": 0.9407,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 0.9881,
+     "R_tiered": 0.9941,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    }
+   ]
+  },
+  "ISOBUTANOL": {
+   "frontier_severe": {
+    "GLC_LOW": 2.1893,
+    "GLC_MID": 3.8048,
+    "ANAEROBIC": 11.8476,
+    "GLYCEROL": 2.98,
+    "ACETATE": 2.5498
+   },
+   "n_pass": 18,
+   "best_by_R_tiered": {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": true,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "adh_nadh": true,
+     "adh_nadph": false
+    },
+    "nominal": 6.4975,
+    "mild_retention": {
+     "GLC_PERT_MINUS20": 0.834,
+     "GLC_PERT_PLUS20": 1.166,
+     "O2_PERT_MINUS50": 1.0
+    },
+    "severe_relative": {
+     "GLC_LOW": 1.0,
+     "GLC_MID": 0.9999,
+     "ANAEROBIC": 0.9999,
+     "GLYCEROL": 1.0,
+     "ACETATE": 1.0
+    },
+    "R_pert": 1.0,
+    "R_shift": 1.0,
+    "R_tiered": 1.0,
+    "mild_leg_pass": true,
+    "severe_leg_pass": true,
+    "battery_pass": true
+   },
+   "best_by_nominal": {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": true,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "adh_nadh": true,
+     "adh_nadph": false
+    },
+    "nominal": 6.4975,
+    "mild_retention": {
+     "GLC_PERT_MINUS20": 0.834,
+     "GLC_PERT_PLUS20": 1.166,
+     "O2_PERT_MINUS50": 1.0
+    },
+    "severe_relative": {
+     "GLC_LOW": 1.0,
+     "GLC_MID": 0.9999,
+     "ANAEROBIC": 0.9999,
+     "GLYCEROL": 1.0,
+     "ACETATE": 1.0
+    },
+    "R_pert": 1.0,
+    "R_shift": 1.0,
+    "R_tiered": 1.0,
+    "mild_leg_pass": true,
+    "severe_leg_pass": true,
+    "battery_pass": true
+   },
+   "top5": [
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "nominal": 6.4975,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.834,
+      "GLC_PERT_PLUS20": 1.166,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 0.9999,
+      "ANAEROBIC": 0.9999,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "nominal": 6.4975,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.834,
+      "GLC_PERT_PLUS20": 1.166,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 0.9999,
+      "ANAEROBIC": 0.9999,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "nominal": 6.4975,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.834,
+      "GLC_PERT_PLUS20": 1.166,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 0.9999,
+      "ANAEROBIC": 0.9999,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "nominal": 6.4975,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.834,
+      "GLC_PERT_PLUS20": 1.166,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 0.9999,
+      "ANAEROBIC": 0.9999,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "nominal": 6.4975,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.834,
+      "GLC_PERT_PLUS20": 1.166,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 0.9999,
+      "ANAEROBIC": 0.9229,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 0.9846,
+     "R_tiered": 0.9923,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    }
+   ]
+  },
+  "LYCOPENE": {
+   "frontier_severe": {
+    "GLC_LOW": 0.327,
+    "GLC_MID": 0.4783,
+    "ANAEROBIC": 0.3886,
+    "GLYCEROL": 0.4,
+    "ACETATE": 0.3603
+   },
+   "n_pass": 18,
+   "best_by_R_tiered": {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "dxs_push": false,
+     "idi_push": true
+    },
+    "nominal": 0.7298,
+    "mild_retention": {
+     "GLC_PERT_MINUS20": 0.8624,
+     "GLC_PERT_PLUS20": 1.1376,
+     "O2_PERT_MINUS50": 1.0
+    },
+    "severe_relative": {
+     "GLC_LOW": 1.0,
+     "GLC_MID": 1.0,
+     "ANAEROBIC": 1.0,
+     "GLYCEROL": 1.0,
+     "ACETATE": 1.0
+    },
+    "R_pert": 1.0,
+    "R_shift": 1.0,
+    "R_tiered": 1.0,
+    "mild_leg_pass": true,
+    "severe_leg_pass": true,
+    "battery_pass": true
+   },
+   "best_by_nominal": {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "dxs_push": false,
+     "idi_push": true
+    },
+    "nominal": 0.7298,
+    "mild_retention": {
+     "GLC_PERT_MINUS20": 0.8624,
+     "GLC_PERT_PLUS20": 1.1376,
+     "O2_PERT_MINUS50": 1.0
+    },
+    "severe_relative": {
+     "GLC_LOW": 1.0,
+     "GLC_MID": 1.0,
+     "ANAEROBIC": 1.0,
+     "GLYCEROL": 1.0,
+     "ACETATE": 1.0
+    },
+    "R_pert": 1.0,
+    "R_shift": 1.0,
+    "R_tiered": 1.0,
+    "mild_leg_pass": true,
+    "severe_leg_pass": true,
+    "battery_pass": true
+   },
+   "top5": [
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "nominal": 0.7298,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.8624,
+      "GLC_PERT_PLUS20": 1.1376,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 1.0,
+      "ANAEROBIC": 1.0,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "nominal": 0.7298,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.8624,
+      "GLC_PERT_PLUS20": 1.1376,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 1.0,
+      "ANAEROBIC": 1.0,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "nominal": 0.7298,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.8624,
+      "GLC_PERT_PLUS20": 1.1376,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 1.0,
+      "ANAEROBIC": 1.0,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "nominal": 0.7298,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.8624,
+      "GLC_PERT_PLUS20": 1.1376,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 1.0,
+      "ANAEROBIC": 1.0,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 1.0,
+     "R_tiered": 1.0,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "nominal": 0.7298,
+     "mild_retention": {
+      "GLC_PERT_MINUS20": 0.8624,
+      "GLC_PERT_PLUS20": 1.1376,
+      "O2_PERT_MINUS50": 1.0
+     },
+     "severe_relative": {
+      "GLC_LOW": 1.0,
+      "GLC_MID": 1.0,
+      "ANAEROBIC": 0.9064,
+      "GLYCEROL": 1.0,
+      "ACETATE": 1.0
+     },
+     "R_pert": 1.0,
+     "R_shift": 0.9813,
+     "R_tiered": 0.9906,
+     "mild_leg_pass": true,
+     "severe_leg_pass": true,
+     "battery_pass": true
+    }
+   ]
+  }
+ }
+}
