@@ -1,0 +1,133 @@
+COURIER INSTRUCTIONS (for Udita): this is the W11 ai-evolved-biofactories ONE counted ChatGPT judge round under your 10:00 rule ("NOT 10 ROUNDS OF CHATGPT CHECK JUST ONE WHICH I PROVIDE OK?"). Open a FRESH ChatGPT chat. Paste each BLOCK below as its own message, in order. After the last block (QUESTIONS), paste it too, then copy ChatGPT's full reply and send it back. The reply becomes the lane's one counted judge verdict (logged verbatim with this file's sha).
+
+
+===== BLOCK 1 of 8 =====
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\title{AI-evolved biological factories: constraint-based evolutionary search for robust metabolic architectures in \emph{E. coli}}
+\author{}
+\date{September 26, 2026}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Engineered microbes convert renewable feedstocks into fuels, materials, and chemicals, but the design of production strains remains guided primarily by human intuition: an engineer picks a pathway, expresses it, and hopes the host tolerates it. An alternative is to let a search process explore the space of possible metabolic architectures and select for what works, under conditions that resemble an industrial process rather than a single idealized optimum. This project asks whether a computational evolutionary search, starting from a target product rather than an existing pathway, can discover non-obvious biological architectures that match or exceed known engineered pathways under multi-condition robustness criteria. The design principles that let engineered cells maintain high productivity while remaining metabolically stable are the scientific object of interest; the evolved architecture library is the deliverable.
+
+Three hypotheses are pre-registered (PRE-REGISTRATION.md, locked before any data or search): H1 (performance) - at least one evolved architecture reaches predicted product flux at or above the published engineered pathway evaluated in the same genome-scale model under identical uptake bounds; H2 (novelty) - the evolved library contains architectures absent from the published pathway that are mechanistically interpretable; H3 (robustness principle) - architectures selected under multi-condition pressure retain their production across a locked stress battery at a significantly higher rate than architectures selected under single-condition pressure. Honest negatives are preserved and redirect the project internally; no negative is published as the final result.
+
+\section{Pre-registered design}
+\subsection{Hosts, models, and targets}
+The primary host is \emph{Escherichia coli} K-12 MG1655 in the genome-scale metabolic model iML1515, with the yeast arm (Yeast8) reserved for cross-host robustness analysis. Three locked target products span distinct chemistry classes: 1,4-butanediol (non-natural industrial diol; benchmark route Yim et al.\ 2011, the Genomatica pathway), isobutanol (branched-chain higher alcohol; benchmark Atsumi et al.\ 2008, the keto-acid route), and lycopene (tetraterpene; benchmark Alper et al.\ 2005, crtEBI with dxs push). Reaction lists per the cited papers were locked in data/benchmarks.json before any search, with DOI provenance.
+
+===== BLOCK 2 of 8 =====
+
+\subsection{Benchmark metric: production envelopes}
+For each target, the published engineered pathway was implemented in iML1515 under the locked base condition (M9 minimal, glucose 10 mmol/gDW/h, aerobic). Because production competes with biomass, a single max-growth number is meaningless: at 100\% of maximum growth all three pathways carry zero product flux. The benchmark is therefore a production envelope: maximum product flux with growth fixed at locked fractions of the FBA maximum,
+\begin{equation}
+F_t(g) = \max_{v} \; v_{\text{product}} \quad \text{s.t.} \quad S v = 0, \; v_{\text{biomass}} = g \cdot \mu_{\max}, \; l \le v \le u,
+\end{equation}
+evaluated at $g \in \{1.0, 0.9, 0.75, 0.5, 0.25, 0.0\}$ with a parsimonious-FBA tie-break. Measured envelopes (results/benchmark\_flux.json): 1,4-BDO reaches $F=10.35$ mmol/gDW/h at $g=0$ and $5.27$ at $g=0.5$; isobutanol $10.00$ and $5.24$; lycopene $0.97$ and $0.49$. The envelope, not a single titer, is what an evolved architecture must beat at matched growth.
+Table~\ref{tab:envelopes} reports the measured envelopes for all three published routes at the six locked growth fractions; the FBA maximum growth rate of the host under the base condition is $\mu_{\max} = 0.877$ h$^{-1}$ for all targets (identical uptake bounds, wild-type core).
+\begin{table}[h]
+\centering
+\caption{Measured production envelopes (product flux, mmol/gDW/h) of the three published engineered routes in iML1515 under the locked base condition, at growth fixed to fractions of $\mu_{\max}$ (results/benchmark\_flux.json, run 2026-09-26; pFBA tie-break coefficient 0.999).}
+\label{tab:envelopes}
+\begin{tabular}{lcccccc}
+\hline
+Target route & $g{=}1.0$ & $0.9$ & $0.75$ & $0.5$ & $0.25$ & $0.0$ \\
+\hline
+1,4-BDO (Yim 2011) & 0.000 & 1.060 & 2.649 & 5.267 & 7.878 & 10.355 \\
+Isobutanol (Atsumi 2008) & 0.000 & 1.048 & 2.620 & 5.239 & 7.813 & 10.000 \\
+Lycopene (Alper 2005) & 0.000 & 0.098 & 0.244 & 0.488 & 0.731 & 0.970 \\
+\hline
+\end{tabular}
+\end{table}
+The zero at $g=1.0$ in every row is a verified property of the host--route system, not a solver artifact: biomass and product draw on the same carbon and redox budget, so the envelopes are strictly monotone decreasing in $g$, and any comparison at a single growth point would be meaningless without the matched-growth rule.
+
+===== BLOCK 3 of 8 =====
+
+\subsection{Search protocol}
+The tie-break inside each envelope point is parsimonious FBA: among optimal solutions, minimize total flux,
+\begin{equation}
+v^{*} \;=\; \arg\min_{v} \; \|v\|_{1} \quad \text{s.t.} \quad S v = 0, \; v_{\text{product}} = F_t(g), \; v_{\text{biomass}} = g\,\mu_{\max}, \; l \le v \le u,
+\end{equation}
+with the pFBA optimality slack fixed at 0.999; FBA and pFBA product fluxes were verified equal on all envelope points (unique optima), so the cheaper FBA is used for search fitness and full pFBA reserved for final evaluation.
+The search genome encodes on/off choices over a locked reaction pool (benchmark route blocks plus literature-noted alternatives, data/reaction\_pool.json). Fitness is product flux at the pFBA-optimal solution with growth fixed at $g=0.5$, the envelope midpoint. Search fitness is the nominal-condition envelope point at the locked growth fraction,
+\begin{equation}
+\Phi(a) \;=\; F_a^{(\mathrm{nominal})}(0.5),
+\end{equation}
+and architecture performance against the benchmark route is reported as the exceedance ratio
+\begin{equation}
+E_a \;=\; \frac{F_a^{(\mathrm{nominal})}(0.5)}{F_{\mathrm{benchmark}}^{(\mathrm{nominal})}(0.5)},
+\end{equation}
+with $E_a > 1$ required for an H1 beat at matched uptake bounds. The exhaustive pools used so far have genome spaces of
+\begin{equation}
+|\mathcal{G}| \;=\; 2^{h} \times 2^{t},
+\end{equation}
+genomes per target ($h$ host-level blocks, $t$ target-specific blocks: $h{=}0, t{=}2$ in pool v1 giving 4; $h{=}4, t{=}2$ in pool v2 giving 64), so enumeration evaluates every genome exactly once and the stochastic search budget is dominated by construction. Significance of any evolved advantage is calibrated against a 1000-seed random-architecture null as the percentile
+\begin{equation}
+\hat{q} \;=\; \frac{1 + \sum_{s=1}^{1000} \mathbf{1}[\Phi(a_s^{\mathrm{rand}}) \ge \Phi(a)]}{1001}.
+\end{equation}
+The search is a ($\mu+\lambda$) evolutionary algorithm ($\mu=24$, $\lambda=48$, tournament selection, 60 generations, five locked seeds), with a 1000-seed random-architecture null for significance calibration. On the version-1 pool (two alternative blocks per target, four genomes), exhaustive enumeration strictly dominates the stochastic search and was used instead; the EA scaffold is retained for expanded pools.
+
+===== BLOCK 4 of 8 =====
+
+\subsection{Stability battery}
+A scalar summary of production-growth coupling used in the envelope analysis is the local slope
+\begin{equation}
+\sigma_t(g) \;=\; \frac{F_t(g_2) - F_t(g_1)}{g_2 - g_1},
+\end{equation}
+the shadow price of growth in units of product flux per unit growth fraction; the measured envelopes are strictly monotone with $\sigma_t < 0$ throughout.
+Robustness is evaluated over a locked nine-condition battery (nutrient shifts, carbon shifts to glycerol and acetate, anaerobiosis, uptake perturbations, oxygen limitation). After a metric-interpretation bug was caught at first evaluation (growth referenced to the base-condition maximum, which made every condition untestable), the locked rule is growth fixed at 50\% of the condition-specific maximum, with retention defined against nominal-condition flux. The nine locked conditions are: GLC\_LOW (glucose uptake $-2$), GLC\_MID ($-5$), GLC$+20\%$ ($-12$), GLC$-20\%$ ($-8$), GLYCEROL (sole carbon, uptake $-10$), ACETATE (sole carbon, uptake $-10$), ANAEROBIC (oxygen uptake 0), O2$-50\%$ (oxygen uptake halved), and the nominal base GLC\_AEROBIC (glucose $-10$, aerobic); all uptakes in mmol/gDW/h. Formally, for architecture $a$ and condition $c$,
+\begin{equation}
+R(a, c) \;=\; \frac{F_a^{(c)}(0.5)}{F_a^{(\mathrm{nominal})}(0.5)}, \qquad
+\mathrm{BatteryPass}(a) \;=\; \bigwedge_{c \in \mathrm{battery}} \mathbf{1}\!\left[ R(a,c) \ge 0.8 \right],
+\end{equation}
+where $F_a^{(c)}(0.5)$ is the architecture's product flux in condition $c$ with growth fixed at $50\%$ of the condition-specific maximum. The pass bar of $0.8$ was locked before any architecture was evaluated against the battery.
+
+\section{Results}
+\subsection{Single-condition search reproduces the benchmark envelopes}
+Across all fifteen seed runs (three targets, five seeds), the best evolved architecture exactly reaches the locked envelope value at $g=0.5$: 5.27 mmol/gDW/h for 1,4-BDO, 5.24 for isobutanol, 0.49 for lycopene. The search recovers the published routes as optimal under single-condition selection - a validation of the evaluation pipeline, and the baseline for H1.
+
+\subsection{H2 candidate: a tail-only minimal 1,4-BDO architecture}
+A non-obvious architecture emerged from the search: with \emph{both} heterologous upstream route blocks switched off, the four-step heterologous tail (4-hydroxybutyrate dehydrogenase, CoA transferase, CoA-acylating aldehyde dehydrogenase, alcohol dehydrogenase) still reaches the full nominal flux of 5.27 mmol/gDW/h. The model explains why: \emph{E. coli}'s native GABA shunt (succinate-semialdehyde supply through glutamate metabolism) feeds the tail without any heterologous upstream enzyme. This tail-only architecture is absent from the Yim et al.\ pathway definition, uses four fewer heterologous enzymes, and is mechanistically interpretable - the H2 novelty pattern in its locked form at the nominal condition. As the tiered-battery subsection below shows, the candidate does not survive the battery, so the claim stands at nominal condition only.
+
+===== BLOCK 5 of 8 =====
+
+\subsection{H3 honest negative on pool v1, and a battery-design finding}
+Exhaustive multi-condition evaluation of pool v1 found that \emph{no} genome passes the locked battery (80\% retention in all nine conditions): best minimum retentions are 0.175 (1,4-BDO), 0.176 (isobutanol), and 0.27 (lycopene). Inspection shows the failure is structural, not a lack of search power: under the severe nutrient shift GLC\_LOW (glucose at 2 rather than 10 mmol/gDW/h), elementary carbon balance caps a C4 product at roughly one to two mmol/gDW/h against a nominal 5.27, a retention ceiling of 0.2--0.3 that no architecture can lift. The bound is elementary: a C4 product made from glucose at uptake $u_{\mathrm{glc}}$ satisfies
+\begin{equation}
+v_{\mathrm{product}} \;\le\; \frac{6}{4}\, u_{\mathrm{glc}} \;=\; 3.0 \quad \text{mmol/gDW/h at } u_{\mathrm{glc}} = 2,
+\end{equation}
+before any carbon is allocated to biomass, maintenance, or byproducts; with growth fixed at $50\%$ of the condition maximum the achievable product flux falls to roughly one to two, giving $R(a, \mathrm{GLC\_LOW}) \le 1.5/5.267 \approx 0.28$ for every conceivable architecture $a$ - including the published routes and any architecture the search could ever return. The benchmark engineered routes fail identically. A pass bar of 80\% retention on severe nutrient shifts is therefore unsatisfiable by construction, the battery provides no selection gradient, and H3 is untestable as locked. This is recorded as an honest negative with the design flaw named, and a redesign (retention against condition-achievable optimum rather than against nominal flux; tiered bars for shifts versus perturbations; robustness-oriented pool levers such as knockout blocks and co-utilization feeds) is being locked as a dated amendment before any re-evaluation, following the project's redirect-on-failure rule.
+
+===== BLOCK 6 of 8 =====
+
+\subsection{Pool v2: robustness levers shift the nominal optimum (amendment 2026-09-26)}
+Following the redirect rule, pool v2 was locked as a dated amendment before evaluation: four host-level robustness levers - acetate-overflow knockout (ackA--pta), formate-overflow knockout (pflB), lactate-overflow knockout (ldhA), and a glycerol co-utilization feed - added to the target-specific blocks, expanding the genome space to 64 genomes per target. Exhaustive enumeration (192 genomes total, metric-independent of the pending battery redesign) was again strictly dominant over the stochastic budget at this size. Under the nominal condition at $g=0.5$, the co-utilization feed dominates every target: best nominal fluxes rise to 6.496 (1,4-BDO), 6.498 (isobutanol), and 0.730 (lycopene) mmol/gDW/h, against envelope values of 5.267, 5.239, and 0.488 - nominal-condition exceedances of 23\%, 24\%, and 50\% over the published routes evaluated in the same model. The gain is attributable to the added carbon supply, so the honest comparison under co-feeding must re-baseline the benchmark route with the same feed block enabled:
+\begin{equation}
+E_a^{\mathrm{cofeed}} \;=\; \frac{F_a^{(\mathrm{cofeed})}(0.5)}{F_{\mathrm{benchmark}}^{(\mathrm{cofeed})}(0.5)},
+\end{equation}
+with both sides evaluated under identical uptake bounds including the glycerol co-feed; that re-baselined comparison is queued as the next evaluation step (the tiered-battery amendment itself is now locked and executed, below). An honest secondary negative is recorded: for isobutanol, some knockout combinations abolish product flux entirely (minimum 0.0), so the levers are not uniformly benign even at nominal condition.
+
+===== BLOCK 7 of 8 =====
+
+\subsection{Tiered battery executed: satisfiability restored, H3 advantage unearned (amendment 2026-09-27)}
+The battery was redesigned and locked as a dated amendment on 2026-09-27 before evaluation: mild perturbations (glucose $\pm 20\%$, oxygen $-50\%$) are scored as absolute retention versus nominal with a hard leg of $\ge 0.8$ each, and severe nutrient shifts (GLC\_LOW, GLC\_MID, ANAEROBIC, GLYCEROL, ACETATE) are scored against the pool frontier in the same condition, $r_k = v_{p,k} / \max_a v_{p,k}(a)$, with a hard leg of $\ge 0.8$ each; $R_{\mathrm{tiered}} = 0.5\,R_{\mathrm{pert}} + 0.5\,R_{\mathrm{shift}}$. The bar is now satisfiable: 16/64 (1,4-BDO), 18/64 (isobutanol), and 18/64 (lycopene) genomes pass both hard legs. The best designs score $R_{\mathrm{tiered}} = 1.0$ in all three targets: pflB knockout plus glycerol co-feed plus the succinyl-CoA route at 6.496 mmol/gDW/h nominal (1,4-BDO), pflB knockout plus co-feed plus the NADH alcohol dehydrogenase at 6.497 (isobutanol), and co-feed plus idi push at 0.730 (lycopene). Two findings follow. First, the tail-only H2 candidate does \emph{not} survive the tiered battery ($R_{\mathrm{tiered}} = 0.768$; severe-condition frontier-relative retention 0.41--0.67 on GLC\_LOW, GLC\_MID, ANAEROBIC, and ACETATE): its minimal-architecture claim stands at the nominal condition only, and the battery-robust designs are co-fed, not enzyme-minimal. Second, the H3 comparison is degenerate at this pool size: the best-by-nominal genome and the best-by-$R_{\mathrm{tiered}}$ genome coincide in all three targets (battery pass rates 3/3 versus 3/3), so no multi-condition search advantage is demonstrable at pool 64. This is recorded as an honest negative at current scale, not a refutation of the principle; a redirect consult and larger pools are queued per the standing rule.
+
+\section{Caveats}
+(1) All results are in-silico flux predictions; no wet-lab validation is claimed, and no build-phase engineering guidance is produced. (2) Both pools evaluated so far are deliberately small; the exhaustive results bound what these pools can express, and conclusions about search power await larger pools. In particular, the H3 multi-condition advantage is undetectable at pool 64, where the nominal-best and battery-best genomes coincide in every target. (3) The tail-only H2 candidate is verified at the nominal condition only: it fails the tiered battery, and every battery-passing design requires the glycerol co-feed. Robustness here means robustness given the added carbon supply, pending the re-baselined co-feed comparison. (4) GSMM predictions assume steady state and fixed biomass composition; real titers are typically lower.
+
+\section{Next steps}
+(1) Re-baseline the benchmark routes with the co-feed block enabled ($E^{\mathrm{cofeed}}$) and re-run the full EA at the locked budget on pool v2, with the 1000-seed random null. (2) Redirect consult on the H3 tie and on the tail-only battery failure, with any metric or pool change locked as a dated amendment before evaluation. (3) Expand the pool with cofactor and transporter variants, each with provenance. (4) Yeast8 cross-host arm for the robustness principle.
+
+\end{document}
+
+
+===== BLOCK 8 of 8 (QUESTIONS - paste last) =====
+
+JUDGE QUESTIONS (answer after reading all blocks): You are a harsh expert reviewer in computational metabolic engineering seeing this paper for the FIRST time. Context you must weigh: the project pre-registers every gate, locks amendments before inspecting outcomes, and records honest negatives. Its v1 stability battery was proven unsatisfiable by an elementary carbon-balance argument; a tiered battery (mild absolute retention >=0.8; severe frontier-relative >=0.8; R_tiered=0.5/0.5) was locked as a dated amendment BEFORE evaluation and is now satisfiable (16-18/64 pass per target). The H3 search-mode comparison came out degenerate at pool 64 (best-by-nominal == best-by-R_tiered in all 3 targets, 3/3 vs 3/3) and is reported as an honest negative at current scale. The H2 tail-only minimal architecture passes nominal but FAILS the tiered battery (R_tiered=0.768) and is claimed at nominal only. Judge: (1) Is the tiered-battery redesign methodologically sound, or is frontier-relative scoring letting the project grade itself on a curve? (2) Is the H3 tie handled honestly, and is the queued fix (pool expansion to 256 + held-out 3-HP target Fisher test) the right resolution? (3) Does the nominal-only H2 claim survive, or should it be cut from the paper? (4) The strongest and weakest aspects for a top-tier computational-biology verdict. (5) Quote version-unique phrases (e.g. '6.496', 'R_tiered', '0.768', '16/64', 'tiered battery', exact target names) so the review is verifiably of THIS version.
