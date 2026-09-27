@@ -1,0 +1,1133 @@
+{
+ "amendment": "2026-09-27 10:04 IST 3B (locked pre-construction)",
+ "target": "3-hydroxypropionate",
+ "route": "MCR1+MCR2 heterologous, transport + EX_3hp_e",
+ "pool": "6 host levers, 64 genomes, exhaustive",
+ "nominal_max": 10.910943396246097,
+ "frontier_severe": {
+  "GLC_LOW": 3.6855,
+  "GLC_MID": 6.3892,
+  "ANAEROBIC": 4.2793,
+  "GLYCEROL": 5.0715,
+  "ACETATE": 4.3597
+ },
+ "n_pass": 6,
+ "motif_M": "cofeed_glycerol AND ko_pflB",
+ "fisher_table": {
+  "pass_with_M": 0,
+  "pass_without_M": 6,
+  "fail_with_M": 16,
+  "fail_without_M": 42
+ },
+ "fisher_one_tailed_p": 1.0,
+ "odds_ratio": 0.0,
+ "WIN_3B": false,
+ "falsification_rule": "p>=0.05 OR zero passers -> falsified, no loosening",
+ "best_by_R_tiered": {
+  "genome": {
+   "ko_ackApta": false,
+   "ko_pflB": false,
+   "ko_ldhA": false,
+   "cofeed_glycerol": true,
+   "ko_adhE": false,
+   "ko_tpiA": false
+  },
+  "nominal": 10.9109,
+  "R_pert": 1.0,
+  "R_shift": 1.0,
+  "R_tiered": 1.0,
+  "mild_leg_pass": true,
+  "severe_leg_pass": true,
+  "battery_pass": true
+ },
+ "all_scored": [
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.673,
+   "R_tiered": 0.8365,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6796,
+   "R_pert": 1.0,
+   "R_shift": 0.6118,
+   "R_tiered": 0.8059,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6553,
+   "R_tiered": 0.8277,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6796,
+   "R_pert": 1.0,
+   "R_shift": 0.5859,
+   "R_tiered": 0.7929,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 1.0,
+   "R_tiered": 1.0,
+   "mild_leg_pass": true,
+   "severe_leg_pass": true,
+   "battery_pass": true
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6749,
+   "R_pert": 1.0,
+   "R_shift": 0.8752,
+   "R_tiered": 0.9376,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.9676,
+   "R_tiered": 0.9838,
+   "mild_leg_pass": true,
+   "severe_leg_pass": true,
+   "battery_pass": true
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6749,
+   "R_pert": 1.0,
+   "R_shift": 0.8596,
+   "R_tiered": 0.9298,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.673,
+   "R_tiered": 0.8365,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6796,
+   "R_pert": 1.0,
+   "R_shift": 0.6118,
+   "R_tiered": 0.8059,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6553,
+   "R_tiered": 0.8277,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6796,
+   "R_pert": 1.0,
+   "R_shift": 0.5859,
+   "R_tiered": 0.7929,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 1.0,
+   "R_tiered": 1.0,
+   "mild_leg_pass": true,
+   "severe_leg_pass": true,
+   "battery_pass": true
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6749,
+   "R_pert": 1.0,
+   "R_shift": 0.8752,
+   "R_tiered": 0.9376,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.9676,
+   "R_tiered": 0.9838,
+   "mild_leg_pass": true,
+   "severe_leg_pass": true,
+   "battery_pass": true
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6749,
+   "R_pert": 1.0,
+   "R_shift": 0.8596,
+   "R_tiered": 0.9298,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6305,
+   "R_tiered": 0.8153,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6796,
+   "R_pert": 1.0,
+   "R_shift": 0.5433,
+   "R_tiered": 0.7716,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6056,
+   "R_tiered": 0.8028,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6796,
+   "R_pert": 1.0,
+   "R_shift": 0.5307,
+   "R_tiered": 0.7653,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.9473,
+   "R_tiered": 0.9736,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6749,
+   "R_pert": 1.0,
+   "R_shift": 0.8066,
+   "R_tiered": 0.9033,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.927,
+   "R_tiered": 0.9635,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6749,
+   "R_pert": 1.0,
+   "R_shift": 0.7959,
+   "R_tiered": 0.898,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6305,
+   "R_tiered": 0.8153,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6796,
+   "R_pert": 1.0,
+   "R_shift": 0.5433,
+   "R_tiered": 0.7716,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6056,
+   "R_tiered": 0.8028,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6796,
+   "R_pert": 1.0,
+   "R_shift": 0.5307,
+   "R_tiered": 0.7653,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.9473,
+   "R_tiered": 0.9736,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6749,
+   "R_pert": 1.0,
+   "R_shift": 0.8066,
+   "R_tiered": 0.9033,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.927,
+   "R_tiered": 0.9635,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": false,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6749,
+   "R_pert": 1.0,
+   "R_shift": 0.7959,
+   "R_tiered": 0.898,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6205,
+   "R_tiered": 0.8103,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6797,
+   "R_pert": 1.0,
+   "R_shift": 0.526,
+   "R_tiered": 0.763,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6035,
+   "R_tiered": 0.8017,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6797,
+   "R_pert": 1.0,
+   "R_shift": 0.502,
+   "R_tiered": 0.751,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.9519,
+   "R_tiered": 0.976,
+   "mild_leg_pass": true,
+   "severe_leg_pass": true,
+   "battery_pass": true
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6751,
+   "R_pert": 1.0,
+   "R_shift": 0.7885,
+   "R_tiered": 0.8942,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.9316,
+   "R_tiered": 0.9658,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6751,
+   "R_pert": 1.0,
+   "R_shift": 0.7645,
+   "R_tiered": 0.8823,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6205,
+   "R_tiered": 0.8103,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6797,
+   "R_pert": 1.0,
+   "R_shift": 0.526,
+   "R_tiered": 0.763,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6035,
+   "R_tiered": 0.8017,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6797,
+   "R_pert": 1.0,
+   "R_shift": 0.502,
+   "R_tiered": 0.751,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.9519,
+   "R_tiered": 0.976,
+   "mild_leg_pass": true,
+   "severe_leg_pass": true,
+   "battery_pass": true
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6751,
+   "R_pert": 1.0,
+   "R_shift": 0.7885,
+   "R_tiered": 0.8942,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.9316,
+   "R_tiered": 0.9658,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": false,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6751,
+   "R_pert": 1.0,
+   "R_shift": 0.7645,
+   "R_tiered": 0.8823,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6133,
+   "R_tiered": 0.8066,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6797,
+   "R_pert": 1.0,
+   "R_shift": 0.526,
+   "R_tiered": 0.763,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.5697,
+   "R_tiered": 0.7849,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6797,
+   "R_pert": 1.0,
+   "R_shift": 0.4841,
+   "R_tiered": 0.742,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.9302,
+   "R_tiered": 0.9651,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6751,
+   "R_pert": 1.0,
+   "R_shift": 0.7885,
+   "R_tiered": 0.8942,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.8924,
+   "R_tiered": 0.9462,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": false,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6751,
+   "R_pert": 1.0,
+   "R_shift": 0.7466,
+   "R_tiered": 0.8733,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.6133,
+   "R_tiered": 0.8066,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6797,
+   "R_pert": 1.0,
+   "R_shift": 0.526,
+   "R_tiered": 0.763,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 8.7977,
+   "R_pert": 1.0,
+   "R_shift": 0.5697,
+   "R_tiered": 0.7849,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": false,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 8.6797,
+   "R_pert": 1.0,
+   "R_shift": 0.4841,
+   "R_tiered": 0.742,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.9302,
+   "R_tiered": 0.9651,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": false,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6751,
+   "R_pert": 1.0,
+   "R_shift": 0.7885,
+   "R_tiered": 0.8942,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": false
+   },
+   "nominal": 10.9109,
+   "R_pert": 1.0,
+   "R_shift": 0.8924,
+   "R_tiered": 0.9462,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "genome": {
+    "ko_ackApta": true,
+    "ko_pflB": true,
+    "ko_ldhA": true,
+    "cofeed_glycerol": true,
+    "ko_adhE": true,
+    "ko_tpiA": true
+   },
+   "nominal": 10.6751,
+   "R_pert": 1.0,
+   "R_shift": 0.7466,
+   "R_tiered": 0.8733,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  }
+ ]
+}
