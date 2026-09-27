@@ -59,3 +59,16 @@ The primary claim is non-obvious architecture discovery (H2), not prediction acc
 - Random-architecture null and single-condition ablation per the main pre-registration.
 
 # PROCESS NOTE (not a gate change): ChatGPT judge rounds resumed per user WhatsApp 2026-09-26 16:11 IST; minimum 10 rounds/project with the novelty-producing-round rule of 17:00 IST applies. The 13:52 freeze line above is historical.
+
+## AMENDMENT 2026-09-27 09:01 IST (battery metric redesign - judge verdict foldback, locked BEFORE battery re-evaluation)
+Source: battery-metric redirect consult (Gemini supplementary surface, thread https://gemini.google.com/app/dcfb44d8d7350891; verdict archived judge/round1_battery_redirect_verdict_gemini.txt). Replaces the absolute-retention battery rule (min over 9 conditions of condition/nominal >= 0.8), which is physically unsatisfiable on severe shifts (substrate-limited max yield drops), so the battery gave no selection gradient and H3 was untestable.
+
+CONDITION CLASSIFICATION (locked; verdict examples + mechanical fill recorded): nominal = GLC_AEROBIC (denominator only). MILD perturbations = {GLC_PERT_MINUS20, GLC_PERT_PLUS20, O2_PERT_MINUS50} (verdict's "glucose +/-20%, O2 -50%" examples verbatim). SEVERE regime shifts = {GLC_LOW, GLC_MID, ANAEROBIC, GLYCEROL, ACETATE} (verdict names GLC_LOW/ANAEROBIC/GLYCEROL/ACETATE; GLC_MID filled into severe as a carbon-input regime change beyond the mild +/-20% band - fill recorded here).
+
+TIERED METRIC (exact, locked):
+- Mild leg: retention_k = v_p,k / v_p,nominal per mild condition k, with v_p at the condition-specific 50%-max-growth constraint (existing battery rule). Hard pass leg: retention_k >= 0.8 for EVERY mild k. R_pert = mean over mild retention_k.
+- Severe leg: condition-relative retention r_k = v_p,k(mu_k) / v_p,k^max(mu_k), mu_k = 50% of the condition-specific FBA max growth; v_p,k^max = max over the 64 pool-v2 genomes of the SAME target under condition k (frontier-relative reading of the verdict's "maximum achievable in that condition"; fill recorded). Hard pass leg: r_k >= 0.8 for EVERY severe k. R_shift = mean over severe r_k.
+- R_tiered = 0.5*R_pert + 0.5*R_shift (weights filled 50/50; verdict gave none - fill recorded).
+- BATTERY PASS = both hard legs. H3's locked battery-fitness/pass uses this metric; its two-proportion test (alpha 0.05) is unchanged. Locked fallback: if both search modes pass at rate 0 (degenerate two-proportion), H3 compares mean R_tiered between selection modes by Mann-Whitney at alpha 0.05.
+
+FALSIFICATION BRANCH: if zero of the 192 pool-v2 architectures pass both hard legs, report the pass rate and the R_tiered ranking as the outcome; do NOT loosen thresholds post hoc. The verdict's pool-expansion levers (adhE knockout; cofactor pntAB/sthA + NAD/NADP-variant dehydrogenases; anaplerotic ppc/pck/maeB) are staged as pool v3 under their own amendment if the gradient is still insufficient.
