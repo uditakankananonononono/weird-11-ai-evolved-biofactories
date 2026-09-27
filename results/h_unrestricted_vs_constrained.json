@@ -1,0 +1,65 @@
+{
+ "amendment": "2026-09-27 12:38 IST #18 unrestricted vs constrained",
+ "results": {
+  "14BDO": {
+   "unrestricted_best": {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "ko_adhE": false,
+     "ko_tpiA": false,
+     "routeA_kgd": false,
+     "routeB_sucd": false
+    },
+    "unrestricted_flux": 7.7499,
+    "implied_growth": 0.4385
+   },
+   "zero_growth_in_top10": 0,
+   "unrestricted_best_worst_severe": 0.4616,
+   "realism_gain_ratio": 0.8382,
+   "constrained_best_nominal": 6.4956
+  },
+  "ISOBUTANOL": {
+   "unrestricted_best": {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "ko_adhE": false,
+     "ko_tpiA": false,
+     "adh_nadh": true,
+     "adh_nadph": false
+    },
+    "unrestricted_flux": 7.756,
+    "implied_growth": 0.4385
+   },
+   "zero_growth_in_top10": 0,
+   "unrestricted_best_worst_severe": 0.9147,
+   "realism_gain_ratio": 0.8377,
+   "constrained_best_nominal": 6.4975
+  },
+  "LYCOPENE": {
+   "unrestricted_best": {
+    "genome": {
+     "ko_ackApta": false,
+     "ko_pflB": false,
+     "ko_ldhA": false,
+     "cofeed_glycerol": true,
+     "ko_adhE": false,
+     "ko_tpiA": false,
+     "dxs_push": false,
+     "idi_push": false
+    },
+    "unrestricted_flux": 0.7221,
+    "implied_growth": 0.4385
+   },
+   "zero_growth_in_top10": 0,
+   "unrestricted_best_worst_severe": 0.6178,
+   "realism_gain_ratio": 1.0107,
+   "constrained_best_nominal": 0.7298
+  }
+ }
+}
