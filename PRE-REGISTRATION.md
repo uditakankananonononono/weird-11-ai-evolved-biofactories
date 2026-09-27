@@ -72,3 +72,25 @@ TIERED METRIC (exact, locked):
 - BATTERY PASS = both hard legs. H3's locked battery-fitness/pass uses this metric; its two-proportion test (alpha 0.05) is unchanged. Locked fallback: if both search modes pass at rate 0 (degenerate two-proportion), H3 compares mean R_tiered between selection modes by Mann-Whitney at alpha 0.05.
 
 FALSIFICATION BRANCH: if zero of the 192 pool-v2 architectures pass both hard legs, report the pass rate and the R_tiered ranking as the outcome; do NOT loosen thresholds post hoc. The verdict's pool-expansion levers (adhE knockout; cofactor pntAB/sthA + NAD/NADP-variant dehydrogenases; anaplerotic ppc/pck/maeB) are staged as pool v3 under their own amendment if the gradient is still insufficient.
+
+# PROCESS NOTE (supersedes): the "minimum 10 ChatGPT judge rounds" process line above is RETIRED per user WhatsApp 2026-09-27 10:00:07 ("NOT 10 ROUNDS OF CHATGPT CHECK JUST ONE WHICH I PROVIDE OK?") and settled 10:01:47 ("EACH PROJECTS NEED ONE FROM ME TO PASS"). Counted judge gate = ONE verdict she personally provides via courier. Agent-initiated rounds preserved as history, never counted. Historical text kept intact.
+
+## AMENDMENT 2026-09-27 10:04 IST (H3 resolution 3A/3B + H2 redirect RMA + E^cofeed lock; judge verdict foldback from round_supp1, thread https://gemini.google.com/app/031d790b7ab04c00, verdict judge/round_supp1_h3_redirect_verdict_gemini.txt; locked BEFORE any pool-v3 computation, 3-HP model construction, RMA scoring, or E^cofeed evaluation)
+
+3A POOL V3 EXPANSION (H3 rank-resolution): two new binary host levers - ko_adhE (reaction ALCD2x bounds (0,0); ethanol-overflow knockout) and ko_tpiA (reaction TPI bounds (0,0); triose-phosphate isomerase knockout). Judge suggested adhE among others and phosphate-transport blocks; PIt2r/PIt7 do not exist in iML1515 (verified) - ko_tpiA substituted as the second lever and the substitution is recorded here. Pool v3 = 8 binary levers (6 host: ko_ackApta, ko_pflB, ko_ldhA, cofeed_glycerol, ko_adhE, ko_tpiA; + 2 target-specific) = 256 genomes/target, exhaustive enumeration. Same model, conditions, tiered battery metric (09:01 lock), seed 260927.
+- NULL H0,3A: at N=256, argmax(v_nominal) == argmax(R_tiered) in ALL three targets.
+- WIN 3A: H0,3A rejected if in >=2 of 3 targets argmax(R_tiered) != argmax(v_nominal) AND R_tiered(argmax R_tiered) - R_tiered(argmax v_nominal) >= 0.10.
+- FALSIFICATION: 0 or 1 targets diverge -> H3 search-advantage reported not earned at N=256; no post-hoc re-pooling or threshold changes.
+
+3B HELD-OUT TARGET 3-HP (design-principle generalization): new target 3-hydroxypropionate via heterologous malonyl-CoA reductase route - MCR1 (malonyl-CoA + NADPH -> malonate semialdehyde + CoA + NADP+ + H+) and MCR2 (malonate semialdehyde + NADPH + H+ -> 3-hydroxypropionate + NADP+), plus transport + EX_3hp_e; constructed in the same iML1515 base, same 50%-max-growth battery rule. 3-HP pool = the 6 host levers only (64 genomes, no target-specific levers). Tiered battery identical; severe-leg frontier computed WITHIN the 3-HP pool.
+- MOTIF M = {cofeed_glycerol ON, ko_pflB ON} (the shared architecture of the three primary targets' battery winners).
+- NULL H0,3B: proportion of battery-passing 3-HP designs carrying M <= proportion among failing designs.
+- WIN 3B: one-tailed Fisher exact test p < 0.05 for M enrichment among battery-passers.
+- FALSIFICATION: p >= 0.05 OR zero passers (report pass count; no loosening).
+
+H2-RMA (Robust Minimal Architecture): K_het = count of heterologous (non-native E. coli) pathway reactions ACTIVE in the design; host knockouts and uptake-bound changes (co-feed) are not enzymes and do not count. Published anchor K_het,Yim = 5 (kgd + 4hbD + CoA-transferase + aldehyde dehydrogenase + alcohol dehydrogenase per the locked data/benchmarks.json reaction list).
+- NULL H0,H2: min K_het among battery-passing pool-v3 14BDO designs >= 5.
+- WIN H2-RMA: exists a pool-v3 14BDO design with battery PASS (both hard legs), K_het <= 4, and nominal flux >= 0.90 x published-route nominal under identical bounds.
+- FALSIFICATION: no such design; the tail-only nominal-only result stands as already reported.
+
+E^COFEED + RANDOM NULL (descriptive, no gate): E_a^cofeed = F_a^cofeed(0.5)/F_benchmark^cofeed(0.5) computed for each target's best pool-v2 genome vs its locked benchmark route, BOTH with the cofeed_glycerol block enabled under identical bounds; reported descriptively. Random-architecture null: 1000 uniform-random pool-v2 genomes (seed 260927), compare best-of-random nominal + R_tiered against the exhaustive best; reported descriptively. Neither is a win/fail gate.
