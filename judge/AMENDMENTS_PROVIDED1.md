@@ -15,7 +15,7 @@ Source: judge/round_provided1_verdict_whatsapp.txt (her 10:27:30 paste, wamid...
 | 10 | Only three products | Add 4th chemical class (amino acid / organic acid / pharma precursor) | QUEUED |
 | 11 | No cross-organism generalization | Test principle transfer on E. coli + yeast models | QUEUED |
 | 12 | Overfit targets | Hold-out target: search on 2 products, test principles on 3rd | QUEUED |
-| 13 | No random-search significance | 100 random searches: best fitness, robustness, diversity | PARTIAL - random null done at pool 64 (trivial); extend to 100 runs at pool v3 |
+| 13 | No random-search significance | 100 random searches: best fitness, robustness, diversity | LANDED (D2, results/amendment_d2_randomnull.json: random subsets hit passers at rate 0.69-1.0 at B=12, ~1.0 at B>=48; space easy at pool v3 - search-triviality disclosed) |
 | 14 | Runtime not evaluated | Report CPU hours, generations, population size, convergence curves | PARTIAL+ - D1-b: all 15 runs converged before final 10 gens; CPU-hour logging gap recorded + mandated |
 | 15 | No uncertainty estimation | Monte Carlo FBA / ensemble / parameter sampling | QUEUED |
 | 16 | "AI" overstated | Define representation, search policy, objective, learning component; remove vague AI language | QUEUED (paper text pass) |

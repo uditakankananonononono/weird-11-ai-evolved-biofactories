@@ -1,0 +1,91 @@
+{
+ "amendment": "2026-09-27 10:32 IST D2 random-search null pool v3",
+ "seed": 260927,
+ "budgets": [
+  12,
+  24,
+  48,
+  96
+ ],
+ "n_subsets": 100,
+ "per_target": {
+  "14BDO": {
+   "n_pass": 32,
+   "pool_optimum_R": 0.9938,
+   "budgets": {
+    "12": {
+     "hit_rate_pass": 0.85,
+     "median_bestR_ratio": 0.9944,
+     "min_bestR_ratio": 0.907
+    },
+    "24": {
+     "hit_rate_pass": 0.98,
+     "median_bestR_ratio": 1.0,
+     "min_bestR_ratio": 0.9361
+    },
+    "48": {
+     "hit_rate_pass": 1.0,
+     "median_bestR_ratio": 1.0,
+     "min_bestR_ratio": 0.9798
+    },
+    "96": {
+     "hit_rate_pass": 1.0,
+     "median_bestR_ratio": 1.0,
+     "min_bestR_ratio": 0.9944
+    }
+   }
+  },
+  "ISOBUTANOL": {
+   "n_pass": 60,
+   "pool_optimum_R": 0.9997,
+   "budgets": {
+    "12": {
+     "hit_rate_pass": 0.95,
+     "median_bestR_ratio": 0.9918,
+     "min_bestR_ratio": 0.8397
+    },
+    "24": {
+     "hit_rate_pass": 0.99,
+     "median_bestR_ratio": 0.999,
+     "min_bestR_ratio": 0.9653
+    },
+    "48": {
+     "hit_rate_pass": 1.0,
+     "median_bestR_ratio": 1.0,
+     "min_bestR_ratio": 0.9904
+    },
+    "96": {
+     "hit_rate_pass": 1.0,
+     "median_bestR_ratio": 1.0,
+     "min_bestR_ratio": 0.999
+    }
+   }
+  },
+  "LYCOPENE": {
+   "n_pass": 22,
+   "pool_optimum_R": 1.0,
+   "budgets": {
+    "12": {
+     "hit_rate_pass": 0.69,
+     "median_bestR_ratio": 0.9845,
+     "min_bestR_ratio": 0.8728
+    },
+    "24": {
+     "hit_rate_pass": 0.86,
+     "median_bestR_ratio": 0.9906,
+     "min_bestR_ratio": 0.8785
+    },
+    "48": {
+     "hit_rate_pass": 0.98,
+     "median_bestR_ratio": 1.0,
+     "min_bestR_ratio": 0.9717
+    },
+    "96": {
+     "hit_rate_pass": 1.0,
+     "median_bestR_ratio": 1.0,
+     "min_bestR_ratio": 0.9854
+    }
+   }
+  }
+ }
+}
