@@ -1,0 +1,30 @@
+{
+ "amendment": "2026-09-27 10:04 IST (descriptive, no gate)",
+ "seed": 260927,
+ "results": {
+  "14BDO": {
+   "best_poolv2_nominal_cofeed": 6.4956,
+   "benchmark_route_nominal_cofeed": 6.4956,
+   "E_cofeed": 1.0,
+   "random_null_best_nominal_1000": 6.4956,
+   "exhaustive_best_nominal": 6.4956,
+   "exhaustive_ge_random": false
+  },
+  "ISOBUTANOL": {
+   "best_poolv2_nominal_cofeed": 6.4975,
+   "benchmark_route_nominal_cofeed": 6.4975,
+   "E_cofeed": 1.0,
+   "random_null_best_nominal_1000": 6.4975,
+   "exhaustive_best_nominal": 6.4975,
+   "exhaustive_ge_random": false
+  },
+  "LYCOPENE": {
+   "best_poolv2_nominal_cofeed": 0.7298,
+   "benchmark_route_nominal_cofeed": 0.7298,
+   "E_cofeed": 1.0,
+   "random_null_best_nominal_1000": 0.7298,
+   "exhaustive_best_nominal": 0.7298,
+   "exhaustive_ge_random": false
+  }
+ }
+}
