@@ -25,3 +25,20 @@ Source: judge/round_provided1_verdict_whatsapp.txt (her 10:27:30 paste, wamid...
 | 20 | Reproducibility package | Release bundle: model files, seeds, reaction libraries, benchmark definitions, generated architectures | PARTIAL - repo structured; formal bundle queued |
 
 Execution order (next heartbeats): cheap analyses first (#2, #13-ext, #14, #5), then filters/ablation (#6, #8, #18), then new compute (#1, #4, #10-12, #15), paper passes (#16, #19, #3, #9, #17, #20). Each compute item gets its own pre-registered amendment before evaluation.
+
+## PROVIDED CRITIQUE #2 MERGE (locked 2026-09-27 10:32 IST, pre-execution)
+Source: judge/round_provided2_verdict_whatsapp.txt (10:31:07, wamid...MUMzRQA=). 18 weaknesses deduped against round 1: 9 merge into existing items, 9 NEW below. Gate stays MET 1 of 1 provided; these extend the same queue.
+
+Merged (no new item): R2#3->#7 (+convergence speed/cost metrics), R2#4->#4 (+reaction-bound and biomass-equation perturbations), R2#5->#13 (+shuffled-fitness null), R2#8->#5 (+justify the 8 battery conditions), R2#9->#9, R2#11->#10, R2#13->#8 (+no-adaptive-mutation arm), R2#14->#2 (+exploration efficiency), R2#16->#15.
+
+| # | Weakness (R2) | Planned change | Status |
+|---|---------------|----------------|--------|
+| 21 | "AI" overstated, option B | Add a learning component: RL search policy OR GNN/surrogate model OR learned mutation prioritization (option A reframe already covered by #16/#19) | QUEUED |
+| 22 | Novel search operators | Topology-aware mutations, enzyme-cost-aware evolution, thermodynamics-guided evolution, adaptive mutation rates (extends #1) | QUEUED |
+| 23 | Statistical confidence | 50-100 independent seeds: mean, variance, CIs, convergence curves (extends #14) | QUEUED |
+| 24 | Objectives incomplete | Multi-objective optimization: enzyme burden, ATP cost, toxicity, redox balance, genetic stability (extends #6) | QUEUED |
+| 25 | No comparison with known engineered strains | Benchmark vs published engineered strains/designs: predicted yield, pathway complexity, robustness | QUEUED |
+| 26 | Host generalization beyond E. coli/yeast | Add cyanobacteria / Corynebacterium / another microbial chassis (extends #11) | QUEUED |
+| 27 | Premature convergence | Population-diversity tracking + multi-run convergence analysis (extends #14) | QUEUED |
+| 28 | No interpretability framework | Design explanation report per architecture: pathway diagram, flux changes, rationale, predicted bottlenecks (extends #9) | QUEUED |
+| 29 | Novelty not quantified | Novelty score: reaction edit distance, pathway topology distance, KEGG similarity, literature overlap | QUEUED |
