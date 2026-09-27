@@ -135,4 +135,7 @@ The remaining live test of the robustness principle was run under its 10:04 IST 
 \subsection{FBA-assumption sensitivity (queue \#4)}
 The three battery winners were re-evaluated on a locked 12-cell grid (biomass fraction $\{0.4,0.5,0.6\}\times$ glycerol uptake $\{-2,-4\}\times$ glucose base $\{-8,-10\}$), surviving 6/12 (1,4-BDO), 8/12 (isobutanol), and 10/12 (lycopene) cells. The mild leg never fails (minimum mild retention 1.0 in all 36 cells); all failures sit in the stacked worst case (forced growth 0.6 with throttled feeds) on the severe leg. Robustness therefore holds under single-parameter perturbation and degrades gracefully, with the lycopene design most assumption-stable.
 
+\subsection{Monte Carlo FBA uncertainty (queue \#15)}
+Under the 13:35 IST lock, each winner was re-evaluated over 200 draws with every battery uptake bound independently jittered by $U(0.8,1.2)$ (seed 260927). Battery-pass fractions: 1,4-BDO $92.5\%$ (mean $R_{\mathrm{tiered}}=0.993$, 5--95\% $[0.949,1.043]$), isobutanol $98.0\%$ ($0.999$, $[0.955,1.049]$), lycopene $100\%$ ($0.999$, $[0.965,1.037]$). Winner robustness is not a knife-edge property of the locked bounds; the 7.5\% 1,4-BDO failure tail is reported as the sensitivity mass below the pass bar.
+
 \end{document}
