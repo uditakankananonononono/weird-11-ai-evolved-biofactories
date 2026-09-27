@@ -1,0 +1,21 @@
+{
+ "nominal": 5.2672,
+ "mild": {
+  "GLC_PERT_MINUS20": 0.7939,
+  "GLC_PERT_PLUS20": 1.2061,
+  "O2_PERT_MINUS50": 1.0
+ },
+ "severe_rel": {
+  "GLC_LOW": 0.427,
+  "GLC_MID": 0.6745,
+  "ANAEROBIC": 0.4139,
+  "GLYCEROL": 1.0,
+  "ACETATE": 0.5075
+ },
+ "R_pert": 0.9313,
+ "R_shift": 0.6046,
+ "R_tiered": 0.7679,
+ "mild_pass": false,
+ "severe_pass": false,
+ "battery_pass": false
+}
