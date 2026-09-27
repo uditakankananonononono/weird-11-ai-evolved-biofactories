@@ -2,7 +2,7 @@
 
 - Build: `cd paper && pdflatex -interaction=nonstopmode -halt-on-error main.tex` twice. Compiled and visually inspected on 2026-09-27.
 - Source base: committed main tip `4f7cc5e2dd5064fc6b970c81149ad5e859389e8d`; working branch `paper-build` is not merged into main.
-- Current PDF: 17 pages, A4, 12-point text. This draft is incomplete and does not reach the 50-page submission floor.
+- Current PDF: 18 pages, A4, 12-point text. This draft is incomplete and does not reach the 50-page submission floor.
 - Font substitution: `mathptmx` supplies Times-compatible text and math. Genuine licensed Times New Roman is not installed here, so this PDF must not be described as Times New Roman. Replace or rebuild on a system with the licensed font if that exact face is mandatory.
 - The top rule is a design aid, not a science result. The data appendix is traceable to committed result paths named in the manuscript. Negative results and [PENDING] gates have not been softened.
 
@@ -23,3 +23,4 @@
 - Equal-feed comparator retracts the earlier nominal-flux architectural exceedance: matched-feed E=1.00 for all three targets. Pool-v3 H3 and H2-RMA negatives are preserved.
 
 - No author byline or PDF Author metadata is present in this manuscript.
+- The added pool-v3 complete-row audit uses committed `results/battery_tiered_v3.json`: all 768 rows are stored; 114 battery passers require co-feed within this pool, but co-feed is not sufficient, and the co-feed-plus-pflB motif is not universal. The held-out 3-HP test remains pending.
