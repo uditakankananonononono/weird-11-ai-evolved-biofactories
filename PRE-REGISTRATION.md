@@ -126,3 +126,6 @@ DOCUMENTATION-ONLY: add a locked definitions subsection: representation, search 
 
 ## AMENDMENT 2026-09-27 13:23 IST (provided-verdict queue #9 extension: per-architecture rationale - documentation-only, locked BEFORE drafting)
 DOCUMENTATION-ONLY: per-architecture rationale subsection for the three committed battery-winning genomes (results/battery_tiered_v3.json, best_by_R_tiered per target). Every rationale traces the genome's blocks to its committed retention/flux numbers; interpretation stays at the level of the block definitions (knockout = removed overflow route; co-feed = added carbon supply; route/adi choices = committed alternative blocks). No new compute; no mechanistic claim beyond what the block definitions and committed numbers support.
+
+## ERRATUM 2026-09-27 13:24 IST
+The per-architecture rationale subsection as first committed (03b5707) stated "no single-lever genome passes both hard legs". Verification against committed results/battery_tiered_v3.json found 2+2+3 co-feed-only passers. The claim was wrong and has been corrected in-paper to the verified statement: every passer carries the glycerol co-feed (32/32, 60/60, 22/22); knockouts are optional refinements. Cause: an over-strict ad-hoc filter checked before commit; the corrected text was verified against the committed JSON before re-commit.
