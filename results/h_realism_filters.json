@@ -1,0 +1,512 @@
+{
+ "amendment": "2026-09-27 12:32 IST #6 realism filters (F1, F3; F2 deferred w/ disclosure)",
+ "results": {
+  "14BDO": {
+   "benchmark_hetero": 5,
+   "top10_F1_survivors": 10,
+   "top10_F3_flags": 0,
+   "best_by_R_tiered_F1": true,
+   "best_by_nominal_F1": true,
+   "rows": [
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "hetero_count": 5,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "hetero_count": 6,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "hetero_count": 5,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "hetero_count": 6,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "hetero_count": 5,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "hetero_count": 6,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "hetero_count": 5,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "hetero_count": 6,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9882,
+     "hetero_count": 5,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9882,
+     "hetero_count": 6,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    }
+   ]
+  },
+  "ISOBUTANOL": {
+   "benchmark_hetero": 5,
+   "top10_F1_survivors": 10,
+   "top10_F3_flags": 0,
+   "best_by_R_tiered_F1": true,
+   "best_by_nominal_F1": true,
+   "rows": [
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9997,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9997,
+     "hetero_count": 4,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9997,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9997,
+     "hetero_count": 4,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9991,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9991,
+     "hetero_count": 4,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9991,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9991,
+     "hetero_count": 4,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9987,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9987,
+     "hetero_count": 4,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    }
+   ]
+  },
+  "LYCOPENE": {
+   "benchmark_hetero": 4,
+   "top10_F1_survivors": 10,
+   "top10_F3_flags": 0,
+   "best_by_R_tiered_F1": true,
+   "best_by_nominal_F1": true,
+   "rows": [
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 1.0,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 1.0,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 1.0,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 1.0,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 0.9906,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 0.9906,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 0.9906,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 0.9906,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 0.9854,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 0.9854,
+     "hetero_count": 3,
+     "F1_pass": true,
+     "F3_cofactor_fragile": false
+    }
+   ]
+  }
+ }
+}
