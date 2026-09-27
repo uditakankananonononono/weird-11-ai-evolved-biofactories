@@ -1,0 +1,239 @@
+# W11 supplementary judge round: H3-tie + tail-only redirect consult
+# model: Gemini - SUPPLEMENTARY ONLY, not counted (parent ruling 08:59)
+# thread: https://gemini.google.com/app/031d790b7ab04c00
+# captured 2026-09-27 ~09:21 IST
+
+An evaluation of options (a)–(d) reveals clear methodological trade-offs, leading to concrete, pre-registrable amendment templates for the viable paths.
+
+1. Methodological Evaluation of Options (a)–(d)
+Option (a): Enlarge Pool Size to N∈[256,1024]
+
+Status: VALID (Recommended Core Patch)
+
+Assessment: The degeneracy at pool size 64 (N=64) is a classic sample-size/resolution artifact: the top nominal candidate and top multi-condition candidate coincide because the pool has not sampled enough of the trade-off frontier. Expanding the pool exhaustively using deterministic combinatorial rules (e.g., adding defined KO combinations or transporter blocks) introduces zero post-hoc selection bias, provided the expansion rules are fully specified prior to execution.
+
+Option (b): Distributional Comparison (Mann-Whitney U on Top Deciles)
+
+Status: METHODOLOGICALLY BROKEN (Drop or Restructure)
+
+Assessment: Comparing the R
+tiered
+	​
+
+ distribution of top nominal-ranked genomes against top R
+tiered
+	​
+
+-ranked genomes creates severe overlap bias. Because both top deciles are drawn from the exact same pool of candidates, the two sets will share a large proportion of identical genomes (especially at high ranks), violating the independence assumption of the Mann-Whitney U test. Furthermore, testing top deciles introduces an arbitrary hyperparameter (10% threshold) post-evaluation.
+
+Correction: If a distributional test is desired, you must evaluate the correlation (e.g., Spearman’s ρ) between nominal rank and R
+tiered
+	​
+
+ rank across the entire pool, testing the null hypothesis that nominal performance is a perfect predictor of multi-condition robustness (ρ=1.0).
+
+Option (c): Reframe H3 as a Design-Principle Claim on a Held-Out Target
+
+Status: VALID (Strongest Pre-Registration Strategy)
+
+Assessment: This completely bypasses the degenerate rank-1 overlap issue by shifting from a search-algorithm comparison to an empirical biological hypothesis. Testing whether the identified structural motif (e.g., glycerol co-feed + formate-overflow KO requirement) holds for a 4th held-out target (e.g., 3-HP or itaconate) under the exact locked tiered battery provides an unconfounded, out-of-sample validation step.
+
+Option (d): Redirect H2 to Constrained Minimality
+
+Status: VALID (Saves H2 without Post-Hoc Distortion)
+
+Assessment: The original H2 claim ("enzyme-minimal at nominal") remains factually true for nominal conditions, but failed under stress. Reframing H2 as a constrained-optimization problem (min(enzymes) subject to R
+tiered
+	​
+
+≥0.80 in all legs) is methodologically sound. It explicitly acknowledges the nominal-vs-robustness trade-off and re-evaluates novelty within the satisfiable design space.
+
+2. Formal Pre-Registration Amendment Templates
+
+The following templates are structured for immediate inclusion in a dated amendment log prior to re-execution.
+
+Amendment 1: H3 Protocol Resolution (Combining Pool Expansion and Held-Out Target)
+Protocol Specification
+
+Pool Expansion (Sub-study 3A): The design search space is expanded from 64 to N=256 combinatorial variants per target by exhaustively incorporating the specified knockouts and transporter modifications:
+
+Native knockout options: ΔtpiA, ΔpfkA, Δpta, ΔadhE.
+
+Transport blocks: PitA/PitB inorganic phosphate transport blocks.
+
+Held-Out Target Validation (Sub-study 3B): The locked tiered battery (R
+tiered
+	​
+
+) will be applied to a 4th target, 3-hydroxypropionate (3-HP), constructed using the standard iML1515 base model at 50% maximal growth yield.
+
+Null Hypotheses (H
+0
+	​
+
+)
+
+H
+0,3A
+	​
+
+ (Rank Resolution): At pool size N=256, the design exhibiting the highest nominal flux (v
+nominal
+max
+	​
+
+) is identical to the design exhibiting the highest tiered battery score (R
+tiered
+max
+	​
+
+) across all three targets (1,4-BDO, isobutanol, lycopene).
+
+H
+0,3B
+	​
+
+ (Design Principle Generalization): In the held-out target (3-HP), the proportion of battery-passing designs (R
+tiered
+	​
+
+≥0.80) containing the paired motif (glycerol co-feed+ΔpflB/ΔfocA) is less than or equal to the proportion among failing designs (p
+pass
+	​
+
+≤p
+fail
+	​
+
+).
+
+Win Conditions
+
+Win Condition 3A: H
+0,3A
+	​
+
+ is rejected if, in ≥2 out of 3 primary targets, Argmax(R
+tiered
+	​
+
+)
+
+=Argmax(v
+nominal
+	​
+
+) AND R
+tiered
+	​
+
+(Argmax(R
+tiered
+	​
+
+))−R
+tiered
+	​
+
+(Argmax(v
+nominal
+	​
+
+))≥0.10.
+
+Win Condition 3B: H
+0,3B
+	​
+
+ is rejected via a one-tailed Fisher’s Exact Test at α=0.05 (p<0.05), demonstrating that the structural motif is significantly enriched in R
+tiered
+	​
+
+-passing architectures for 3-HP.
+
+Amendment 2: H2 Protocol Redirection (Constrained Minimality)
+Protocol Specification
+
+The novelty definition for H2 is formally updated to Robust Minimal Architecture (RMA).
+
+The search space is constrained strictly to the subset of designs satisfying R
+tiered
+	​
+
+≥0.80 across both hard legs (absolute mild retention ≥0.80; frontier-relative severe retention ≥0.80).
+
+The heterologous enzyme count (K
+het
+	​
+
+) is defined as the total number of non-native E.coli reactions introduced to complete the pathway.
+
+Null Hypothesis (H
+0,H2
+	​
+
+)
+
+H
+0,H2
+	​
+
+: min(K
+het
+	​
+
+∣R
+tiered
+	​
+
+≥0.80)≥K
+het, published
+	​
+
+, where K
+het, published
+	​
+
+ is the heterologous enzyme count of the canonical published reference route for 1,4-BDO passing the identical tiered battery.
+
+Win Condition
+
+Win Condition H2: H
+0,H2
+	​
+
+ is rejected if there exists at least one design g
+∗
+ in the expanded pool (N=256) such that:
+
+R
+tiered
+	​
+
+(g
+∗
+)≥0.80 across all 8 battery conditions.
+
+K
+het
+	​
+
+(g
+∗
+)<K
+het, published
+	​
+
+.
+
+Nominal flux yield v
+nominal
+	​
+
+(g
+∗
+)≥0.90×v
+nominal
+	​
+
+(published route).
