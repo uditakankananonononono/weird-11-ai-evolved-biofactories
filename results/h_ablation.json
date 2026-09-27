@@ -1,0 +1,228 @@
+{
+ "amendment": "2026-09-27 12:37 IST #8 ablation (scoring components, committed exhaustive results; no new FBA)",
+ "headline": "all four scoring arms select the SAME winner on all three targets: the robustness objective is non-binding at pool v3 (locked recorded outcome); severe-retention loss of nominal-only ranking = 0.0",
+ "results": {
+  "14BDO": {
+   "winners": {
+    "A0_full_R_tiered": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "nominal": 6.4956,
+     "worst_severe": 0.9379,
+     "R_tiered": 0.9938
+    },
+    "A1_nominal_only": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "nominal": 6.4956,
+     "worst_severe": 0.9379,
+     "R_tiered": 0.9938
+    },
+    "A2_R_pert_only": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "nominal": 6.4956,
+     "worst_severe": 0.9379,
+     "R_tiered": 0.9938
+    },
+    "A3_R_shift_only": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "nominal": 6.4956,
+     "worst_severe": 0.9379,
+     "R_tiered": 0.9938
+    }
+   },
+   "A1_equals_A0": true,
+   "severe_retention_loss_A1_vs_A0": 0.0,
+   "identical_winner_pairs": [
+    "A0_full_R_tiered=A1_nominal_only",
+    "A0_full_R_tiered=A2_R_pert_only",
+    "A0_full_R_tiered=A3_R_shift_only",
+    "A1_nominal_only=A2_R_pert_only",
+    "A1_nominal_only=A3_R_shift_only",
+    "A2_R_pert_only=A3_R_shift_only"
+   ]
+  },
+  "ISOBUTANOL": {
+   "winners": {
+    "A0_full_R_tiered": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "nominal": 6.4975,
+     "worst_severe": 0.9971,
+     "R_tiered": 0.9997
+    },
+    "A1_nominal_only": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "nominal": 6.4975,
+     "worst_severe": 0.9971,
+     "R_tiered": 0.9997
+    },
+    "A2_R_pert_only": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "nominal": 6.4975,
+     "worst_severe": 0.9971,
+     "R_tiered": 0.9997
+    },
+    "A3_R_shift_only": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "nominal": 6.4975,
+     "worst_severe": 0.9971,
+     "R_tiered": 0.9997
+    }
+   },
+   "A1_equals_A0": true,
+   "severe_retention_loss_A1_vs_A0": 0.0,
+   "identical_winner_pairs": [
+    "A0_full_R_tiered=A1_nominal_only",
+    "A0_full_R_tiered=A2_R_pert_only",
+    "A0_full_R_tiered=A3_R_shift_only",
+    "A1_nominal_only=A2_R_pert_only",
+    "A1_nominal_only=A3_R_shift_only",
+    "A2_R_pert_only=A3_R_shift_only"
+   ]
+  },
+  "LYCOPENE": {
+   "winners": {
+    "A0_full_R_tiered": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "nominal": 0.7298,
+     "worst_severe": 1.0,
+     "R_tiered": 1.0
+    },
+    "A1_nominal_only": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "nominal": 0.7298,
+     "worst_severe": 1.0,
+     "R_tiered": 1.0
+    },
+    "A2_R_pert_only": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "nominal": 0.7298,
+     "worst_severe": 1.0,
+     "R_tiered": 1.0
+    },
+    "A3_R_shift_only": {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "nominal": 0.7298,
+     "worst_severe": 1.0,
+     "R_tiered": 1.0
+    }
+   },
+   "A1_equals_A0": true,
+   "severe_retention_loss_A1_vs_A0": 0.0,
+   "identical_winner_pairs": [
+    "A0_full_R_tiered=A1_nominal_only",
+    "A0_full_R_tiered=A2_R_pert_only",
+    "A0_full_R_tiered=A3_R_shift_only",
+    "A1_nominal_only=A2_R_pert_only",
+    "A1_nominal_only=A3_R_shift_only",
+    "A2_R_pert_only=A3_R_shift_only"
+   ]
+  }
+ }
+}
