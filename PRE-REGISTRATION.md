@@ -123,3 +123,6 @@ MEASURES (locked): per target, (i) unrestricted-best genome + its product flux; 
 
 ## AMENDMENT 2026-09-27 13:19 IST (provided-verdict queue #16: terminology definitions - documentation-only, locked BEFORE drafting)
 DOCUMENTATION-ONLY: add a locked definitions subsection: representation, search policy, objective, learning component. The learning component is NONE (no trained or adaptive model anywhere in the pipeline) - this is stated explicitly. No compute; no claim changes; the word "AI" is not used in-body to describe the method. Title question ("AI-evolved") escalated to the user level, not edited unilaterally.
+
+## AMENDMENT 2026-09-27 13:23 IST (provided-verdict queue #9 extension: per-architecture rationale - documentation-only, locked BEFORE drafting)
+DOCUMENTATION-ONLY: per-architecture rationale subsection for the three committed battery-winning genomes (results/battery_tiered_v3.json, best_by_R_tiered per target). Every rationale traces the genome's blocks to its committed retention/flux numbers; interpretation stays at the level of the block definitions (knockout = removed overflow route; co-feed = added carbon supply; route/adi choices = committed alternative blocks). No new compute; no mechanistic claim beyond what the block definitions and committed numbers support.
