@@ -135,3 +135,6 @@ QUESTION: do the three committed battery winners survive perturbation of the loc
 
 ## NOTE 2026-09-27 13:34 IST (sensitivity execution detail, recorded at commit)
 The 13:33 amendment did not specify the severe-leg frontier for single-genome grid cells. Executed choice: severe legs scored against the COMMITTED pool-v3 frontier per target/condition (battery_tiered_v3.json), since a single-genome cell has no within-cell frontier. Recorded in results/h_fba_sensitivity.json under _rule.
+
+## AMENDMENT 2026-09-27 13:35 IST (provided-verdict queue #15: Monte Carlo FBA uncertainty - locked BEFORE computation)
+QUESTION: uncertainty distribution of winner performance under parameter sampling. Locked: 200 draws (seed 260927), each draw jittering every battery exchange-uptake bound independently by U(0.8, 1.2) multiplicatively (bounds scaled, signs preserved); per draw recompute the winner's R_tiered (severe legs vs committed pool-v3 frontiers, same rule as 13:34 note) for each target's committed best_by_R_tiered genome. REPORT: mean, SD, 5th/95th percentile of R_tiered and battery-pass fraction per target, verbatim. No genome changes; no claim beyond the distribution.
