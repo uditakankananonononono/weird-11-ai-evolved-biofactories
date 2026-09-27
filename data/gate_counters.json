@@ -1,0 +1,16 @@
+{
+ "project": "W11",
+ "as_of": "2026-09-27T13:20:00+05:30",
+ "paper_pages": 8,
+ "numbered_formulas": 4,
+ "tool_runs": null,
+ "accession_datasets": {
+  "iml1515_model": 1,
+  "yeast8_reserved": 1,
+  "benchmark_routes_locked": 3,
+  "reaction_pool_versions": 3,
+  "battery_conditions": 9,
+  "random_null_seeds": 1000
+ },
+ "note": "tool_runs ledger to be summed from results/ manifests; accession convention = external model/dataset artifacts, not NCBI accessions (no sequence data in this lane)"
+}
