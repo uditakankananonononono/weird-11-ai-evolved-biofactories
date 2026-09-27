@@ -1,0 +1,32 @@
+{
+ "amendment": "2026-09-27 14:15 IST",
+ "model": "yeast-GEM-v8",
+ "product": "succinate (native, r_2056) at 50% growth",
+ "cofeed_off": {
+  "nominal": 7.5853,
+  "GLC_LOW": 1.4949,
+  "GLC_MID": 3.7788,
+  "GLC+20%": 9.1079,
+  "GLC-20%": 6.0627,
+  "ANAEROBIC": 6.8118,
+  "O2-50%": 7.5853
+ },
+ "cofeed_on": {
+  "nominal": 9.1015,
+  "GLC_LOW": 3.0503,
+  "GLC_MID": 5.295,
+  "GLC+20%": 10.6241,
+  "GLC-20%": 7.5789,
+  "ANAEROBIC": 0.0,
+  "O2-50%": 9.1015
+ },
+ "severe_gain": {
+  "GLC_LOW": 1.5554,
+  "GLC_MID": 1.5162,
+  "GLC+20%": 1.5162,
+  "GLC-20%": 1.5162,
+  "ANAEROBIC": -6.8118,
+  "O2-50%": 1.5162
+ },
+ "principle_supported": false
+}

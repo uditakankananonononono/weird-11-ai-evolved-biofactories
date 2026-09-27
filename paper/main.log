@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.14)  27 SEP 2026 13:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.14)  27 SEP 2026 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -260,46 +260,55 @@ noted al-ter-na-tives, data/reaction_pool.json).
  []
 
 [2] [3]
-Overfull \hbox (6.90442pt too wide) in paragraph at lines 89--90
+Overfull \hbox (6.90442pt too wide) in paragraph at lines 92--93
 \T1/ptm/m/n/12 mmol/gDW/h), el-e-men-tary car-bon bal-ance caps a C4 prod-uct a
 t roughly one to two mmol/gDW/h
  []
 
 [4] [5]
-Overfull \hbox (5.5379pt too wide) in paragraph at lines 108--108
+Overfull \hbox (5.5379pt too wide) in paragraph at lines 111--111
 []\T1/ptm/b/n/14.4 Unrestricted ver-sus bi-o-log-i-cally con-strained search (a
 mend-ment 2026-
  []
 
+[6]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-15.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+18.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [6] [7] [8]
-(./main.aux) ) 
+) [7] [8]
+Overfull \hbox (31.77011pt too wide) in paragraph at lines 136--137
+\T1/ptm/m/n/12 The three bat-tery win-ners were re-evaluated on a locked 12-cel
+l grid (biomass frac-tion $\OMS/ztmcm/m/n/12 f\OT1/ztmcm/m/n/12 0\OML/ztmcm/m/i
+t/12 :\OT1/ztmcm/m/n/12 4\OML/ztmcm/m/it/12 ; \OT1/ztmcm/m/n/12 0\OML/ztmcm/m/i
+t/12 :\OT1/ztmcm/m/n/12 5\OML/ztmcm/m/it/12 ; \OT1/ztmcm/m/n/12 0\OML/ztmcm/m/i
+t/12 :\OT1/ztmcm/m/n/12 6\OMS/ztmcm/m/n/12 g^^B$
+ []
+
+[9] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2174 strings out of 480247
- 32569 string characters out of 5896151
- 330502 words of memory out of 5000000
- 20103 multiletter control sequences out of 15000+600000
- 518953 words of font info for 102 fonts, out of 8000000 for 9000
+ 2175 strings out of 480247
+ 32582 string characters out of 5896151
+ 331499 words of memory out of 5000000
+ 20104 multiletter control sequences out of 15000+600000
+ 520649 words of font info for 103 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,11n,62p,2766b,243s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/sandbox/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/e
-c/ectt1200.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usy
-r.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 123607 bytes).
+ </home/sandbox/.texlive2021/texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ectt1200.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol
+/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (9 pages, 132136 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

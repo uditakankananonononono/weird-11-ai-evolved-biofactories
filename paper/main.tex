@@ -138,4 +138,7 @@ The three battery winners were re-evaluated on a locked 12-cell grid (biomass fr
 \subsection{Monte Carlo FBA uncertainty (queue \#15)}
 Under the 13:35 IST lock, each winner was re-evaluated over 200 draws with every battery uptake bound independently jittered by $U(0.8,1.2)$ (seed 260927). Battery-pass fractions: 1,4-BDO $92.5\%$ (mean $R_{\mathrm{tiered}}=0.993$, 5--95\% $[0.949,1.043]$), isobutanol $98.0\%$ ($0.999$, $[0.955,1.049]$), lycopene $100\%$ ($0.999$, $[0.965,1.037]$). Winner robustness is not a knife-edge property of the locked bounds; the 7.5\% 1,4-BDO failure tail is reported as the sensitivity mass below the pass bar.
 
+\subsection{Cross-organism transfer: native-yeast arm (queue \#11)}
+The carbon-supply principle was tested in Yeast8 (native succinate export, 50\% growth, 7 conditions mirroring the battery; amendment 14:15 IST, all reaction IDs verified pre-lock). The glycerol co-feed improves succinate flux in 6 of 7 conditions with the largest gain under carbon limitation (GLC\_LOW $1.49 \to 3.05$ mmol/gDW/h, $+104\%$) - but collapses anaerobically ($6.81 \to 0.00$), consistent with yeast's oxygen-dependent glycerol catabolism, so the locked all-conditions prediction is reported as not met. Together with the 3-HP hold-out, the transferable content is the abstract principle (unlock carbon supply, gains largest under limitation); lever choice is host-specific.
+
 \end{document}
