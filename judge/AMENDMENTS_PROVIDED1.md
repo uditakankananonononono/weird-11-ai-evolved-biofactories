@@ -4,10 +4,10 @@ Source: judge/round_provided1_verdict_whatsapp.txt (her 10:27:30 paste, wamid...
 | # | Weakness | Planned change | Status |
 |---|----------|----------------|--------|
 | 1 | Search novelty unclear | Add unique algorithmic component: constraint-aware mutation operators + diversity-preserving (novelty) search; pre-register before compute | QUEUED |
-| 2 | Toy search space | Quantify: total architecture count, explored fraction, solution diversity at pool v3 (N=256) | QUEUED (cheap analysis) |
+| 2 | Toy search space | Quantify: total architecture count, explored fraction, solution diversity at pool v3 (N=256) | LANDED (D1-a, results/amendment_d1_descriptive.json/.md; co-feed-carrying disclosed) |
 | 3 | Simulation != validation | Tier 1-4 confidence framework (math feasibility / enzyme availability / known precedent / validation candidate) | PARTIAL - tiered survival battery exists; extend to prediction-confidence tiers |
 | 4 | FBA assumptions | Sensitivity analysis: uptake rates, O2, biomass constraints, maintenance energy; solutions must survive | QUEUED |
-| 5 | Robustness definition | Single locked definition: environment count, min retention threshold, penalty function | PARTIAL - battery pre-registered in 3A amendment; formalize |
+| 5 | Robustness definition | Single locked definition: environment count, min retention threshold, penalty function | LANDED (D1-c canonical R_tiered definition, documentation-only) |
 | 6 | Optimize model not organism | Biological realism filters: reject impossible enzyme burdens, unrealistic ATP costs, unavailable cofactors | QUEUED |
 | 7 | No benchmark vs existing methods | Benchmark vs OptKnock/OptGene/OptFlux + random + greedy, same targets/constraints/runtime | PARTIAL - random-search null DONE (E^cofeed: random recovers optimum at pool 64, reported honestly); external tools subject to availability |
 | 8 | No ablation | Remove robustness objective / diversity / constraint penalties; measure performance loss | QUEUED |
@@ -16,7 +16,7 @@ Source: judge/round_provided1_verdict_whatsapp.txt (her 10:27:30 paste, wamid...
 | 11 | No cross-organism generalization | Test principle transfer on E. coli + yeast models | QUEUED |
 | 12 | Overfit targets | Hold-out target: search on 2 products, test principles on 3rd | QUEUED |
 | 13 | No random-search significance | 100 random searches: best fitness, robustness, diversity | PARTIAL - random null done at pool 64 (trivial); extend to 100 runs at pool v3 |
-| 14 | Runtime not evaluated | Report CPU hours, generations, population size, convergence curves | PARTIAL - ea_runs.jsonl logs exist; formal curves queued |
+| 14 | Runtime not evaluated | Report CPU hours, generations, population size, convergence curves | PARTIAL+ - D1-b: all 15 runs converged before final 10 gens; CPU-hour logging gap recorded + mandated |
 | 15 | No uncertainty estimation | Monte Carlo FBA / ensemble / parameter sampling | QUEUED |
 | 16 | "AI" overstated | Define representation, search policy, objective, learning component; remove vague AI language | QUEUED (paper text pass) |
 | 17 | No wet-lab connection | Prioritized experimental shortlist (candidates only, no experiments) | QUEUED |

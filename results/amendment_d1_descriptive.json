@@ -1,0 +1,221 @@
+{
+ "amendment": "2026-09-27 10:31 IST D1 descriptive pack",
+ "space": {
+  "host_levers": 6,
+  "route_levers_per_target": 2,
+  "genomes_per_target": 256,
+  "total": 768,
+  "battery_explored_fraction": 1.0
+ },
+ "per_target": {
+  "14BDO": {
+   "n_pass": 32,
+   "n_levers": 8,
+   "hamming_mean": 2.5806,
+   "hamming_min": 1,
+   "hamming_max": 5,
+   "lever_usage": {
+    "cofeed_glycerol": 32,
+    "ko_ackApta": 16,
+    "ko_adhE": 16,
+    "ko_ldhA": 16,
+    "ko_pflB": 16,
+    "ko_tpiA": 0,
+    "routeA_kgd": 16,
+    "routeB_sucd": 32
+   },
+   "fixed_levers": [
+    "cofeed_glycerol",
+    "ko_tpiA",
+    "routeB_sucd"
+   ],
+   "variable_levers": [
+    "ko_ackApta",
+    "ko_adhE",
+    "ko_ldhA",
+    "ko_pflB",
+    "routeA_kgd"
+   ]
+  },
+  "ISOBUTANOL": {
+   "n_pass": 60,
+   "n_levers": 8,
+   "hamming_mean": 3.1232,
+   "hamming_min": 1,
+   "hamming_max": 7,
+   "lever_usage": {
+    "adh_nadh": 56,
+    "adh_nadph": 32,
+    "cofeed_glycerol": 60,
+    "ko_ackApta": 34,
+    "ko_adhE": 32,
+    "ko_ldhA": 30,
+    "ko_pflB": 36,
+    "ko_tpiA": 24
+   },
+   "fixed_levers": [
+    "cofeed_glycerol"
+   ],
+   "variable_levers": [
+    "adh_nadh",
+    "adh_nadph",
+    "ko_ackApta",
+    "ko_adhE",
+    "ko_ldhA",
+    "ko_pflB",
+    "ko_tpiA"
+   ]
+  },
+  "LYCOPENE": {
+   "n_pass": 22,
+   "n_levers": 8,
+   "hamming_mean": 2.4978,
+   "hamming_min": 1,
+   "hamming_max": 5,
+   "lever_usage": {
+    "cofeed_glycerol": 22,
+    "dxs_push": 12,
+    "idi_push": 20,
+    "ko_ackApta": 8,
+    "ko_adhE": 4,
+    "ko_ldhA": 11,
+    "ko_pflB": 8,
+    "ko_tpiA": 0
+   },
+   "fixed_levers": [
+    "cofeed_glycerol",
+    "ko_tpiA"
+   ],
+   "variable_levers": [
+    "dxs_push",
+    "idi_push",
+    "ko_ackApta",
+    "ko_adhE",
+    "ko_ldhA",
+    "ko_pflB"
+   ]
+  }
+ },
+ "ea_runs": [
+  {
+   "target": "14BDO",
+   "seed": 260926,
+   "mode": "single_condition",
+   "final_best": 5.2672,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "14BDO",
+   "seed": 260927,
+   "mode": "single_condition",
+   "final_best": 5.2672,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "14BDO",
+   "seed": 260928,
+   "mode": "single_condition",
+   "final_best": 5.2672,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "14BDO",
+   "seed": 260929,
+   "mode": "single_condition",
+   "final_best": 5.2672,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "14BDO",
+   "seed": 260930,
+   "mode": "single_condition",
+   "final_best": 5.2672,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "seed": 260926,
+   "mode": "single_condition",
+   "final_best": 5.2391,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "seed": 260927,
+   "mode": "single_condition",
+   "final_best": 5.2391,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "seed": 260928,
+   "mode": "single_condition",
+   "final_best": 5.2391,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "seed": 260929,
+   "mode": "single_condition",
+   "final_best": 5.2391,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "seed": 260930,
+   "mode": "single_condition",
+   "final_best": 5.2391,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "LYCOPENE",
+   "seed": 260926,
+   "mode": "single_condition",
+   "final_best": 0.4877,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "LYCOPENE",
+   "seed": 260927,
+   "mode": "single_condition",
+   "final_best": 0.4877,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "LYCOPENE",
+   "seed": 260928,
+   "mode": "single_condition",
+   "final_best": 0.4877,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "LYCOPENE",
+   "seed": 260929,
+   "mode": "single_condition",
+   "final_best": 0.4877,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  },
+  {
+   "target": "LYCOPENE",
+   "seed": 260930,
+   "mode": "single_condition",
+   "final_best": 0.4877,
+   "last10_flat": true,
+   "still_improving_at_term": false
+  }
+ ]
+}
