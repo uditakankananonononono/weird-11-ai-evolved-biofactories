@@ -68,8 +68,14 @@ for era, src in [('v2','results/battery_tiered_v2.json'), ('v3','results/battery
     for tid in ['14BDO','ISOBUTANOL','LYCOPENE']:
         tkey = tid
         if tkey in e_out and e_out[tkey].get('done'): continue
-        rows = committed[tid]['all_scored']
-        genomes = [r['genome'] for r in rows]
+        if 'all_scored' in committed[tid]:
+            genomes = [r['genome'] for r in committed[tid]['all_scored']]
+        else:  # v2 committed file lacks per-genome rows: enumerate the era pool (same construction as battery_tiered_v2.py)
+            hb2 = ['ko_ackApta','ko_pflB','ko_ldhA','cofeed_glycerol']
+            blocks = list(POOL[tid]['blocks'])
+            genomes = [dict(zip(hb2, hb)) | dict(zip(blocks, tb))
+                       for hb in itertools.product([False,True], repeat=len(hb2))
+                       for tb in itertools.product([False,True], repeat=len(blocks))]
         m, prod = get_model(tid)
         rxns = [r.id for r in m.reactions]
         S = cua.create_stoichiometric_matrix(m, array_type='lil').tocsc()
