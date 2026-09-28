@@ -1,0 +1,637 @@
+{
+ "frontier_severe_evaluated_set": {
+  "GLC_LOW": 4.3333,
+  "GLC_MID": 7.3333,
+  "ANAEROBIC": 12.3333,
+  "GLYCEROL": 5.8333,
+  "ACETATE": 5.6667
+ },
+ "n_pass": 0,
+ "scored": [
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A0",
+   "seed": 260927,
+   "best_flux_search": 12.333333333333536,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 1.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.4,
+   "R_tiered": 0.2,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A0",
+   "seed": 261927,
+   "best_flux_search": 12.333333333333664,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.9719,
+    "GLC_MID": 0.9975,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.5939,
+   "R_tiered": 0.2969,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A0",
+   "seed": 262927,
+   "best_flux_search": 12.333333333334442,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.9732,
+    "GLC_MID": 1.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.9576,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.7861,
+   "R_tiered": 0.3931,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A0",
+   "seed": 263927,
+   "best_flux_search": 12.333333333333549,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A0",
+   "seed": 264927,
+   "best_flux_search": 12.333333333333435,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.9879,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.8565
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.5689,
+   "R_tiered": 0.2844,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A1",
+   "seed": 260927,
+   "best_flux_search": 12.333333333341521,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 1.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.2,
+   "R_tiered": 0.1,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A1",
+   "seed": 261927,
+   "best_flux_search": 12.333333333343754,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.9732,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.1946,
+   "R_tiered": 0.0973,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A1",
+   "seed": 262927,
+   "best_flux_search": 12.333333333346957,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.7252
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.145,
+   "R_tiered": 0.0725,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A1",
+   "seed": 263927,
+   "best_flux_search": 12.33333333334736,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.834,
+    "GLC_PERT_PLUS20": 1.1622,
+    "O2_PERT_MINUS50": 1.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.98,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.8157
+   },
+   "R_pert": 0.9987,
+   "R_shift": 0.5591,
+   "R_tiered": 0.7789,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A1",
+   "seed": 264927,
+   "best_flux_search": 12.33333333336552,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.9792,
+    "ACETATE": 0.3781
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.4715,
+   "R_tiered": 0.2357,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A2",
+   "seed": 260927,
+   "best_flux_search": 12.333333333333547,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.2,
+   "R_tiered": 0.1,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A2",
+   "seed": 261927,
+   "best_flux_search": 12.333333333333778,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.9471,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.9421,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.5778,
+   "R_tiered": 0.2889,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A2",
+   "seed": 262927,
+   "best_flux_search": 12.333333333333437,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.8378,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.968,
+    "GLC_MID": 0.9916,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.9713,
+    "ACETATE": 0.7969
+   },
+   "R_pert": 0.2793,
+   "R_shift": 0.9456,
+   "R_tiered": 0.6124,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A2",
+   "seed": 263927,
+   "best_flux_search": 12.333333333333403,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 1.1622,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 1.0
+   },
+   "R_pert": 0.3874,
+   "R_shift": 0.4,
+   "R_tiered": 0.3937,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A2",
+   "seed": 264927,
+   "best_flux_search": 12.333333333333464,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.8378,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 1.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 1.0,
+    "ACETATE": 0.4118
+   },
+   "R_pert": 0.2793,
+   "R_shift": 0.6824,
+   "R_tiered": 0.4808,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A3",
+   "seed": 260927,
+   "best_flux_search": 12.33333333333343,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.989,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.9872,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.3952,
+   "R_tiered": 0.1976,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A3",
+   "seed": 261927,
+   "best_flux_search": 12.333333333333922,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 1.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.9706
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.5941,
+   "R_tiered": 0.2971,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A3",
+   "seed": 262927,
+   "best_flux_search": 12.333333333333442,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.8378,
+    "GLC_PERT_PLUS20": 1.1622,
+    "O2_PERT_MINUS50": 1.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.8565
+   },
+   "R_pert": 1.0,
+   "R_shift": 0.3713,
+   "R_tiered": 0.6856,
+   "mild_leg_pass": true,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A3",
+   "seed": 263927,
+   "best_flux_search": 12.333333333333995,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A3",
+   "seed": 264927,
+   "best_flux_search": 12.333333333333725,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 1.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.4,
+   "R_tiered": 0.2,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A4",
+   "seed": 260927,
+   "best_flux_search": 12.333333333333512,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A4",
+   "seed": 261927,
+   "best_flux_search": 12.33333333334014,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.2,
+   "R_tiered": 0.1,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A4",
+   "seed": 262927,
+   "best_flux_search": 12.333333333333783,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.8378,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.9792,
+    "ACETATE": 0.8655
+   },
+   "R_pert": 0.2793,
+   "R_shift": 0.3689,
+   "R_tiered": 0.3241,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A4",
+   "seed": 263927,
+   "best_flux_search": 12.333333333333773,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.9307,
+    "GLC_MID": 0.98,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.9177,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.5657,
+   "R_tiered": 0.2828,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "ISOBUTANOL",
+   "arm": "A4",
+   "seed": 264927,
+   "best_flux_search": 12.3333333333342,
+   "nominal_battery": 12.3333,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.2,
+   "R_tiered": 0.1,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  }
+ ]
+}

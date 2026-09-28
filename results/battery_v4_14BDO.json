@@ -1,0 +1,637 @@
+{
+ "frontier_severe_evaluated_set": {
+  "GLC_LOW": 4.7273,
+  "GLC_MID": 8.0,
+  "ANAEROBIC": 13.4545,
+  "GLYCEROL": 6.3636,
+  "ACETATE": 6.1818
+ },
+ "n_pass": 0,
+ "scored": [
+  {
+   "target": "14BDO",
+   "arm": "A0",
+   "seed": 260927,
+   "best_flux_search": 13.454545454546055,
+   "nominal_battery": 13.4545,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.8378,
+    "GLC_PERT_PLUS20": 1.1622,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 1.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 1.0,
+    "ACETATE": 1.0
+   },
+   "R_pert": 0.6667,
+   "R_shift": 1.0,
+   "R_tiered": 0.8333,
+   "mild_leg_pass": false,
+   "severe_leg_pass": true,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A0",
+   "seed": 261927,
+   "best_flux_search": 13.454545454547173,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A0",
+   "seed": 262927,
+   "best_flux_search": 13.454545454548658,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A0",
+   "seed": 263927,
+   "best_flux_search": 13.454545454564345,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A0",
+   "seed": 264927,
+   "best_flux_search": 13.454545454546292,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A1",
+   "seed": 260927,
+   "best_flux_search": 13.454545454553193,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A1",
+   "seed": 261927,
+   "best_flux_search": 13.454545454546988,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A1",
+   "seed": 262927,
+   "best_flux_search": 13.454545454546382,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A1",
+   "seed": 263927,
+   "best_flux_search": 13.454545454545807,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A1",
+   "seed": 264927,
+   "best_flux_search": 13.454545454547407,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A2",
+   "seed": 260927,
+   "best_flux_search": 13.454545454548324,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A2",
+   "seed": 261927,
+   "best_flux_search": 13.454545454548393,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A2",
+   "seed": 262927,
+   "best_flux_search": 13.454545454546109,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A2",
+   "seed": 263927,
+   "best_flux_search": 13.454545454548587,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A2",
+   "seed": 264927,
+   "best_flux_search": 13.454545454546121,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A3",
+   "seed": 260927,
+   "best_flux_search": 13.454545454552504,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A3",
+   "seed": 261927,
+   "best_flux_search": 13.454545454546823,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A3",
+   "seed": 262927,
+   "best_flux_search": 13.454545454547185,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A3",
+   "seed": 263927,
+   "best_flux_search": 13.454545454546146,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A3",
+   "seed": 264927,
+   "best_flux_search": 13.45454545454872,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A4",
+   "seed": 260927,
+   "best_flux_search": 13.454545454546162,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A4",
+   "seed": 261927,
+   "best_flux_search": 13.454545454554664,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A4",
+   "seed": 262927,
+   "best_flux_search": 13.454545454546105,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A4",
+   "seed": 263927,
+   "best_flux_search": 13.454545454549248,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "14BDO",
+   "arm": "A4",
+   "seed": 264927,
+   "best_flux_search": 13.454545454547247,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  }
+ ]
+}

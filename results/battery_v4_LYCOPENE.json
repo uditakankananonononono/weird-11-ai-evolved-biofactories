@@ -1,0 +1,637 @@
+{
+ "frontier_severe_evaluated_set": {
+  "GLC_LOW": 0.4815,
+  "GLC_MID": 0.8148,
+  "ANAEROBIC": 1.3704,
+  "GLYCEROL": 0.6481,
+  "ACETATE": 0.6296
+ },
+ "n_pass": 0,
+ "scored": [
+  {
+   "target": "LYCOPENE",
+   "arm": "A0",
+   "seed": 260927,
+   "best_flux_search": 1.3703703703704158,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.2,
+   "R_tiered": 0.1,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A0",
+   "seed": 261927,
+   "best_flux_search": 1.37037037037054,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A0",
+   "seed": 262927,
+   "best_flux_search": 1.3703703703704346,
+   "nominal_battery": 1.3704,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A0",
+   "seed": 263927,
+   "best_flux_search": 1.3703703703705117,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A0",
+   "seed": 264927,
+   "best_flux_search": 1.3703703703704093,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A1",
+   "seed": 260927,
+   "best_flux_search": 1.3703703703704662,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A1",
+   "seed": 261927,
+   "best_flux_search": 1.3703703703704073,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.4,
+   "R_tiered": 0.2,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A1",
+   "seed": 262927,
+   "best_flux_search": 1.3703703703710446,
+   "nominal_battery": 1.3704,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A1",
+   "seed": 263927,
+   "best_flux_search": 1.3703703703710917,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 1.0,
+    "ACETATE": 1.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.4,
+   "R_tiered": 0.2,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A1",
+   "seed": 264927,
+   "best_flux_search": 1.3703703703704675,
+   "nominal_battery": 1.3704,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.2,
+   "R_tiered": 0.1,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A2",
+   "seed": 260927,
+   "best_flux_search": 1.3703703703732375,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A2",
+   "seed": 261927,
+   "best_flux_search": 1.3703703703706365,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A2",
+   "seed": 262927,
+   "best_flux_search": 1.3703703703749042,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A2",
+   "seed": 263927,
+   "best_flux_search": 1.3703703703708063,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 1.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.4,
+   "R_tiered": 0.2,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A2",
+   "seed": 264927,
+   "best_flux_search": 1.3703703703717034,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A3",
+   "seed": 260927,
+   "best_flux_search": 1.3703703703732206,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 1.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.4,
+   "R_tiered": 0.2,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A3",
+   "seed": 261927,
+   "best_flux_search": 1.370370370370659,
+   "nominal_battery": 1.3704,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A3",
+   "seed": 262927,
+   "best_flux_search": 1.3703703703722108,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 1.0,
+    "ACETATE": 1.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.4,
+   "R_tiered": 0.2,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A3",
+   "seed": 263927,
+   "best_flux_search": 1.370370370370708,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A3",
+   "seed": 264927,
+   "best_flux_search": 1.3703703703707808,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 1.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.4,
+   "R_tiered": 0.2,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A4",
+   "seed": 260927,
+   "best_flux_search": 1.3703703703704038,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.0,
+   "R_tiered": 0.0,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A4",
+   "seed": 261927,
+   "best_flux_search": 1.3703703703715069,
+   "nominal_battery": 0.0,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.2,
+   "R_tiered": 0.1,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A4",
+   "seed": 262927,
+   "best_flux_search": 1.3703703703703989,
+   "nominal_battery": 1.3704,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.0,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 1.0,
+    "ANAEROBIC": 1.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.0,
+   "R_shift": 0.6,
+   "R_tiered": 0.3,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A4",
+   "seed": 263927,
+   "best_flux_search": 1.3703703703704524,
+   "nominal_battery": 1.3704,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.8378,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "R_pert": 0.2793,
+   "R_shift": 0.2,
+   "R_tiered": 0.2396,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  },
+  {
+   "target": "LYCOPENE",
+   "arm": "A4",
+   "seed": 264927,
+   "best_flux_search": 1.3703703703704104,
+   "nominal_battery": 1.3704,
+   "mild_retention": {
+    "GLC_PERT_MINUS20": 0.8378,
+    "GLC_PERT_PLUS20": 0.0,
+    "O2_PERT_MINUS50": 0.0
+   },
+   "severe_relative": {
+    "GLC_LOW": 1.0,
+    "GLC_MID": 1.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 1.0,
+    "ACETATE": 1.0
+   },
+   "R_pert": 0.2793,
+   "R_shift": 0.8,
+   "R_tiered": 0.5396,
+   "mild_leg_pass": false,
+   "severe_leg_pass": false,
+   "battery_pass": false
+  }
+ ]
+}
