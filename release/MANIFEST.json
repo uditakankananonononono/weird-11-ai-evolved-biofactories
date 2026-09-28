@@ -1,5 +1,5 @@
 {
- "amendment_lock": "5e14d5e (queue #20 re-stamp post-EA-completion)",
+ "amendment_lock": "176a26d (battery supersession + A5 fold-in; deterministic HiGHS metric; amendments through 2026-09-28 16:46 IST)",
  "ea_rows_at_assembly": 83,
  "seeds": [
   260927,
@@ -24,12 +24,29 @@
  },
  "pool_v4": "12 host + 2 target levers = 16,384 genomes/target (ERRATUM 0e72f42)",
  "files": {
-  "PRE-REGISTRATION.md": "a8cfd22629532b778fc558cf86641c4d274e1053d18877fa3f0a739d2c3ac2a7",
+  "PRE-REGISTRATION.md": "b2bfc0630e907dc473a2d3e78f5c7cc832644e493d98e6112e39cd5add528cd6",
   "data/condition_battery.json": "10283ab9ac84b623132fa0e4d3b81c94af729ea43998ef81d7f5bedc20facac7",
   "data/models/iML1515.xml.gz": "2555e0f7e55a8cb8e770b9bb29cdaeb5db171941c414e7a232ff2d8e0228e308",
   "data/reaction_pool.json": "c7fdda8c7c76340f387e3e2d1bf3ccd5459ee843664d3fd67d27276fe0340254",
-  "paper/main.pdf": "5dca812fe79c7bdecaa7e3d3dd19e5fe320e8b672c8bcb7b11c7aa4251df67ae",
-  "paper/main.tex": "6cf4d33544ed5a12b925458b9f629ec508dd23e71a1c26f60f9815b22b6e9b0d",
+  "paper/main.pdf": "b250ba1cd3e4033f76bc897f4645668db184098f0ea0cf35f1021db84b2aa561",
+  "paper/main.tex": "2fcef690dbc347cf7cd9c99c70b85409d8ffbfe9ac9c6beb3cabab0c08879887",
+  "results/a5_runs.jsonl": "3872541022e5650eca2d357576568c6d1b5d92271ba28683044d20dca2b68277",
+  "results/a5_selection_warmorder_SUPERSEDED.json": "18da13ad7798cd291a39d4cf647732ae4360d6ddc07241c05f493821ef821262",
+  "results/a5_traj/14BDO_260927.json": "8f022f603b4c7891ecb80efc782ccc491192c1e83b695e96712792b02e59343f",
+  "results/a5_traj/14BDO_261927.json": "635bc112299871fb19a0f3f79376c060e89c8fcf9128a7e0bfa37c95e7ec04d8",
+  "results/a5_traj/14BDO_262927.json": "5632443f4596fe6c23294e5d13889d5188571720de44d31c51b7ad6bd27f1021",
+  "results/a5_traj/14BDO_263927.json": "536d9e8d305d7f27fc5954e2bcb32171d214c3c203084d0ed0ad82ce0bf03a8c",
+  "results/a5_traj/14BDO_264927.json": "be566f39585fb1a3069ae28856300be5245d434ba4fe8b1cd68e6d9090ae6316",
+  "results/a5_traj/ISOBUTANOL_260927.json": "5ce7150581e9890e2dc4e2293fa9e342ac7d7355ec434b4f372354edf4f56a85",
+  "results/a5_traj/ISOBUTANOL_261927.json": "e79101c8cd7cd196b0b7287e549f501afd5c59f50181f7e75ad36be0073ecc1f",
+  "results/a5_traj/ISOBUTANOL_262927.json": "830d0e771d0aa8b7e0ce767c721ac9ad5f74aa28009216184574debd2ff27a1c",
+  "results/a5_traj/ISOBUTANOL_263927.json": "e36329a2371039ca73aa82b0f7134e8c6084352d123b56c33069f4a0f63870d9",
+  "results/a5_traj/ISOBUTANOL_264927.json": "4565305d0840e6477501133e8ff72adf8dbd273debd8b8ce0185ac8709b607b3",
+  "results/a5_traj/LYCOPENE_260927.json": "c27abda55d6ffa726ae297e951e8f3625fb5408348cb07b15c4e90a125d154f9",
+  "results/a5_traj/LYCOPENE_261927.json": "290fdab6af53571f4cd107ec5f47a61f561bf2aa03dc43e506b1a0ba5ee6238f",
+  "results/a5_traj/LYCOPENE_262927.json": "4e72ea81f41ef5daba3b60e777829d22f7929ea500237518e14f950d3a0caf88",
+  "results/a5_traj/LYCOPENE_263927.json": "c726389242c470dd4fd43f5c77d3b407ffa3cec602cde5cfd96573de4510d4b4",
+  "results/a5_traj/LYCOPENE_264927.json": "69289be467197284f3453d7e08762e4b8d7830ce52558d1c8f83462f830a106b",
   "results/amendment_d1_descriptive.json": "e9063b72eb42a2ed156f788f6785de654e1a401f13665c38f76baca2996346c3",
   "results/amendment_d1_descriptive.md": "a513c884f13359bb63c72b7972ed5d516d98ad1673e3bb263067cce4359fde10",
   "results/amendment_d2_randomnull.json": "e5bfa2fca874a6d22116adf0d752ebbc70826c60c8c8812e13f5c510083c2528",
@@ -40,6 +57,8 @@
   "results/battery_v4_14BDO.json": "37b23002e8df873979a53262592bdc20eec6b57208ebc2ca261b4f0815a2dc15",
   "results/battery_v4_ISOBUTANOL.json": "fa8eb69209cfd39a5dbcfd68212eec8d6a88d1cf61157b3bb50ae784cded26e7",
   "results/battery_v4_LYCOPENE.json": "97363f7d112664377d3f8f45f38f8c5892389cb4b2981a64860aeea9b03e133e",
+  "results/battery_v5.json": "e04a6f2a8abbe0ffd18b0d92d16df011efde2f6063fd4166bf9e17626e8344fb",
+  "results/battery_v6.json": "6db110310ff9cdcbd3a98931bb0c70d661fd3c7821aa6c35ef582f19482f714e",
   "results/benchmark_flux.json": "9eb65891c2ccdce22b1c8705102bdb809bcd9b146e535b38b70beb61affbe8f4",
   "results/ea_v4_runs.jsonl": "0275f524d054fcaf3b86d57bc40c6a6f88083fa2400822a2f7ac1525414a56b8",
   "results/ecofeed_rebaseline_null.json": "f66e18069df2f41cbd694b15a16af4c9ac66b7770046296c0637340fdc7750a1",
@@ -64,8 +83,12 @@
   "results/h_yeast_transfer.md": "50578ded2f8867be081f4a4458675dbf50c93985b9c7a2aeda9a59b706034fa7",
   "results/tailonly_battery_check.json": "04ddcfdc23f2409a3319376e16cc7bec67679b4f1547fae13183f5946711d8d3",
   "src/battery_final_v4.py": "159ca2aa182369997cbc21772074aff93215e2e89bcb4c195eed9fae7936bea3",
+  "src/battery_v5.py": "c08ef607fbfb54a132c7471705e7522b10fcebc1d8df06e0520a73d6c0bd2dea",
+  "src/battery_v6.py": "c86a3ee7dc8bf7c7b07e48a85205f188b90be42ef8d7191652f395b553f64afe",
   "src/benchmark_flux.py": "6c6cbdcc7b04733da93981798f9293d550f0a1e65cda24d1eff6e3ca0d9d9ed8",
-  "src/search_ea_v4.py": "e75fa94caf18bfb4c9dffcf1c879d8c2540f353a13f9d4886e39448dcb6531bf"
+  "src/search_a5.py": "ef797226462d0729dde3d712920bd5efde396a72a0b4ff14f72245fe9a584e7d",
+  "src/search_ea_v4.py": "e75fa94caf18bfb4c9dffcf1c879d8c2540f353a13f9d4886e39448dcb6531bf",
+  "src/select_a5.py": "07d4606a377b013a4a0b9475587425fa18e9a81847878aea1dac9218cb99e8a6"
  },
  "ea_primary_complete": "75/75 primary rows (5 seeds x 5 arms x 3 targets), 8 labeled extension rows, 0 duplicate keys",
  "analysis": {
@@ -73,5 +96,17 @@
   "gate": "M-W exact 5v5 arm vs A0 on best_flux + 10k-label permutation sensitivity (eede3fd)",
   "script": "src/battery_final_v4.py"
  },
- "fault_tolerance": "search_ea_v4.py checkpoints every generation (results/ea_v4_ckpt/); resume is bit-exact (equivalence-verified); GLPK presolve rejected (1646/2568 mismatch, max rel diff 13.45)"
+ "fault_tolerance": "search_ea_v4.py checkpoints every generation (results/ea_v4_ckpt/); resume is bit-exact (equivalence-verified); GLPK presolve rejected (1646/2568 mismatch, max rel diff 13.45)",
+ "battery_metric": {
+  "current": "HiGHS deterministic (results/battery_v6.json, 0/~1706 validation failures)",
+  "superseded": [
+   "results/battery_v4_*.json (GLPK warm-start artifacts)",
+   "results/battery_v5.json (GLPK max-of-3 interim, 762 failures)"
+  ]
+ },
+ "a5": {
+  "design": "two-stage: A0 trajectory replay + plateau argmax R_tiered (1e-6 relative plateau)",
+  "gate": "M-W exact vs repaired A0, 5v5 per target + 10k perm; 14BDO epsilon-null, ISOBUTANOL/LYCOPENE genuine",
+  "selections": "15/15 battery_pass at R_tiered 1.277 (frontier parity)"
+ }
 }
