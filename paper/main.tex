@@ -167,6 +167,34 @@ The operator race showed a flat nominal optimum whose plateau members were expec
 
 \paragraph{Tie-break control: where does selection beat luck? (amendment 10faf32, locked before inspection).} External review noted that 70 of 83 repaired best genomes pass the battery, so A5's 15/15 could reflect a favorable pool rather than a selection-rule contribution. The locked control compares, per run, the A5-selected $R_{\mathrm{tiered}}$ with the run's full plateau distribution: $f_{\mathrm{tie}}$ is the probability that a uniform-random plateau tie-break attains the A5-selected value. By the locked rule (win at median $f_{\mathrm{tie}} \le 0.2$) the control returns a \textbf{null overall}: median $f_{\mathrm{tie}} = 0.817$ across the 15 runs - in most runs any tie-break finds a frontier-parity design. The per-target decomposition mirrors the effect-size audit exactly. At 1,4-BDO $f_{\mathrm{tie}} = 1.0$ in all five runs: every plateau member is frontier-parity, selection contributes nothing, and the realized A0 luck selections sit at the same value. At lycopene the median $f_{\mathrm{tie}} = 0.82$ - mostly luck. At isobutanol the median $f_{\mathrm{tie}} = 0.098$ (range 0.017-0.252, A5 percentiles 87-99, realized A0 selections at plateau percentiles 18-74): robustness-aware selection beats a random tie-break decisively. The three targets are therefore not three equivalent successes: 1,4-BDO is an epsilon-level null, isobutanol a substantive computational effect, and lycopene a heterogeneous benefit on three of five seeds - and the tie-break control shows the same asymmetry in the selection mechanism itself. A5's measured contribution is real but target-dependent, not a uniform guarantee.
 
+\begin{table}[h]
+\centering
+\small
+\caption{Tie-break control, all 15 runs (amendment 10faf32, locked before inspection). $f_{\mathrm{tie}}$: probability a uniform-random plateau tie-break attains the A5-selected $R_{\mathrm{tiered}}$; gap: A5 minus plateau mean; pct: percentile within the run's plateau (mid-rank). A0: the realized luck-based selection for the same run. Verdict by the locked rule (median $f_{\mathrm{tie}} \le 0.2$): \textbf{null overall} (median 0.817); isobutanol is the exception (median 0.098).}
+\label{tab:tiebreak}
+\begin{tabular}{l l r r r r r r r}
+\hline
+Target & Seed & Plateau $n$ & A5 $R_{\mathrm{tiered}}$ & $f_{\mathrm{tie}}$ & Gap & A5 pct & A0 $R_{\mathrm{tiered}}$ & A0 pct \\
+\hline
+1,4-BDO & 260927 & 94 & 1.277 & 1.000 & 0.000 & 50.0 & 1.277 & 50.0 \\
+1,4-BDO & 261927 & 101 & 1.277 & 1.000 & 0.000 & 50.0 & 1.277 & 50.0 \\
+1,4-BDO & 262927 & 108 & 1.277 & 1.000 & 0.000 & 50.0 & 1.277 & 50.0 \\
+1,4-BDO & 263927 & 77 & 1.277 & 1.000 & 0.000 & 50.0 & 1.277 & 50.0 \\
+1,4-BDO & 264927 & 95 & 1.277 & 1.000 & 0.000 & 50.0 & 1.277 & 50.0 \\
+Isobutanol & 260927 & 154 & 1.277 & 0.071 & 0.058 & 96.4 & 1.106 & 18.5 \\
+Isobutanol & 261927 & 119 & 1.277 & 0.017 & 0.048 & 99.2 & 1.261 & 72.3 \\
+Isobutanol & 262927 & 129 & 1.277 & 0.233 & 0.038 & 88.4 & 1.261 & 52.7 \\
+Isobutanol & 263927 & 133 & 1.277 & 0.098 & 0.044 & 95.1 & 1.272 & 73.7 \\
+Isobutanol & 264927 & 151 & 1.277 & 0.252 & 0.061 & 87.4 & 1.243 & 33.4 \\
+Lycopene & 260927 & 93 & 1.277 & 0.817 & 0.031 & 59.1 & 1.106 & 9.1 \\
+Lycopene & 261927 & 81 & 1.277 & 0.383 & 0.106 & 80.9 & 1.106 & 30.9 \\
+Lycopene & 262927 & 111 & 1.277 & 0.829 & 0.029 & 58.6 & 1.277 & 58.6 \\
+Lycopene & 263927 & 81 & 1.277 & 0.963 & 0.006 & 51.9 & 1.277 & 51.9 \\
+Lycopene & 264927 & 96 & 1.277 & 0.750 & 0.043 & 62.5 & 1.106 & 12.5 \\
+\hline
+\end{tabular}
+\end{table}
+
 \section{Caveats}
 (1) All results are in-silico flux predictions; no wet-lab validation is claimed, and no build-phase engineering guidance is produced. (2) Both pools evaluated so far are deliberately small; the exhaustive results bound what these pools can express, and conclusions about search power await larger pools. In particular, the H3 multi-condition advantage was first recorded as undetectable at pool 64 under the superseded GLPK-era battery; the deterministic re-evaluation finds the nominal-best and battery-best designs coincide in only one of three targets there, at tied nominal fitness, so pool-64 evidence is tie-level and pool-256 remains the falsifying scale. (3) The tail-only H2 candidate is verified at the nominal condition only: it fails the tiered battery, every battery-passing design requires the glycerol co-feed, and under equal-feed comparison ($E^{\mathrm{cofeed}} = 1.00$) the co-feed fully accounts for the nominal-flux gains - no flux advantage over the published routes remains. The defensible claims are the robustness structure and its cross-target motif, not nominal flux. (4b) H3's multi-condition search advantage is falsified at N=256 (nominal-best and battery-best designs coincide in every target, rank-1 difference 0.0000); at N=64 the corrected-semantics re-evaluation reverses the superseded GLPK-era coincidence reading (coincidence in one of three targets, at tied nominal), so the earlier N=64 honest-negative framing is withdrawn. (5) At pool v4 the nominal optimum is flat and fully reached by every operator arm tested; operator claims are therefore limited to tie-breaking effects on battery robustness, and the three locked-gate passes are numerically significant solver-noise effects ($\sim 10^{-11}$ relative), reported verbatim and not counted as arm advantages. (6) At pool v4 the growth-coupling floor is non-binding: maximum growth under the locked base condition evaluates to numerical zero ($\sim 5\times 10^{-31}$) for measured genomes, so the $0.5\,\mu_{\max}$ floor never constrains and all pool-v4 fluxes are effectively uncoupled maxima; mild-leg retentions above 1 (perturbed conditions yielding more product than nominal) are deterministic properties of this model's bound set, reported verbatim and not claimed as biology. (7) Battery solver history: the pool-v4 battery was first computed under GLPK with carried warm-start state (artifact, superseded), then under a max-of-3 perturbed GLPK repair (insufficient - 762 self-validation failures, superseded), and finally under the deterministic HiGHS metric with 100\% nominal-versus-search validation across $\sim$1{,}706 genomes; only the HiGHS numbers are current, and the superseded values remain in the record for audit. (8) The pool-v2/v3 batteries were computed under the same GLPK pipeline; they have since been re-evaluated under deterministic HiGHS with the original metric semantics (amendment 70a6872, locked before computation), after a first re-evaluation execution contained an adaptation defect - a missing biomass unpin that artifactually zeroed three severe legs - caught by a pre-fold-in hand check, withdrawn, and retained in the record. Under the corrected re-evaluation every published pool-v2/v3 number re-stands except the two tie-level pool-64 coincidence flags and the tail-only $R_{\mathrm{tiered}}$ ($0.768 \to 0.8023$); all diffs appear explicitly in the text. (4) GSMM predictions assume steady state and fixed biomass composition; real titers are typically lower.
 
@@ -194,4 +222,144 @@ The carbon-supply principle was tested in Yeast8 (native succinate export, 50\% 
 \subsection{Fourth chemical class: native succinate (queue \#10)}
 A native organic-acid target was added under the 14:17 IST lock (64 host-lever genomes, identical battery). Ten of 64 genomes pass both hard legs (nominal max 10.66 mmol/gDW/h), and all ten carry the glycerol co-feed (Fisher one-tailed $p=0.0004$, pre-locked test): the carbon-supply-necessity pattern replicates on a fourth, chemically distinct target class, its first replication under a pre-registered significance gate.
 
+
+\appendix
+
+\section{Solver and metric provenance}
+All flux evaluations solve linear programs over the iML1515 genome-scale model. Search fitness and every superseded battery used GLPK 5.0 through optlang 1.9.1; all current battery numbers use HiGHS through \texttt{scipy.optimize.linprog} (scipy 1.15.3, \texttt{method='highs'}, default tolerances) on exported arrays. The export procedure is fixed: after applying the genome and the condition's exchange bounds, the stoichiometric matrix is taken from cobra 0.32.1 (\texttt{create\_stoichiometric\_matrix}, lil converted to csc), the equality right-hand side is zero (steady state), and column bounds are read directly from the reaction objects. A solver reset means a fresh, independent \texttt{linprog} call per LP; no basis, objective, or model state is carried between any two solves, and genome application is rolled back per genome by context manager. The per-leg evaluation algorithm is:
+\begin{enumerate}
+\item unpin the biomass reaction (bounds $0$ to $1000$) and solve for the true condition-specific maximum growth $g$;
+\item if the LP fails or $g \le 0$, the leg value is $0.0$;
+\item otherwise fix biomass at $(0.5\,g, 0.5\,g)$ and solve for maximum product flux $p$; the leg value is $p$ ($0.0$ on failure).
+\end{enumerate}
+The locked validation algorithm adjudicates every battery value before use: for every evaluated genome the battery's nominal-condition value must agree with that genome's recorded search fitness within $10^{-9}$ relative, and every mismatch is disclosed verbatim. Fresh-process reproduction with independently written code was performed for both the cohort battery and the pool re-evaluation (54/54 legs each, tolerance $10^{-9}$). Superseded values never enter current statistics, figures, or denominators; they appear only as explicitly labeled historical audit data. The evolutionary search configuration is locked at MU $=24$, LAM $=48$, 60 generations, tournament selection with $k=3$, bit-flip mutation at rate $1/n$, and $(\mu+\lambda)$ truncation replacement, on seeds 260927--264927.
+
+\section{Locked condition battery}
+Table~\ref{tab:battery} reproduces the locked condition battery (pre-registered 2026-09-26 20:25 IST, before the first search run). All other exchange reactions keep model defaults; lower bounds shown are uptake limits (mmol/gDW/h).
+
+\begin{table}[h]
+\centering
+\small
+\caption{The locked nine-condition battery plus the nominal reference condition.}
+\label{tab:battery}
+\footnotesize
+\begin{tabular}{l l p{4.2cm} l}
+\hline
+Condition & Kind & Bounds changed & Values \\
+\hline
+GLC\_AEROBIC (nominal) & reference & EX\_glc\_\_D\_e, EX\_o2\_e & $-10.0$, $-1000.0$ \\
+GLC\_LOW & nutrient shift & EX\_glc\_\_D\_e, EX\_o2\_e & $-2.0$, $-1000.0$ \\
+GLC\_MID & nutrient shift & EX\_glc\_\_D\_e, EX\_o2\_e & $-5.0$, $-1000.0$ \\
+ANAEROBIC & nutrient shift & EX\_glc\_\_D\_e, EX\_o2\_e & $-10.0$, $0.0$ \\
+GLYCEROL & carbon shift & EX\_glc\_\_D\_e, EX\_glyc\_e, EX\_o2\_e & $0.0$, $-10.0$, $-1000.0$ \\
+ACETATE & carbon shift & EX\_glc\_\_D\_e, EX\_ac\_e, EX\_o2\_e & $0.0$, $-10.0$, $-1000.0$ \\
+GLC\_PERT\_MINUS20 & uptake perturbation & EX\_glc\_\_D\_e, EX\_o2\_e & $-8.0$, $-1000.0$ \\
+GLC\_PERT\_PLUS20 & uptake perturbation & EX\_glc\_\_D\_e, EX\_o2\_e & $-12.0$, $-1000.0$ \\
+O2\_PERT\_MINUS50 & uptake perturbation & EX\_glc\_\_D\_e, EX\_o2\_e & $-10.0$, $-500.0$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Tail-only candidate, condition by condition}
+The 14BDO tail-only H2 candidate (no upstream route block) under the corrected metric: absolute product flux per condition, and frontier-relative severe retention against the pool-v2 frontier. It fails the severe hard leg ($\ge 0.8$) on four of five shifts; its $R_{\mathrm{tiered}} = 0.8023$ supersedes the GLPK-era $0.768$ by explicit diff (the absolute leg values are unchanged; the difference is normalization arithmetic).
+
+\begin{table}[h]
+\centering
+\small
+\caption{Tail-only 1,4-BDO candidate (corrected-semantics HiGHS).}
+\label{tab:tailonly}
+\begin{tabular}{l r r}
+\hline
+Condition & Product flux (mmol/gDW/h) & Frontier-relative retention \\
+\hline
+GLC\_AEROBIC (nominal) & 5.2672 & -- \\
+GLC\_LOW & 0.9240 & 0.427 \\
+GLC\_MID & 2.5527 & 0.675 \\
+ANAEROBIC & 3.7244 & 0.414 \\
+GLYCEROL & 2.9457 & 1.000 \\
+ACETATE & 1.2791 & 0.508 \\
+GLC\_PERT\_MINUS20 & 4.1814 & 0.794 (vs nominal) \\
+GLC\_PERT\_PLUS20 & 6.3529 & 1.206 (vs nominal) \\
+O2\_PERT\_MINUS50 & 5.2672 & 1.000 (vs nominal) \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Genome encodings}
+Every architecture is a bit vector over host levers plus target-specific route blocks. Host levers shared by all pools: \texttt{ko\_ackApta} (ACKr and PTAr blocked), \texttt{ko\_pflB} (PFL blocked), \texttt{ko\_ldhA} (LDH\_D blocked), \texttt{cofeed\_glycerol} (EX\_glyc\_e uptake opened at $-4.0$). Pool v3 adds \texttt{ko\_adhE} (ALCD2x blocked) and \texttt{ko\_tpiA} (TPI blocked); pool v4 adds \texttt{ko\_ppc}, \texttt{ko\_gnd}, \texttt{ko\_pgi}, \texttt{ko\_me1}, \texttt{ko\_acs}, and \texttt{ko\_icdhyr} (each blocking its namesake reaction). Route blocks: 1,4-BDO chooses independently between \texttt{routeA\_kgd} (BDO1) and \texttt{routeB\_sucd} (BDO1B); isobutanol chooses between the NADH- and NADPH-dependent alcohol dehydrogenases (\texttt{adh\_nadh}/IBUTDH, \texttt{adh\_nadph}/IBUTDHP); lycopene carries \texttt{dxs\_push} (DXPS lower bound 1.0) and \texttt{idi\_push} (IPDDI lower bound 0.5). Pool sizes: v2 $=2^4\times2^{|\mathrm{routes}|}=64$ per target, v3 $=256$, v4 $=16{,}384$.
+
+\section{Supersession lineage}
+\begin{table}[h]
+\centering
+\small
+\caption{Battery metric lineage. Only the two rightmost rows are current; every superseded artifact remains in the repository for audit.}
+\label{tab:lineage}
+\footnotesize
+\begin{tabular}{l l p{5.4cm} l}
+\hline
+Version & Solver path & Defect found & Status \\
+\hline
+battery\_v4 & GLPK, optlang & carried warm-start state; order-dependent zeros and suboptimal vertices (proof: identical LP returned 13.4545 and 0.0) & superseded \\
+battery\_v5 & GLPK max-of-3 retries & 762/$\sim$2000 self-validation failures; comparator contaminated & superseded \\
+battery\_v6 & HiGHS, exported LP & none; 0/$\sim$1706 validation failures & \textbf{current (cohort)} \\
+battery\_v23 & HiGHS & missing biomass unpin: pin-feasibility zeros on three severe legs, wrong floors & withdrawn \\
+battery\_v23c & HiGHS, original semantics & none; 54/54 structural check, 768/768 nominals within $10^{-9}$ & \textbf{current (pools v2/v3)} \\
+\hline
+\end{tabular}
+\end{table}
+
+Under the corrected pool re-evaluation every published pool-v2/v3 number re-stands: pass counts $16/64$, $18/64$, $18/64$ (v2) and $32/256$, $60/256$, $22/256$ (v3) are identical, severe frontiers differ by less than $5\times10^{-3}$ on every leg, best $R_{\mathrm{tiered}}$ is unchanged, and pool-v3 pass sets are identical with zero genomes differing in $R_{\mathrm{tiered}}$ by more than $10^{-4}$. The only changes are the two tie-level pool-64 argmax-coincidence flags (1,4-BDO and isobutanol, true$\to$false at tied nominal) and the tail-only candidate's $R_{\mathrm{tiered}}$ ($0.768 \to 0.8023$), both corrected explicitly in the main text. Table~\ref{tab:v23diff} gives the explicit supersession diff.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Pool-v2/v3 supersession diff (GLPK-era committed $\to$ corrected-semantics HiGHS). Identical except the two flagged coincidence cells.}
+\label{tab:v23diff}
+\begin{tabular}{l l l l l}
+\hline
+Pool & Target & Pass count & Best $R_{\mathrm{tiered}}$ & Argmax coincide \\
+\hline
+v2 & 1,4-BDO & $16 \to 16$ & $1.0 \to 1.0$ & true $\to$ \textbf{false} \\
+v2 & Isobutanol & $18 \to 18$ & $1.0 \to 1.0$ & true $\to$ \textbf{false} \\
+v2 & Lycopene & $18 \to 18$ & $1.0 \to 1.0$ & true $\to$ true \\
+v3 & 1,4-BDO & $32 \to 32$ & $0.9938 \to 0.9938$ & true $\to$ true \\
+v3 & Isobutanol & $60 \to 60$ & $0.9997 \to 0.9997$ & true $\to$ true \\
+v3 & Lycopene & $22 \to 22$ & $1.0 \to 1.0$ & true $\to$ true \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{A5 per-run selections}
+\begin{table}[h]
+\centering
+\small
+\caption{A5 stage-2 selections, all 15 runs. Every selection passes the full tiered battery at $R_{\mathrm{tiered}} = 1.277$ ($R_{\mathrm{pert}} = 1.5541$, $R_{\mathrm{shift}} = 1.0$); plateau sizes vary by run.}
+\label{tab:a5sel}
+\begin{tabular}{l l r r l r}
+\hline
+Target & Seed & Plateau size & Selected $R_{\mathrm{tiered}}$ & Battery pass & First-explored index \\
+\hline
+1,4-BDO & 260927 & 94 & 1.277 & pass & 90 \\
+1,4-BDO & 261927 & 101 & 1.277 & pass & -- \\
+1,4-BDO & 262927 & 108 & 1.277 & pass & -- \\
+1,4-BDO & 263927 & 77 & 1.277 & pass & -- \\
+1,4-BDO & 264927 & 95 & 1.277 & pass & -- \\
+Isobutanol & 260927 & 154 & 1.277 & pass & -- \\
+Isobutanol & 261927 & 119 & 1.277 & pass & -- \\
+Isobutanol & 262927 & 129 & 1.277 & pass & -- \\
+Isobutanol & 263927 & 133 & 1.277 & pass & -- \\
+Isobutanol & 264927 & 151 & 1.277 & pass & -- \\
+Lycopene & 260927 & 93 & 1.277 & pass & -- \\
+Lycopene & 261927 & 81 & 1.277 & pass & -- \\
+Lycopene & 262927 & 111 & 1.277 & pass & -- \\
+Lycopene & 263927 & 81 & 1.277 & pass & -- \\
+Lycopene & 264927 & 96 & 1.277 & pass & 48 \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{External judge review (agent-run)}
+\begin{sloppypar}
+Headline claims in this paper were reviewed by an external judge consultation run by the project through ChatGPT on 2026-09-28 (agent-run, per the owner's standing arrangement; the full prompt and response are archived verbatim in the repository under \texttt{judge/}, files \texttt{round2\_as\_sent.txt} and \texttt{round2\_verdict\_chatgpt.txt}). Claims flagged judge-verified (agent-run): (1) the solver-artifact handling is scientifically adequate - the review passed every one of its nine requirements, from concrete detection to explicit numerical diff; (2) the A5 claims as worded - reliability within the explored plateau, the 1,4-BDO epsilon-null disclosure (called ``strongly correct''), isobutanol as a substantive computational effect, lycopene as heterogeneous; (3) the battery interpreted as a model-property robustness measure rather than evidence of growth-coupled production robustness. The review's documentation requirements are adopted verbatim in the solver-provenance appendix. The review's residual criticisms - the plateau-luck question and the target asymmetry - are answered by the tie-break control in the main text. Any verdict can be spot-checked against the archived exchange.
+\end{sloppypar}
 \end{document}
