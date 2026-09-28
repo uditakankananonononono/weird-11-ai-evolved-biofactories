@@ -7,7 +7,7 @@ A3 adaptive mutation rate / A4 surrogate-assisted (RF 50 trees, sklearn defaults
 Search fitness = nominal GLC_AEROBIC product-max FBA (locked precedent).
 Final eval of each run's best = full tiered battery; severe frontier = evaluated-set
 (disclosed per amendment). Resumable: appends to results/ea_v4_runs.jsonl."""
-import cobra, json, random, os, sys, time
+import cobra, json, random, os, sys, time, pickle
 sys.path.insert(0, 'src')
 from benchmark_flux import BUILDERS, BASE, rxn
 
@@ -75,10 +75,17 @@ def fitness(tid, genome):
 
 def key(g, bits): return tuple(1 if g[b] else 0 for b in bits)
 
+CKPT_DIR = 'results/ea_v4_ckpt'
+
 def run_ea(tid, seed, arm):
-    rng = random.Random(seed)
+    # Checkpointed implementation: identical algorithm/RNG stream to the locked
+    # protocol; per-generation pickle makes runs kill-resumable bit-exactly.
+    # (fault-tolerance change only - MU/LAM/GENS/arms/seeds/fitness untouched)
     bits = HOST14 + list(POOL[tid]['blocks'])
     nb = len(bits)
+    os.makedirs(CKPT_DIR, exist_ok=True)
+    ckpt_path = os.path.join(CKPT_DIR, f'{tid}_{arm}_{seed}.pkl')
+    rng = random.Random(seed)
     rand_g = lambda: {b: rng.random() < 0.5 for b in bits}
     seen = set()
     eval_hist = []  # (bit list, fitness) for surrogate training
@@ -88,13 +95,24 @@ def run_ea(tid, seed, arm):
         f = fitness(tid, g)
         eval_hist.append((list(k), f))
         return f
-    pop = [rand_g() for _ in range(MU)]
-    fit = [evalg(g) for g in pop]
-    hist = [max(fit)]
-    mut = 1/nb
-    stall = 0
-    best = fit[0]
-    for gen in range(GENS):
+    if os.path.exists(ckpt_path):
+        with open(ckpt_path, 'rb') as fh:
+            st = pickle.load(fh)
+        rng.setstate(st['rng'])
+        pop, fit, hist = st['pop'], st['fit'], st['hist']
+        mut, stall, best = st['mut'], st['stall'], st['best']
+        seen = set(map(tuple, st['seen']))
+        eval_hist = [(list(x), f) for x, f in st['eval_hist']]
+        gen0 = st['gen']
+    else:
+        pop = [rand_g() for _ in range(MU)]
+        fit = [evalg(g) for g in pop]
+        hist = [max(fit)]
+        mut = 1/nb
+        stall = 0
+        best = fit[0]
+        gen0 = 0
+    for gen in range(gen0, GENS):
         kids = []
         while len(kids) < LAM:
             cand = rng.sample(list(zip(fit, pop)), 3)
@@ -128,6 +146,12 @@ def run_ea(tid, seed, arm):
             else:
                 stall += 1
                 if stall >= 10: mut = min(mut*2, 8/nb); stall = 0
+        with open(ckpt_path, 'wb') as fh:
+            pickle.dump({'rng': rng.getstate(), 'pop': pop, 'fit': fit,
+                         'hist': hist, 'mut': mut, 'stall': stall, 'best': best,
+                         'seen': [list(k) for k in seen],
+                         'eval_hist': eval_hist, 'gen': gen + 1}, fh)
+    os.remove(ckpt_path)
     return {'target': tid, 'seed': seed, 'arm': arm, 'mode': 'pool_v4_nominal',
             'amendment_commit': '4a71551', 'n_evals': len(seen),
             'best_flux': fit[0], 'best_genome': pop[0], 'hist_last10': hist[-10:]}
