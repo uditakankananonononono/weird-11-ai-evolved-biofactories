@@ -24,12 +24,12 @@
  },
  "pool_v4": "12 host + 2 target levers = 16,384 genomes/target (ERRATUM 0e72f42)",
  "files": {
-  "PRE-REGISTRATION.md": "b2bfc0630e907dc473a2d3e78f5c7cc832644e493d98e6112e39cd5add528cd6",
+  "PRE-REGISTRATION.md": "ae2a36d1025502027ed3d2a1cbfa518eaf19e3884306299508348983c7832ac0",
   "data/condition_battery.json": "10283ab9ac84b623132fa0e4d3b81c94af729ea43998ef81d7f5bedc20facac7",
   "data/models/iML1515.xml.gz": "2555e0f7e55a8cb8e770b9bb29cdaeb5db171941c414e7a232ff2d8e0228e308",
   "data/reaction_pool.json": "c7fdda8c7c76340f387e3e2d1bf3ccd5459ee843664d3fd67d27276fe0340254",
-  "paper/main.pdf": "b250ba1cd3e4033f76bc897f4645668db184098f0ea0cf35f1021db84b2aa561",
-  "paper/main.tex": "2fcef690dbc347cf7cd9c99c70b85409d8ffbfe9ac9c6beb3cabab0c08879887",
+  "paper/main.pdf": "2775287610aee0fd811afdc75128317d6bc63e3e042d30ad0fdb04cbe60044bd",
+  "paper/main.tex": "9fbbe5abbd590b0f4247fdc9dbaab0c6df28266a85f1900a9bde3dea3482029d",
   "results/a5_runs.jsonl": "3872541022e5650eca2d357576568c6d1b5d92271ba28683044d20dca2b68277",
   "results/a5_selection_warmorder_SUPERSEDED.json": "18da13ad7798cd291a39d4cf647732ae4360d6ddc07241c05f493821ef821262",
   "results/a5_traj/14BDO_260927.json": "8f022f603b4c7891ecb80efc782ccc491192c1e83b695e96712792b02e59343f",
@@ -88,7 +88,16 @@
   "src/benchmark_flux.py": "6c6cbdcc7b04733da93981798f9293d550f0a1e65cda24d1eff6e3ca0d9d9ed8",
   "src/search_a5.py": "ef797226462d0729dde3d712920bd5efde396a72a0b4ff14f72245fe9a584e7d",
   "src/search_ea_v4.py": "e75fa94caf18bfb4c9dffcf1c879d8c2540f353a13f9d4886e39448dcb6531bf",
-  "src/select_a5.py": "07d4606a377b013a4a0b9475587425fa18e9a81847878aea1dac9218cb99e8a6"
+  "src/select_a5.py": "07d4606a377b013a4a0b9475587425fa18e9a81847878aea1dac9218cb99e8a6",
+  "results/battery_tiered_v23c_highs.json": "83f9794aec954ef9ebe0715ce74b2040bd578e9e436ad55089bf77d5d8678c27",
+  "results/v23c_audit_summary.md": "63c8d4f14e140b2f2dcd74f72072ab179c552391cc2a3c16635afd42971627e1",
+  "results/handcheck_v23_leg0_findings.md": "81527b119e6072995bf2d9e563dbb40f9c0f43982cc4236863a43fb2676894f1",
+  "src/battery_v23c_highs.py": "abc7c391ffb874c6801966e262179be9346c3c744e1315ee86e0f7ea1740e36d",
+  "src/handcheck_v23_leg0.py": "03c8d21670ffc68b0112b9fbf44baf0322dd4b1c7b031337f1340bca7f010fdc",
+  "src/handcheck_v6_floor_semantics.py": "d549d82ecacedfd148d31c73aa4918006b5f6a64aa6f9c92fb81cfcb82a856e1",
+  "judge/round2_as_sent.txt": "54f22ffb0e6c78a2641269d8361fd351fa159fcc9eb838fbbd75ec381a343602",
+  "judge/round2_verdict_chatgpt.txt": "df7aeb3cdd5c98e5e8ba59a6caa5578ecb0c555839c316191ad5be95adaad622",
+  "judge/round2_evidence_packet_battery_supersession_a5.txt": "10e822d0b9d5a8affcb8c6ed372a9f8418603813f41d728b27304f23204f082b"
  },
  "ea_primary_complete": "75/75 primary rows (5 seeds x 5 arms x 3 targets), 8 labeled extension rows, 0 duplicate keys",
  "analysis": {
@@ -108,5 +117,6 @@
   "design": "two-stage: A0 trajectory replay + plateau argmax R_tiered (1e-6 relative plateau)",
   "gate": "M-W exact vs repaired A0, 5v5 per target + 10k perm; 14BDO epsilon-null, ISOBUTANOL/LYCOPENE genuine",
   "selections": "15/15 battery_pass at R_tiered 1.277 (frontier parity)"
- }
+ },
+ "restamp_note": "2026-09-28 19:20 IST: v23c corrected re-eval + paper correction pass (explicit supersession diffs, judge documentation requirements, claims rework); stale entries: []"
 }
