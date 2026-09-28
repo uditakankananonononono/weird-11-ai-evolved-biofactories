@@ -1,0 +1,219 @@
+{
+ "amendment": "10faf32 2026-09-28 20:10 IST",
+ "rule": "WIN if median f_tie <= 0.2 over 15 runs",
+ "per_run": [
+  {
+   "target": "14BDO",
+   "seed": "260927",
+   "plateau": 94,
+   "a5": 1.277,
+   "f_tie": 1.0,
+   "gap": 0.0,
+   "percentile": 50.0
+  },
+  {
+   "target": "14BDO",
+   "seed": "261927",
+   "plateau": 101,
+   "a5": 1.277,
+   "f_tie": 1.0,
+   "gap": 0.0,
+   "percentile": 50.0
+  },
+  {
+   "target": "14BDO",
+   "seed": "262927",
+   "plateau": 108,
+   "a5": 1.277,
+   "f_tie": 1.0,
+   "gap": 0.0,
+   "percentile": 50.0
+  },
+  {
+   "target": "14BDO",
+   "seed": "263927",
+   "plateau": 77,
+   "a5": 1.277,
+   "f_tie": 1.0,
+   "gap": 0.0,
+   "percentile": 50.0
+  },
+  {
+   "target": "14BDO",
+   "seed": "264927",
+   "plateau": 95,
+   "a5": 1.277,
+   "f_tie": 1.0,
+   "gap": 0.0,
+   "percentile": 50.0
+  },
+  {
+   "target": "ISOBUTANOL",
+   "seed": "260927",
+   "plateau": 154,
+   "a5": 1.277,
+   "f_tie": 0.0714,
+   "gap": 0.0575,
+   "percentile": 96.4
+  },
+  {
+   "target": "ISOBUTANOL",
+   "seed": "261927",
+   "plateau": 119,
+   "a5": 1.277,
+   "f_tie": 0.0168,
+   "gap": 0.0479,
+   "percentile": 99.2
+  },
+  {
+   "target": "ISOBUTANOL",
+   "seed": "262927",
+   "plateau": 129,
+   "a5": 1.277,
+   "f_tie": 0.2326,
+   "gap": 0.0383,
+   "percentile": 88.4
+  },
+  {
+   "target": "ISOBUTANOL",
+   "seed": "263927",
+   "plateau": 133,
+   "a5": 1.277,
+   "f_tie": 0.0977,
+   "gap": 0.0439,
+   "percentile": 95.1
+  },
+  {
+   "target": "ISOBUTANOL",
+   "seed": "264927",
+   "plateau": 151,
+   "a5": 1.277,
+   "f_tie": 0.2517,
+   "gap": 0.061,
+   "percentile": 87.4
+  },
+  {
+   "target": "LYCOPENE",
+   "seed": "260927",
+   "plateau": 93,
+   "a5": 1.277,
+   "f_tie": 0.8172,
+   "gap": 0.0313,
+   "percentile": 59.1
+  },
+  {
+   "target": "LYCOPENE",
+   "seed": "261927",
+   "plateau": 81,
+   "a5": 1.277,
+   "f_tie": 0.3827,
+   "gap": 0.1059,
+   "percentile": 80.9
+  },
+  {
+   "target": "LYCOPENE",
+   "seed": "262927",
+   "plateau": 111,
+   "a5": 1.277,
+   "f_tie": 0.8288,
+   "gap": 0.0294,
+   "percentile": 58.6
+  },
+  {
+   "target": "LYCOPENE",
+   "seed": "263927",
+   "plateau": 81,
+   "a5": 1.277,
+   "f_tie": 0.963,
+   "gap": 0.0064,
+   "percentile": 51.9
+  },
+  {
+   "target": "LYCOPENE",
+   "seed": "264927",
+   "plateau": 96,
+   "a5": 1.277,
+   "f_tie": 0.75,
+   "gap": 0.0429,
+   "percentile": 62.5
+  }
+ ],
+ "median_f_tie": 0.8172,
+ "verdict": "NULL",
+ "per_target": {
+  "14BDO": {
+   "median_f_tie": 1.0,
+   "median_gap": 0.0
+  },
+  "ISOBUTANOL": {
+   "median_f_tie": 0.0977,
+   "median_gap": 0.0479
+  },
+  "LYCOPENE": {
+   "median_f_tie": 0.8172,
+   "median_gap": 0.0313
+  }
+ },
+ "a0_realized_vs_plateau": {
+  "14BDO_260927": {
+   "A0_R_tiered": 1.277,
+   "plateau_percentile": 50.0
+  },
+  "14BDO_261927": {
+   "A0_R_tiered": 1.277,
+   "plateau_percentile": 50.0
+  },
+  "14BDO_262927": {
+   "A0_R_tiered": 1.277,
+   "plateau_percentile": 50.0
+  },
+  "14BDO_263927": {
+   "A0_R_tiered": 1.277,
+   "plateau_percentile": 50.0
+  },
+  "14BDO_264927": {
+   "A0_R_tiered": 1.277,
+   "plateau_percentile": 50.0
+  },
+  "ISOBUTANOL_260927": {
+   "A0_R_tiered": 1.1055,
+   "plateau_percentile": 18.5
+  },
+  "ISOBUTANOL_261927": {
+   "A0_R_tiered": 1.261,
+   "plateau_percentile": 72.3
+  },
+  "ISOBUTANOL_262927": {
+   "A0_R_tiered": 1.2605,
+   "plateau_percentile": 52.7
+  },
+  "ISOBUTANOL_263927": {
+   "A0_R_tiered": 1.2717,
+   "plateau_percentile": 73.7
+  },
+  "ISOBUTANOL_264927": {
+   "A0_R_tiered": 1.2429,
+   "plateau_percentile": 33.4
+  },
+  "LYCOPENE_260927": {
+   "A0_R_tiered": 1.1055,
+   "plateau_percentile": 9.1
+  },
+  "LYCOPENE_261927": {
+   "A0_R_tiered": 1.1055,
+   "plateau_percentile": 30.9
+  },
+  "LYCOPENE_262927": {
+   "A0_R_tiered": 1.277,
+   "plateau_percentile": 58.6
+  },
+  "LYCOPENE_263927": {
+   "A0_R_tiered": 1.277,
+   "plateau_percentile": 51.9
+  },
+  "LYCOPENE_264927": {
+   "A0_R_tiered": 1.1055,
+   "plateau_percentile": 12.5
+  }
+ }
+}
