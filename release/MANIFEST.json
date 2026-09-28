@@ -28,8 +28,8 @@
   "data/condition_battery.json": "10283ab9ac84b623132fa0e4d3b81c94af729ea43998ef81d7f5bedc20facac7",
   "data/models/iML1515.xml.gz": "2555e0f7e55a8cb8e770b9bb29cdaeb5db171941c414e7a232ff2d8e0228e308",
   "data/reaction_pool.json": "c7fdda8c7c76340f387e3e2d1bf3ccd5459ee843664d3fd67d27276fe0340254",
-  "paper/main.pdf": "05247a14d7cc75a781961367fac2e810c632c7e8d2fdd873168994b2d74d159d",
-  "paper/main.tex": "4420eaa0fd24a8b0bce94ace5ce4798a66e561c900e0fa26a764220f852c2c73",
+  "paper/main.pdf": "41c993e8dc656b32c1c2180945785f6cea03559ae81c80990319388dbbcddd4a",
+  "paper/main.tex": "2d2a16e937320ab2ab57bbb614d5687a978dd68a066cb843e2466591beeed87c",
   "results/a5_runs.jsonl": "3872541022e5650eca2d357576568c6d1b5d92271ba28683044d20dca2b68277",
   "results/a5_selection_warmorder_SUPERSEDED.json": "18da13ad7798cd291a39d4cf647732ae4360d6ddc07241c05f493821ef821262",
   "results/a5_traj/14BDO_260927.json": "8f022f603b4c7891ecb80efc782ccc491192c1e83b695e96712792b02e59343f",
@@ -120,5 +120,5 @@
   "gate": "M-W exact vs repaired A0, 5v5 per target + 10k perm; 14BDO epsilon-null, ISOBUTANOL/LYCOPENE genuine",
   "selections": "15/15 battery_pass at R_tiered 1.277 (frontier parity)"
  },
- "restamp_note": "2026-09-28 21:06 IST: paper expansion toward 20pp gate - 19pp real content (tie-break table, appendices A-G incl. provenance, battery, encodings, lineage, diff, A5 selections, judge flags)"
+ "restamp_note": "2026-09-28 22:55 IST: appendix G scope clause - agent-run verdicts count for internal progression gates only; project-level pass reserved for owner-run consultation verdict (per owner settled rule, relayed by main 22:45)"
 }
