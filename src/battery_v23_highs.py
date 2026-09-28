@@ -79,9 +79,8 @@ for era, src in [('v2','results/battery_tiered_v2.json'), ('v3','results/battery
         for i, g in enumerate(genomes):
             gk = json.dumps(g, sort_keys=True)
             if gk in F: continue
-            apply_genome(m, tid, g)  # persistent (m reused per genome; reset below)
             row = {}
-            with m:  # revert genome application after this genome
+            with m:  # genome application reverted after this genome
                 apply_genome(m, tid, g)
                 for cond in CONDS:
                     row[cond['id']] = flux_cond(m, S, b_eq, rxns, prod, cond)
