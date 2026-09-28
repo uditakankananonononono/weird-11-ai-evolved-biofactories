@@ -1,0 +1,261 @@
+Show more
+Round-2 judge ruling
+1. Artifact handling: PASS — scientifically adequate, with a few documentation requirements
+
+The handling is strong enough that I would not treat the warm-start failure as an unresolved integrity defect.
+
+Requirement	Judgment	Why
+Concrete detection	PASS	Identical LP, same genome, 13.4545 vs 0.0 is a direct invariant violation.
+Reproduction	PASS	Cold/reset reproduction demonstrates state dependence rather than a one-off discrepancy.
+Interim repair tested	PASS	762/~2,000 failures shows the attempted repair was inadequate.
+Interim repair superseded	PASS	You did not quietly retain a known-bad workaround.
+Final deterministic recomputation	PASS	LP matrices independently solved rather than relying on the problematic stateful evaluation path.
+Validation criterion frozen first	PASS	The 1e-9 equality test was locked before seeing repaired outcomes.
+Genome-level validation	PASS	Zero failures across ~1,706 genomes.
+Auditability	PASS	Old results retained but explicitly superseded.
+Explicit numerical diff	PASS	This makes the effect of the correction inspectable rather than rhetorical.
+What is still missing?
+
+I would require the paper/supplement to give:
+
+Exact GLPK and HiGHS versions.
+
+Solver tolerances and relevant LP settings.
+
+Exact definition of the “solver reset.”
+
+Exact matrix-export procedure.
+
+A reproducible description of how solver state was prevented from entering subsequent evaluations.
+
+The validation pseudocode or equivalent algorithm.
+
+Ideally, an independent fresh-process reproduction of a sample of the invariant checks.
+
+A clear rule that superseded values never enter current inferential statistics, figures, or denominators except where explicitly presented as historical audit data.
+
+The last point matters. “Retained on record” is excellent. “Retained in analysis” would not be.
+
+The fact that the old result is preserved rather than deleted is actually a strength: it creates a traceable record of what changed.
+
+2. Corrected A5 claims: mostly supported, but only with tight wording
+The reliability claim: PASS, narrowly
+
+Your evidence supports:
+
+Across 15 preregistered runs, the A5 rule selected a design satisfying all five severe-leg and all required mild-leg robustness criteria.
+
+That is a genuine reliability result.
+
+It does not establish:
+
+a higher global optimum;
+
+a higher performance ceiling;
+
+superiority across the entire design space;
+
+experimental robustness;
+
+biological robustness;
+
+universal benefit across all three products.
+
+You are already avoiding those claims, which is appropriate.
+
+The 1,4-BDO disclosure: strongly correct
+
+Calling ~10⁻¹³ differences scientifically null is exactly the distinction I would want.
+
+Do not call this an “improvement” merely because the exact statistical procedure can distinguish the values.
+
+The scientifically relevant conclusion is:
+
+A5 passed the formal statistical gate, but the observed 1,4-BDO effect is numerically at floating-point scale and therefore not interpreted as a substantive effect.
+
+That disclosure increases credibility.
+
+Isobutanol: supported
+
+Differences of 0.005–0.171, all positive, together with the stated permutation result, constitute substantially stronger evidence than the epsilon-level 1,4-BDO result.
+
+I would call this a substantive computational effect, not a biological effect.
+
+Lycopene: heterogeneous, not universal
+
+“Genuine on 3/5 seeds” is defensible.
+
+“A5 improves lycopene robustness” without qualification would be too broad.
+
+The correct characterization is something like:
+
+Evidence of a substantive A5 effect was present in 3 of 5 evaluated seeds, indicating heterogeneous rather than uniform benefit.
+
+3. Does the non-binding growth floor make the battery meaningless?
+
+No. But it changes exactly what the battery means.
+
+The battery is not meaningless merely because the growth constraint is inactive.
+
+It can still measure a mathematical property of the model:
+
+How well a nominally high-product-flux design retains its modeled product-flux capability under specified perturbations and severe-condition comparisons.
+
+That is a legitimate computational robustness quantity.
+
+But it is not currently evidence of growth-coupled production robustness.
+
+With maximum growth around 5×10
+−31
+, the growth constraint is effectively irrelevant to the optimization at this pool. Therefore the biological interpretation needs to be narrowed substantially.
+
+The single metric change I would make first
+
+Make the primary robustness objective explicitly growth-conditioned rather than allowing product flux to dominate when growth is effectively zero.
+
+In practice, I would introduce a pre-registered minimum-growth feasibility gate into every battery leg:
+
+g≥g
+min
+	​
+
+
+and calculate robustness only among solutions satisfying that viability criterion.
+
+Crucially, do not choose g
+min
+	​
+
+ after seeing which threshold produces attractive results.
+
+Freeze it from an external/model-based rationale, then rerun the decisive analysis.
+
+I would make this the first metric change because it attacks the largest remaining validity problem directly: currently the battery can reward a design that has excellent modeled product flux but essentially no modeled growth.
+
+I would not start by changing the 0.8 retention threshold, the 50/50 weighting, or the A5 statistical test. Those are secondary until the biological/constraint meaning of the optimization is fixed.
+
+4. Remaining decisive weaknesses — ranked
+1. Non-binding growth coupling — CRITICAL
+
+This is now the biggest issue.
+
+The project should describe itself as computational flux robustness, not growth-coupled metabolic production robustness, unless the growth constraint is made genuinely active.
+
+2. A5 demonstrates reliable selection within an explored plateau, not global algorithmic superiority — CRITICAL
+
+A5 searches among 77–154 genomes already within 10
+−6
+ of the run's best flux.
+
+Therefore its result answers:
+
+Can robustness-aware selection find a robust member of the already-explored nominal-optimal plateau?
+
+It does not answer:
+
+Does this evolutionary strategy discover better metabolic designs than alternatives?
+
+That distinction needs to remain explicit.
+
+3. Robust designs are already common — MAJOR
+
+70/83 repaired committed best genomes pass the full battery.
+
+That makes the 15/15 A5 result less surprising.
+
+A stronger control would ask whether A5 beats an appropriate predefined/random/alternative plateau tie-break in substantive robustness, rather than simply demonstrating that maximizing robustness finds one among many robust members.
+
+This is probably the most important experiment for establishing that A5 contributes more than an obvious selection rule applied to an unusually favorable pool.
+
+4. 1,4-BDO provides essentially no substantive effect — MAJOR
+
+The formal gate firing across all targets must not be allowed to obscure the effect-size audit.
+
+The project does not have three equivalent substantive successes.
+
+It has:
+
+1,4-BDO: epsilon/null;
+
+isobutanol: substantive positive effect;
+
+lycopene: heterogeneous effect.
+
+That asymmetry should be prominent in the abstract/conclusion, not buried in supplementary analysis.
+
+5. Lycopene heterogeneity — MAJOR
+
+Three of five seeds showing a substantive effect is interesting, but insufficient for a universal target-level claim.
+
+The paper should report the seed-level results rather than relying primarily on the aggregate permutation statistic.
+
+6. Small inferential comparison — MAJOR
+
+5v5 is a very small comparison.
+
+The 10,000-label permutation procedure improves assessment of the observed statistic but does not create additional independent experimental replicates.
+
+Therefore the individual R-tiered values, seed-level behavior, and effect sizes should remain visible.
+
+7. Earlier 64- and 256-genome pools are not yet valid evidence — MAJOR
+
+Until recomputed through the repaired pipeline, those results are historical/superseded evidence.
+
+They should not support current quantitative conclusions.
+
+8. Frontier construction needs an explicit anti-circularity audit — MAJOR
+
+Because R
+shift
+	​
+
+ is frontier-relative, specify exactly:
+
+how the frontier is generated;
+
+which genomes are eligible;
+
+whether the evaluated genome can influence its own frontier;
+
+whether the frontier is recomputed after repair;
+
+how ties are handled.
+
+The acetate movement from 6.18 to 10.0 is not itself evidence of a problem, but the denominator/reference construction must be transparent.
+
+9. R>1 needs unusually clear interpretation — MODERATE
+
+Mild retentions of 1.39–1.72 sound biologically impossible if a reader interprets “retention” as percentage retained.
+
+You have correctly identified these as properties of the model's bound set.
+
+Make the mathematical definition prominent enough that nobody interprets 1.72 as “172% biological retention.”
+
+10. No experimental validation — MODERATE/MAJOR depending on claim scope
+
+For an explicitly computational methods project, lack of wet-lab validation is not automatically fatal.
+
+It becomes a major weakness only if the paper makes biological claims beyond what the model establishes.
+
+Your current explicit “in silico only” boundary is therefore important.
+
+Final round-2 assessment
+
+Metric-integrity handling: PASS.
+
+I would consider the original corrupted result fully superseded, rather than merely “adjusted.”
+
+A5 reliability claim: PASS, narrowly.
+
+The strongest defensible contribution is now:
+
+A preregistered robustness-aware tie-break can repeatedly select full-battery-passing designs from an already explored nominal-optimal plateau, with a substantive computational effect for isobutanol, heterogeneous evidence for lycopene, and no substantive effect for 1,4-BDO.
+
+The principal remaining scientific problem is not the solver artifact. You have handled that well.
+
+It is that the current optimization's growth constraint is effectively inactive. Until that is addressed, I would regard the project as demonstrating robustness of model-predicted product-flux solutions, rather than robustness of genuinely growth-coupled metabolic production. That distinction should govern the title, abstract, figures, and final claims.
+
+ChatGPT can make mistakes. Check important info.
+
+Think
+Start Voice
