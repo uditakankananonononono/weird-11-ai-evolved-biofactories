@@ -1,0 +1,3003 @@
+{
+ "amendment": "dd14bdf",
+ "references": {
+  "14BDO": {
+   "v_product": 5.267158680265693,
+   "v_growth_floor": 0.43849860721348494,
+   "v_ATPM": 6.86,
+   "v_ATPS4rpp": 38.92975947895885
+  },
+  "ISOBUTANOL": {
+   "v_product": 5.239101123596115,
+   "v_growth_floor": 0.4384986072134851,
+   "v_ATPM": 6.86,
+   "v_ATPS4rpp": 31.411370426658323
+  },
+  "LYCOPENE": {
+   "v_product": 0.4877405857740657,
+   "v_growth_floor": 0.43849860721348516,
+   "v_ATPM": 6.86,
+   "v_ATPS4rpp": 46.64202925793565
+  }
+ },
+ "targets": {
+  "14BDO": {
+   "n_designs": 16,
+   "n_flagged": 0,
+   "designs": [
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.4955891872312,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695026,
+       "atps_per_product": 7.404086128397953,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.164137931035354,
+       "v_growth_floor": 0.18172439588037134,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.65264755974772
+      },
+      "GLC_MID": {
+       "v_product": 3.7848275862075615,
+       "v_growth_floor": 0.3178150046499293,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699142634
+      },
+      "ANAEROBIC": {
+       "v_product": 8.99723687665039,
+       "v_growth_floor": 0.0793010149008766,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.07320986590139
+      },
+      "GLYCEROL": {
+       "v_product": 2.9457471264372925,
+       "v_growth_floor": 0.24735674620895257,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.41268598158524
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701147056,
+       "v_growth_floor": 0.21164502617722444,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.557959193235774
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.4098080301929325,
+       "v_growth_floor": 0.4535453124451392,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.25041692012131
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344262892,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.937386673813194
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187231154,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796950036
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187230506,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796954036,
+       "atps_per_product": 7.404086128399325,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.164137931034977,
+       "v_growth_floor": 0.18172439588037212,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.65264755974863
+      },
+      "GLC_MID": {
+       "v_product": 3.784827586207715,
+       "v_growth_floor": 0.31781500464993023,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.9639036991407
+      },
+      "ANAEROBIC": {
+       "v_product": 8.997236876652515,
+       "v_growth_floor": 0.07930101490085777,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.073209865900563
+      },
+      "GLYCEROL": {
+       "v_product": 2.9457471264360473,
+       "v_growth_floor": 0.24735674620895248,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.412685981590528
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701135714,
+       "v_growth_floor": 0.2116450261772244,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.55795919324216
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030192233,
+       "v_growth_floor": 0.453545312445139,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.250416920124614
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344269253,
+       "v_growth_floor": 0.6341057752249907,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.9373866737793
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187230504,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695405
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187230053,
+       "v_growth_floor": 0.5438255438350665,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695626,
+       "atps_per_product": 7.404086128400184,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.164137931035184,
+       "v_growth_floor": 0.18172439588037106,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.65264755974836
+      },
+      "GLC_MID": {
+       "v_product": 3.784827586208049,
+       "v_growth_floor": 0.3178150046499307,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.96390369913878
+      },
+      "ANAEROBIC": {
+       "v_product": 8.997236876650556,
+       "v_growth_floor": 0.0793010149008766,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.073209865901617
+      },
+      "GLYCEROL": {
+       "v_product": 2.945747126437798,
+       "v_growth_floor": 0.24735674620895254,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.412685981582285
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701150413,
+       "v_growth_floor": 0.21164502617722447,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.55795919323441
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030192968,
+       "v_growth_floor": 0.45354531244514057,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.250416920119775
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.5813703442648865,
+       "v_growth_floor": 0.6341057752249921,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.93738667380225
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187229635,
+       "v_growth_floor": 0.5438255438350664,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695791
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187230729,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796952764,
+       "atps_per_product": 7.404086128398875,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1641379310355506,
+       "v_growth_floor": 0.18172439588037134,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559746697
+      },
+      "GLC_MID": {
+       "v_product": 3.784827586206945,
+       "v_growth_floor": 0.31781500464992946,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699144502
+      },
+      "ANAEROBIC": {
+       "v_product": 8.99723687665048,
+       "v_growth_floor": 0.0793010149008766,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.073209865900428
+      },
+      "GLYCEROL": {
+       "v_product": 2.9457471264379653,
+       "v_growth_floor": 0.2473567462089533,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.41268598158124
+      },
+      "ACETATE": {
+       "v_product": 2.520459770115116,
+       "v_growth_floor": 0.2116450261772057,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.55795919323282
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.4098080301943,
+       "v_growth_floor": 0.4535453124451392,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.250416920113544
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344269587,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.937386673776544
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187230724,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796952764
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187231337,
+       "v_growth_floor": 0.5438255438350661,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179694937,
+       "atps_per_product": 7.404086128397659,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1641379310349635,
+       "v_growth_floor": 0.18172439588037095,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559748857
+      },
+      "GLC_MID": {
+       "v_product": 3.7848275862071104,
+       "v_growth_floor": 0.31781500464993034,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699143657
+      },
+      "ANAEROBIC": {
+       "v_product": 8.997236876650994,
+       "v_growth_floor": 0.07930101490087596,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.073209865901269
+      },
+      "GLYCEROL": {
+       "v_product": 2.945747126438234,
+       "v_growth_floor": 0.2473567462089524,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.412685981580584
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701137677,
+       "v_growth_floor": 0.21164502617722447,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.557959193240094
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030194272,
+       "v_growth_floor": 0.45354531244514024,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.25041692011371
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344269558,
+       "v_growth_floor": 0.6341057752249917,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.93738667377795
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187230941,
+       "v_growth_floor": 0.5438255438350661,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695143
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187230042,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796956025,
+       "atps_per_product": 7.40408612840016,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1641379310349045,
+       "v_growth_floor": 0.18172439588037134,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.65264755975079
+      },
+      "GLC_MID": {
+       "v_product": 3.784827586207431,
+       "v_growth_floor": 0.31781500464992934,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699142094
+      },
+      "ANAEROBIC": {
+       "v_product": 8.997236876650971,
+       "v_growth_floor": 0.07930101490087667,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.073209865901163
+      },
+      "GLYCEROL": {
+       "v_product": 2.9457471264378414,
+       "v_growth_floor": 0.24735674620893366,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.412685981581177
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701145817,
+       "v_growth_floor": 0.21164502617722536,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.55795919323691
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030194284,
+       "v_growth_floor": 0.45354531244513924,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.250416920113615
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.58137034426951,
+       "v_growth_floor": 0.6341057752249909,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.937386673779656
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187231895,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796946284
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187230701,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796952764,
+       "atps_per_product": 7.404086128398907,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1641379310350763,
+       "v_growth_floor": 0.18172439588037131,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559747578
+      },
+      "GLC_MID": {
+       "v_product": 3.784827586207369,
+       "v_growth_floor": 0.31781500464992896,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699142747
+      },
+      "ANAEROBIC": {
+       "v_product": 8.997236876650684,
+       "v_growth_floor": 0.07930101490087645,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.073209865900822
+      },
+      "GLYCEROL": {
+       "v_product": 2.9457471264375865,
+       "v_growth_floor": 0.24735674620895257,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.412685981582
+      },
+      "ACETATE": {
+       "v_product": 2.520459770115232,
+       "v_growth_floor": 0.21164502617722447,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.557959193233614
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.4098080301938385,
+       "v_growth_floor": 0.45354531244513935,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.25041692011653
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344269091,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.93738667378168
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187230536,
+       "v_growth_floor": 0.5438255438350652,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695379
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9938,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187231751,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179694732,
+       "atps_per_product": 7.404086128396872,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.16413793103557,
+       "v_growth_floor": 0.18172439588037131,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559746203
+      },
+      "GLC_MID": {
+       "v_product": 3.784827586207517,
+       "v_growth_floor": 0.31781500464992934,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.96390369914218
+      },
+      "ANAEROBIC": {
+       "v_product": 8.997236876650586,
+       "v_growth_floor": 0.07930101490087645,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.073209865900935
+      },
+      "GLYCEROL": {
+       "v_product": 2.945747126437218,
+       "v_growth_floor": 0.24735674620893378,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.41268598158552
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701153126,
+       "v_growth_floor": 0.21164502617721553,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.55795919323282
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030194355,
+       "v_growth_floor": 0.4535453124451392,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.250416920113864
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.58137034426918,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.937386673779166
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187231909,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796946284
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9882,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187231108,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796950796,
+       "atps_per_product": 7.4040861283981405,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1641379310348685,
+       "v_growth_floor": 0.18172439588037131,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559748985
+      },
+      "GLC_MID": {
+       "v_product": 3.7848275862075704,
+       "v_growth_floor": 0.31781500464992896,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699141724
+      },
+      "ANAEROBIC": {
+       "v_product": 8.46394645203212,
+       "v_growth_floor": 0.09890957027353464,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.220907491486393
+      },
+      "GLYCEROL": {
+       "v_product": 2.945747126437544,
+       "v_growth_floor": 0.24735674620895232,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.412685981583728
+      },
+      "ACETATE": {
+       "v_product": 2.520459770114442,
+       "v_growth_floor": 0.21164502617722433,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.557959193238275
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030194261,
+       "v_growth_floor": 0.45354531244513935,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.25041692011325
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344269198,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.937386673779194
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187231214,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179694868
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9882,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.49558918723192,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179694651,
+       "atps_per_product": 7.404086128396555,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.164137931035201,
+       "v_growth_floor": 0.18172439588037134,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559747038
+      },
+      "GLC_MID": {
+       "v_product": 3.7848275862075367,
+       "v_growth_floor": 0.31781500464992896,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699142335
+      },
+      "ANAEROBIC": {
+       "v_product": 8.463946452031456,
+       "v_growth_floor": 0.09890957027353464,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.2209074914867095
+      },
+      "GLYCEROL": {
+       "v_product": 2.9457471264375426,
+       "v_growth_floor": 0.24735674620895257,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.412685981583785
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701140807,
+       "v_growth_floor": 0.21164502617722444,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.557959193239085
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.4098080301936164,
+       "v_growth_floor": 0.45354531244513935,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.25041692011723
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.5813703442688105,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.937386673781845
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187231353,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179694924
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9882,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187230598,
+       "v_growth_floor": 0.5438255438350652,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695264,
+       "atps_per_product": 7.404086128399006,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1641379310341406,
+       "v_growth_floor": 0.18172439588037134,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.65264755975392
+      },
+      "GLC_MID": {
+       "v_product": 3.7848275862084098,
+       "v_growth_floor": 0.3178150046499294,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.96390369913786
+      },
+      "ANAEROBIC": {
+       "v_product": 8.463946452031127,
+       "v_growth_floor": 0.09890957027353577,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.220907491487878
+      },
+      "GLYCEROL": {
+       "v_product": 2.94574712643783,
+       "v_growth_floor": 0.24735674620895257,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.412685981582424
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701138685,
+       "v_growth_floor": 0.21164502617722453,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.557959193240464
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030194792,
+       "v_growth_floor": 0.4535453124451392,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.250416920111206
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344263508,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.937386673809236
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.49558918723106,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695026
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9882,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187230463,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695434,
+       "atps_per_product": 7.404086128399421,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1641379310350253,
+       "v_growth_floor": 0.1817243958803721,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559747606
+      },
+      "GLC_MID": {
+       "v_product": 3.7848275862078165,
+       "v_growth_floor": 0.31781500464993034,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699139905
+      },
+      "ANAEROBIC": {
+       "v_product": 8.463946452031939,
+       "v_growth_floor": 0.09890957027351586,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.220907491486969
+      },
+      "GLYCEROL": {
+       "v_product": 2.9457471264366077,
+       "v_growth_floor": 0.24735674620895248,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.41268598158855
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701130185,
+       "v_growth_floor": 0.2116450261772244,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.55795919324419
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030194357,
+       "v_growth_floor": 0.453545312445139,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.250416920113956
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344269587,
+       "v_growth_floor": 0.6341057752249909,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.93738667377721
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187231548,
+       "v_growth_floor": 0.5438255438350553,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796948266
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9882,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187230547,
+       "v_growth_floor": 0.5438255438350652,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695359,
+       "atps_per_product": 7.404086128399209,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.164137931034876,
+       "v_growth_floor": 0.18172439588037131,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559749763
+      },
+      "GLC_MID": {
+       "v_product": 3.7848275862055942,
+       "v_growth_floor": 0.31781500464992923,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699152592
+      },
+      "ANAEROBIC": {
+       "v_product": 8.463946452032598,
+       "v_growth_floor": 0.09890957027353452,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.220907491486876
+      },
+      "GLYCEROL": {
+       "v_product": 2.9457471264375865,
+       "v_growth_floor": 0.24735674620895257,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.41268598158295
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701149942,
+       "v_growth_floor": 0.21164502617722447,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.557959193234865
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030192927,
+       "v_growth_floor": 0.45354531244513935,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.25041692012001
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344262913,
+       "v_growth_floor": 0.634105775224991,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.93738667381391
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187229982,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695568
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9882,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187231349,
+       "v_growth_floor": 0.5438255438350655,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179694919,
+       "atps_per_product": 7.404086128397617,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1641379310358366,
+       "v_growth_floor": 0.18172439588037198,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559744235
+      },
+      "GLC_MID": {
+       "v_product": 3.7848275862080776,
+       "v_growth_floor": 0.3178150046499295,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699139397
+      },
+      "ANAEROBIC": {
+       "v_product": 8.463946452032737,
+       "v_growth_floor": 0.09890957027353577,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.22090749148731
+      },
+      "GLYCEROL": {
+       "v_product": 2.945747126436035,
+       "v_growth_floor": 0.24735674620895254,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.41268598159049
+      },
+      "ACETATE": {
+       "v_product": 2.520459770113578,
+       "v_growth_floor": 0.21164502617722442,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.557959193243505
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030194219,
+       "v_growth_floor": 0.4535453124451397,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.25041692011205
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344269276,
+       "v_growth_floor": 0.6341057752249911,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.9373866737792
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187231211,
+       "v_growth_floor": 0.5438255438350653,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179694891
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": false,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9882,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.4955891872305305,
+       "v_growth_floor": 0.5438255438350661,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.09390179695373,
+       "atps_per_product": 7.40408612839925,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1641379310347326,
+       "v_growth_floor": 0.18172439588037095,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559749767
+      },
+      "GLC_MID": {
+       "v_product": 3.784827586207671,
+       "v_growth_floor": 0.31781500464993045,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699140182
+      },
+      "ANAEROBIC": {
+       "v_product": 8.463946452032463,
+       "v_growth_floor": 0.09890957027353452,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.220907491487537
+      },
+      "GLYCEROL": {
+       "v_product": 2.94574712643795,
+       "v_growth_floor": 0.2473567462089524,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.412685981581852
+      },
+      "ACETATE": {
+       "v_product": 2.5204597701154903,
+       "v_growth_floor": 0.21164502617722447,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.557959193232364
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030194268,
+       "v_growth_floor": 0.45354531244514035,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.250416920113594
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344269775,
+       "v_growth_floor": 0.6341057752249917,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.937386673778164
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187230998,
+       "v_growth_floor": 0.5438255438350661,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796951485
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "routeA_kgd": true,
+      "routeB_sucd": true
+     },
+     "R_tiered": 0.9882,
+     "nominal": 6.4956,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.495589187230516,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796954015,
+       "atps_per_product": 7.40408612839931,
+       "ref_ratio": 7.391036010518503,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1641379310352913,
+       "v_growth_floor": 0.18172439588037134,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 20.652647559747038
+      },
+      "GLC_MID": {
+       "v_product": 3.7848275862078262,
+       "v_growth_floor": 0.31781500464992923,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.963903699140246
+      },
+      "ANAEROBIC": {
+       "v_product": 8.463946452032127,
+       "v_growth_floor": 0.09890957027353463,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 4.220907491485832
+      },
+      "GLYCEROL": {
+       "v_product": 2.945747126437791,
+       "v_growth_floor": 0.24735674620893378,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 27.412685981580513
+      },
+      "ACETATE": {
+       "v_product": 2.520459770114412,
+       "v_growth_floor": 0.21164502617721562,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 33.55795919323759
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.409808030193895,
+       "v_growth_floor": 0.4535453124451392,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.250416920116606
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.581370344269267,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 54.93738667377943
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.495589187230527,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 48.093901796954015
+      }
+     }
+    }
+   ]
+  },
+  "ISOBUTANOL": {
+   "n_designs": 12,
+   "n_flagged": 0,
+   "designs": [
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9997,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.497528089887762,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.6381386513043,
+       "atps_per_product": 5.792685792290967,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1893023255827324,
+       "v_growth_floor": 0.1817243958803713,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.374700486767438
+      },
+      "GLC_MID": {
+       "v_product": 3.804602230256318,
+       "v_growth_floor": 0.3178150046499293,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.267481094032895
+      },
+      "ANAEROBIC": {
+       "v_product": 11.918410588446072,
+       "v_growth_floor": 0.056131848303978334,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -7.923208792266465
+      },
+      "GLYCEROL": {
+       "v_product": 2.98000000000088,
+       "v_growth_floor": 0.24735674620895226,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.589697475833862
+      },
+      "ACETATE": {
+       "v_product": 2.5497674418599745,
+       "v_growth_floor": 0.21164502617722428,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.575654996499765
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.418876404494688,
+       "v_growth_floor": 0.4535453124451392,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.3009087444666
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775282339,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.97536855813098
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089887899,
+       "v_growth_floor": 0.5438255438350642,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130385
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9997,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.497528089887859,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130385,
+       "atps_per_product": 5.79268579229081,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1893023255822026,
+       "v_growth_floor": 0.18172439588037212,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.37470048677119
+      },
+      "GLC_MID": {
+       "v_product": 3.804602230256277,
+       "v_growth_floor": 0.31781500464993034,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.26748109403279
+      },
+      "ANAEROBIC": {
+       "v_product": 11.918410588445507,
+       "v_growth_floor": 0.05613184830398043,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -5.073223948360123
+      },
+      "GLYCEROL": {
+       "v_product": 2.980000000001368,
+       "v_growth_floor": 0.24735674620895257,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.589697475830746
+      },
+      "ACETATE": {
+       "v_product": 2.5497674418606557,
+       "v_growth_floor": 0.21164502617722444,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.575654996495473
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.418876404495049,
+       "v_growth_floor": 0.4535453124451295,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.30090874446341
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775281787,
+       "v_growth_floor": 0.6341057752249909,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.97536855813539
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089888302,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130089
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9997,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.497528089887116,
+       "v_growth_floor": 0.5438255438350652,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.638138651308886,
+       "atps_per_product": 5.7926857922922474,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1893023255826916,
+       "v_growth_floor": 0.18172439588037123,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.374700486767637
+      },
+      "GLC_MID": {
+       "v_product": 3.804602230256498,
+       "v_growth_floor": 0.31781500464992946,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.267481094032405
+      },
+      "ANAEROBIC": {
+       "v_product": 11.918410588445958,
+       "v_growth_floor": 0.056131848303978334,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -7.920018089611631
+      },
+      "GLYCEROL": {
+       "v_product": 2.980000000001368,
+       "v_growth_floor": 0.24735674620895257,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.589697475830803
+      },
+      "ACETATE": {
+       "v_product": 2.5497674418603262,
+       "v_growth_floor": 0.21164502617722444,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.575654996497292
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.418876404494041,
+       "v_growth_floor": 0.4535453124451394,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.30090874447163
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775276591,
+       "v_growth_floor": 0.634105775224991,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.9753685581709
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089887616,
+       "v_growth_floor": 0.5438255438350652,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.638138651305546
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9997,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.497528089888217,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.638138651301276,
+       "atps_per_product": 5.792685792290095,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.189302325581492,
+       "v_growth_floor": 0.18172439588037126,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.374700486776206
+      },
+      "GLC_MID": {
+       "v_product": 3.804602230256464,
+       "v_growth_floor": 0.31781500464992923,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.267481094031382
+      },
+      "ANAEROBIC": {
+       "v_product": 11.918410588445571,
+       "v_growth_floor": 0.056131848303979034,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -7.923208792261098
+      },
+      "GLYCEROL": {
+       "v_product": 2.9800000000003686,
+       "v_growth_floor": 0.24735674620895257,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.589697475837724
+      },
+      "ACETATE": {
+       "v_product": 2.5497674418583642,
+       "v_growth_floor": 0.21164502617722447,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.575654996510846
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.418876404494658,
+       "v_growth_floor": 0.4535453124451392,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.30090874446654
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775281757,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.97536855813597
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089888215,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.638138651301276
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9991,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.49752808988827,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130135,
+       "atps_per_product": 5.792685792290059,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1893023255823616,
+       "v_growth_floor": 0.18172439588037126,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.374700486770333
+      },
+      "GLC_MID": {
+       "v_product": 3.804602230256154,
+       "v_growth_floor": 0.31781500464993007,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.26748109403335
+      },
+      "ANAEROBIC": {
+       "v_product": 11.846298941687515,
+       "v_growth_floor": 0.0658873029438577,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -6.900691127986505
+      },
+      "GLYCEROL": {
+       "v_product": 2.980000000001035,
+       "v_growth_floor": 0.24735674620895245,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.589697475833646
+      },
+      "ACETATE": {
+       "v_product": 2.549767441860003,
+       "v_growth_floor": 0.21164502617722442,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.57565499649943
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.418876404493076,
+       "v_growth_floor": 0.4535453124451392,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.30090874447788
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775275559,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.975368558177195
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.49752808988712,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.638138651308886
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9991,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.497528089887593,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130556,
+       "atps_per_product": 5.79268579229131,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1893023255819872,
+       "v_growth_floor": 0.18172439588037134,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.374700486772774
+      },
+      "GLC_MID": {
+       "v_product": 3.8046022302551545,
+       "v_growth_floor": 0.31781500464992896,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.267481094040917
+      },
+      "ANAEROBIC": {
+       "v_product": 11.84629894168737,
+       "v_growth_floor": 0.0658873029438578,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -6.900691127987216
+      },
+      "GLYCEROL": {
+       "v_product": 2.9800000000013673,
+       "v_growth_floor": 0.2473567462089525,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.589697475830803
+      },
+      "ACETATE": {
+       "v_product": 2.549767441861057,
+       "v_growth_floor": 0.21164502617722444,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.57565499649195
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.418876404493548,
+       "v_growth_floor": 0.453545312445139,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.300908744474576
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775275577,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.975368558177266
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089887588,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130557
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9991,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.497528089888238,
+       "v_growth_floor": 0.5438255438350652,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.6381386513011,
+       "atps_per_product": 5.792685792290049,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.18930232558246,
+       "v_growth_floor": 0.1817243958803713,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.374700486769257
+      },
+      "GLC_MID": {
+       "v_product": 3.8046022302565574,
+       "v_growth_floor": 0.3178150046499291,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.267481094031382
+      },
+      "ANAEROBIC": {
+       "v_product": 11.846298941687435,
+       "v_growth_floor": 0.06588730294385775,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -6.900691127988962
+      },
+      "GLYCEROL": {
+       "v_product": 2.9800000000009503,
+       "v_growth_floor": 0.24735674620895226,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.58969747583366
+      },
+      "ACETATE": {
+       "v_product": 2.549767441859541,
+       "v_growth_floor": 0.21164502617722428,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.575654996502717
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.418876404493437,
+       "v_growth_floor": 0.45354531244513924,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.300908744476
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.57617977528162,
+       "v_growth_floor": 0.6341057752249915,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.97536855813519
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089887891,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130385
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9991,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.497528089887861,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130385,
+       "atps_per_product": 5.792685792290809,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1893023255824344,
+       "v_growth_floor": 0.18172439588037134,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.374700486769257
+      },
+      "GLC_MID": {
+       "v_product": 3.8046022302559637,
+       "v_growth_floor": 0.31781500464992934,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.26748109403502
+      },
+      "ANAEROBIC": {
+       "v_product": 11.846298941687449,
+       "v_growth_floor": 0.06588730294385772,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -6.900691127988557
+      },
+      "GLYCEROL": {
+       "v_product": 2.980000000000929,
+       "v_growth_floor": 0.24735674620895257,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.58969747583376
+      },
+      "ACETATE": {
+       "v_product": 2.549767441858366,
+       "v_growth_floor": 0.21164502617722447,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.575654996511606
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.418876404494984,
+       "v_growth_floor": 0.4535453124451391,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.300908744464095
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775282233,
+       "v_growth_floor": 0.6341057752249906,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.97536855813257
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089887864,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130385
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9987,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.497528089888305,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130089,
+       "atps_per_product": 5.792685792289958,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.189302325582466,
+       "v_growth_floor": 0.1817243958803713,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.37470048676903
+      },
+      "GLC_MID": {
+       "v_product": 3.8046022302562514,
+       "v_growth_floor": 0.31781500464992934,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.267481094033055
+      },
+      "ANAEROBIC": {
+       "v_product": 11.796716558715069,
+       "v_growth_floor": 0.07259493908542675,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -7.044277175136166
+      },
+      "GLYCEROL": {
+       "v_product": 2.9800000000013305,
+       "v_growth_floor": 0.24735674620895245,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.589697475830715
+      },
+      "ACETATE": {
+       "v_product": 2.5497674418598617,
+       "v_growth_floor": 0.21164502617722447,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.575654996500784
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.4188764044949576,
+       "v_growth_floor": 0.45354531244513924,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.300908744464095
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775275582,
+       "v_growth_floor": 0.6341057752249908,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.97536855817726
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089888327,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130089
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9987,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.497528089887345,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130771,
+       "atps_per_product": 5.792685792291864,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.189302325581204,
+       "v_growth_floor": 0.18172439588037134,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.374700486778103
+      },
+      "GLC_MID": {
+       "v_product": 3.8046022302565925,
+       "v_growth_floor": 0.31781500464992896,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.267481094031382
+      },
+      "ANAEROBIC": {
+       "v_product": 11.796716558713829,
+       "v_growth_floor": 0.07259493908542727,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -7.044277175122147
+      },
+      "GLYCEROL": {
+       "v_product": 2.9800000000013664,
+       "v_growth_floor": 0.24735674620895248,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.589697475830803
+      },
+      "ACETATE": {
+       "v_product": 2.549767441859747,
+       "v_growth_floor": 0.21164502617722442,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.57565499650191
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.4188764044930995,
+       "v_growth_floor": 0.4535453124451392,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.30090874447785
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775276571,
+       "v_growth_floor": 0.6341057752249907,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.97536855817081
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089887117,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.638138651308886
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": false
+     },
+     "R_tiered": 0.9987,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.49752808988781,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130453,
+       "atps_per_product": 5.792685792290959,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.1893023255817257,
+       "v_growth_floor": 0.18172439588037126,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.374700486773648
+      },
+      "GLC_MID": {
+       "v_product": 3.8046022302565765,
+       "v_growth_floor": 0.3178150046499293,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.267481094031382
+      },
+      "ANAEROBIC": {
+       "v_product": 11.79671655871346,
+       "v_growth_floor": 0.07259493908542806,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -7.044277175117941
+      },
+      "GLYCEROL": {
+       "v_product": 2.9800000000013305,
+       "v_growth_floor": 0.24735674620895226,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.589697475830487
+      },
+      "ACETATE": {
+       "v_product": 2.5497674418597485,
+       "v_growth_floor": 0.21164502617722428,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.575654996501296
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.418876404495433,
+       "v_growth_floor": 0.45354531244513946,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.30090874446114
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775281638,
+       "v_growth_floor": 0.6341057752249909,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.97536855813519
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089887831,
+       "v_growth_floor": 0.5438255438350654,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.6381386513043
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "adh_nadh": true,
+      "adh_nadph": true
+     },
+     "R_tiered": 0.9987,
+     "nominal": 6.4975,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 6.497528089888302,
+       "v_growth_floor": 0.5438255438350651,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130099,
+       "atps_per_product": 5.7926857922899755,
+       "ref_ratio": 5.995564827940862,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 2.189302325581994,
+       "v_growth_floor": 0.1817243958803712,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 16.37470048677153
+      },
+      "GLC_MID": {
+       "v_product": 3.804602230255895,
+       "v_growth_floor": 0.3178150046499295,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.26748109403502
+      },
+      "ANAEROBIC": {
+       "v_product": 11.796716558713577,
+       "v_growth_floor": 0.07259493908542676,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -7.044277175117031
+      },
+      "GLYCEROL": {
+       "v_product": 2.9800000000000235,
+       "v_growth_floor": 0.24735674620895257,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 21.589697475840644
+      },
+      "ACETATE": {
+       "v_product": 2.5497674418601646,
+       "v_growth_floor": 0.21164502617722444,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 28.57565499649888
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 5.418876404494973,
+       "v_growth_floor": 0.4535453124451391,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 32.300908744464095
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 7.576179775282002,
+       "v_growth_floor": 0.6341057752249909,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 42.975368558133255
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 6.497528089887847,
+       "v_growth_floor": 0.5438255438350649,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 37.63813865130385
+      }
+     }
+    }
+   ]
+  },
+  "LYCOPENE": {
+   "n_designs": 12,
+   "n_flagged": 0,
+   "designs": [
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 1.0,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190744748,
+       "v_growth_floor": 0.4314993871684463,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134698,
+       "atps_per_product": 69.10188377168994,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.32700753615533706,
+       "v_growth_floor": 0.06928940062450903,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.23136977849979
+      },
+      "GLC_MID": {
+       "v_product": 0.478276170843049,
+       "v_growth_floor": 0.20539702793094083,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.532890240595208
+      },
+      "ANAEROBIC": {
+       "v_product": 0.3885642107812411,
+       "v_growth_floor": 0.051926547419821355,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -3.7328647293867334
+      },
+      "GLYCEROL": {
+       "v_product": 0.39995978550841277,
+       "v_growth_floor": 0.13492995847441944,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.951251987166337
+      },
+      "ACETATE": {
+       "v_product": 0.36026517924285456,
+       "v_growth_floor": 0.0992137725854976,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.574257255975954
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595534734,
+       "v_growth_floor": 0.34120787235051453,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.959397913768385
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.8302412785959058,
+       "v_growth_floor": 0.5217909019863782,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.90660668890996
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190744748,
+       "v_growth_floor": 0.4314993871684463,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134698
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 1.0,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190744823,
+       "v_growth_floor": 0.4314993871684463,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.433002301347095,
+       "atps_per_product": 69.10188377168939,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.32700753615536243,
+       "v_growth_floor": 0.06928940062450903,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.2313697784995
+      },
+      "GLC_MID": {
+       "v_product": 0.4782761708431013,
+       "v_growth_floor": 0.20539702793093997,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.532890240593154
+      },
+      "ANAEROBIC": {
+       "v_product": 0.3885642107811809,
+       "v_growth_floor": 0.051926547419821355,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -3.732864729387298
+      },
+      "GLYCEROL": {
+       "v_product": 0.39995978550835637,
+       "v_growth_floor": 0.13492995847441944,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.95125198716719
+      },
+      "ACETATE": {
+       "v_product": 0.3602651792428273,
+       "v_growth_floor": 0.0992137725854976,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.574257255976796
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595534081,
+       "v_growth_floor": 0.3412078723505145,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.959397913771454
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.830241278595956,
+       "v_growth_floor": 0.5217909019863782,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.906606688908546
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190747159,
+       "v_growth_floor": 0.43149938716844627,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230133673
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 1.0,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190744566,
+       "v_growth_floor": 0.43149938716844616,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134762,
+       "atps_per_product": 69.10188377169254,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.3270075361550078,
+       "v_growth_floor": 0.06928940062450906,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.231369778512008
+      },
+      "GLC_MID": {
+       "v_product": 0.47827617084324453,
+       "v_growth_floor": 0.2053970279309411,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.532890240586866
+      },
+      "ANAEROBIC": {
+       "v_product": 0.38856421078149816,
+       "v_growth_floor": 0.05192654741982134,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -3.732864729384701
+      },
+      "GLYCEROL": {
+       "v_product": 0.3999597855083617,
+       "v_growth_floor": 0.1349299584744194,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.951251987167414
+      },
+      "ACETATE": {
+       "v_product": 0.36026517924289436,
+       "v_growth_floor": 0.09921377258549753,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.574257255974466
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595534494,
+       "v_growth_floor": 0.3412078723505145,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.9593979137693
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.8302412785959142,
+       "v_growth_floor": 0.5217909019863781,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.906606688909974
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190744568,
+       "v_growth_floor": 0.43149938716844627,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134768
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 1.0,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190744613,
+       "v_growth_floor": 0.43149938716844655,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134844,
+       "atps_per_product": 69.10188377169322,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.3270075361550753,
+       "v_growth_floor": 0.06928940062450906,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.231369778511446
+      },
+      "GLC_MID": {
+       "v_product": 0.4782761708432877,
+       "v_growth_floor": 0.2053970279309411,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.532890240585036
+      },
+      "ANAEROBIC": {
+       "v_product": 0.38856421078139686,
+       "v_growth_floor": 0.051926547419821334,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -3.7328647293854083
+      },
+      "GLYCEROL": {
+       "v_product": 0.39995978550835215,
+       "v_growth_floor": 0.1349299584744194,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.951251987167176
+      },
+      "ACETATE": {
+       "v_product": 0.36026517924282314,
+       "v_growth_floor": 0.09921377258549756,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.57425725597716
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595534928,
+       "v_growth_floor": 0.34120787235051436,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.95939791376777
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.8302412785960765,
+       "v_growth_floor": 0.521790901986378,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.90660668890332
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190744573,
+       "v_growth_floor": 0.43149938716844616,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.4330023013477
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 0.9906,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190744548,
+       "v_growth_floor": 0.4314993871684464,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134763,
+       "atps_per_product": 69.10188377169273,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.32700753615511435,
+       "v_growth_floor": 0.06928940062450906,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.23136977850957
+      },
+      "GLC_MID": {
+       "v_product": 0.47827617084330537,
+       "v_growth_floor": 0.20539702793094083,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.532890240584162
+      },
+      "ANAEROBIC": {
+       "v_product": 0.3521776356454726,
+       "v_growth_floor": 0.02977629231185175,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -0.08384885182122659
+      },
+      "GLYCEROL": {
+       "v_product": 0.39995978550816563,
+       "v_growth_floor": 0.13492995847441944,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.95125198717571
+      },
+      "ACETATE": {
+       "v_product": 0.3602651792427845,
+       "v_growth_floor": 0.0992137725854976,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.574257255979298
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595534928,
+       "v_growth_floor": 0.3412078723505146,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.95939791376763
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.830241278595956,
+       "v_growth_floor": 0.5217909019863782,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.90660668890847
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190744184,
+       "v_growth_floor": 0.43149938716844627,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134952
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 0.9906,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190744546,
+       "v_growth_floor": 0.43149938716844627,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134763,
+       "atps_per_product": 69.10188377169274,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.32700753615511324,
+       "v_growth_floor": 0.06928940062450906,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.23136977850955
+      },
+      "GLC_MID": {
+       "v_product": 0.47827617084332824,
+       "v_growth_floor": 0.2053970279309411,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.532890240583264
+      },
+      "ANAEROBIC": {
+       "v_product": 0.35217763564542404,
+       "v_growth_floor": 0.029776292311851738,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -0.08384885182082336
+      },
+      "GLYCEROL": {
+       "v_product": 0.3999597855083355,
+       "v_growth_floor": 0.13492995847441944,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.95125198716886
+      },
+      "ACETATE": {
+       "v_product": 0.3602651792427823,
+       "v_growth_floor": 0.0992137725854976,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.574257255979283
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595534524,
+       "v_growth_floor": 0.3412078723505145,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.95939791376957
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.830241278595956,
+       "v_growth_floor": 0.5217909019863782,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.90660668890847
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190744546,
+       "v_growth_floor": 0.43149938716844627,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134763
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 0.9906,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190747379,
+       "v_growth_floor": 0.43149938716844394,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.433002301335364,
+       "atps_per_product": 69.10188377164911,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.32700753615528044,
+       "v_growth_floor": 0.06928940062450897,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.231369778502085
+      },
+      "GLC_MID": {
+       "v_product": 0.4782761708430258,
+       "v_growth_floor": 0.20539702793094095,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.53289024059586
+      },
+      "ANAEROBIC": {
+       "v_product": 0.35217763564609905,
+       "v_growth_floor": 0.02977629231185175,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -0.08384885181934898
+      },
+      "GLYCEROL": {
+       "v_product": 0.3999597855082426,
+       "v_growth_floor": 0.1349299584744195,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.951251987172554
+      },
+      "ACETATE": {
+       "v_product": 0.36026517924262774,
+       "v_growth_floor": 0.09921377258549757,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.574257255985685
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595533814,
+       "v_growth_floor": 0.3412078723505025,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.95939791377247
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.8302412785960614,
+       "v_growth_floor": 0.521790901986376,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.90660668890363
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190747126,
+       "v_growth_floor": 0.43149938716844405,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230133673
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": true,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": false,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 0.9906,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190747379,
+       "v_growth_floor": 0.43149938716844394,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.433002301335364,
+       "atps_per_product": 69.10188377164911,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.3270075361553684,
+       "v_growth_floor": 0.06928940062450901,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.231369778499243
+      },
+      "GLC_MID": {
+       "v_product": 0.4782761708430258,
+       "v_growth_floor": 0.20539702793094095,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.53289024059586
+      },
+      "ANAEROBIC": {
+       "v_product": 0.3521776356455419,
+       "v_growth_floor": 0.02977629231185175,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": -0.08384885182101698
+      },
+      "GLYCEROL": {
+       "v_product": 0.3999597855082426,
+       "v_growth_floor": 0.1349299584744195,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.951251987172554
+      },
+      "ACETATE": {
+       "v_product": 0.36026517924262774,
+       "v_growth_floor": 0.09921377258549757,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.574257255985685
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595533814,
+       "v_growth_floor": 0.3412078723505025,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.95939791377259
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.8302412785960708,
+       "v_growth_floor": 0.521790901986376,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.90660668890382
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190747126,
+       "v_growth_floor": 0.43149938716844405,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230133673
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 0.9854,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190744555,
+       "v_growth_floor": 0.43149938716844627,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134763,
+       "atps_per_product": 69.10188377169266,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.32700753615509953,
+       "v_growth_floor": 0.06928940062450906,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.23136977850912
+      },
+      "GLC_MID": {
+       "v_product": 0.47827617084333046,
+       "v_growth_floor": 0.20539702793094083,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.532890240584155
+      },
+      "ANAEROBIC": {
+       "v_product": 0.33191915504296987,
+       "v_growth_floor": 0.02874252064783391,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 0.7208821909143808
+      },
+      "GLYCEROL": {
+       "v_product": 0.39995978550832656,
+       "v_growth_floor": 0.13492995847441944,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.951251987168686
+      },
+      "ACETATE": {
+       "v_product": 0.3602651792426226,
+       "v_growth_floor": 0.0992137725854976,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.574257255986318
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595535098,
+       "v_growth_floor": 0.3412078723505146,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.95939791376698
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.830241278595954,
+       "v_growth_floor": 0.5217909019863782,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.90660668890857
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190744193,
+       "v_growth_floor": 0.43149938716844627,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134953
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": false,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 0.9854,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190744806,
+       "v_growth_floor": 0.4314993871684464,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230134706,
+       "atps_per_product": 69.1018837716895,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.32700753615512707,
+       "v_growth_floor": 0.06928940062450906,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.231369778509137
+      },
+      "GLC_MID": {
+       "v_product": 0.47827617084333046,
+       "v_growth_floor": 0.20539702793094083,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.532890240584155
+      },
+      "ANAEROBIC": {
+       "v_product": 0.33191915504289465,
+       "v_growth_floor": 0.02874252064783388,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 0.720882190914364
+      },
+      "GLYCEROL": {
+       "v_product": 0.39995978550838146,
+       "v_growth_floor": 0.13492995847441944,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.95125198716722
+      },
+      "ACETATE": {
+       "v_product": 0.3602651792428812,
+       "v_growth_floor": 0.0992137725854976,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.5742572559754
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595535601,
+       "v_growth_floor": 0.3412078723505146,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.959397913765464
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.8302412785959566,
+       "v_growth_floor": 0.5217909019863782,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.906606688908404
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190744168,
+       "v_growth_floor": 0.4314993871684464,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.433002301349504
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "dxs_push": false,
+      "idi_push": true
+     },
+     "R_tiered": 0.9854,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190747126,
+       "v_growth_floor": 0.43149938716844405,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230133673,
+       "atps_per_product": 69.10188377165338,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.3270075361553674,
+       "v_growth_floor": 0.06928940062448906,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.231369778497537
+      },
+      "GLC_MID": {
+       "v_product": 0.4782761708430259,
+       "v_growth_floor": 0.20539702793094083,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.53289024059586
+      },
+      "ANAEROBIC": {
+       "v_product": 0.33191915504287034,
+       "v_growth_floor": 0.028742520647815083,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 0.7208821909136507
+      },
+      "GLYCEROL": {
+       "v_product": 0.3999597855082435,
+       "v_growth_floor": 0.1349299584744194,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.95125198717178
+      },
+      "ACETATE": {
+       "v_product": 0.36026517924263474,
+       "v_growth_floor": 0.09921377258549757,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.574257255985458
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.6294295595533814,
+       "v_growth_floor": 0.3412078723505025,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.95939791377259
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.8302412785960699,
+       "v_growth_floor": 0.5217909019863761,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.906606688903764
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190747088,
+       "v_growth_floor": 0.43149938716844405,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230133657
+      }
+     }
+    },
+    {
+     "genome": {
+      "ko_ackApta": false,
+      "ko_pflB": false,
+      "ko_ldhA": true,
+      "cofeed_glycerol": true,
+      "ko_adhE": true,
+      "ko_tpiA": false,
+      "dxs_push": true,
+      "idi_push": true
+     },
+     "R_tiered": 0.9854,
+     "nominal": 0.7298,
+     "flag_F2": false,
+     "conditions": {
+      "GLC_AEROBIC": {
+       "v_product": 0.7298354190747126,
+       "v_growth_floor": 0.43149938716844405,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230133673,
+       "atps_per_product": 69.10188377165338,
+       "ref_ratio": 95.62876376980746,
+       "atpm_at_lb": true
+      },
+      "GLC_LOW": {
+       "v_product": 0.3270075361553857,
+       "v_growth_floor": 0.06928940062450906,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 17.23136977849864
+      },
+      "GLC_MID": {
+       "v_product": 0.4782761708430509,
+       "v_growth_floor": 0.20539702793094095,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 29.532890240595066
+      },
+      "ANAEROBIC": {
+       "v_product": 0.33191915504286734,
+       "v_growth_floor": 0.02874252064781509,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 0.7208821909135601
+      },
+      "GLYCEROL": {
+       "v_product": 0.39995978550824957,
+       "v_growth_floor": 0.1349299584744194,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 24.9512519871721
+      },
+      "ACETATE": {
+       "v_product": 0.3602651792426593,
+       "v_growth_floor": 0.09921377258549757,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 30.57425725598432
+      },
+      "GLC_PERT_MINUS20": {
+       "v_product": 0.629429559553409,
+       "v_growth_floor": 0.3412078723505123,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 41.959397913770886
+      },
+      "GLC_PERT_PLUS20": {
+       "v_product": 0.8302412785960699,
+       "v_growth_floor": 0.5217909019863761,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 58.906606688903764
+      },
+      "O2_PERT_MINUS50": {
+       "v_product": 0.7298354190747088,
+       "v_growth_floor": 0.43149938716844405,
+       "v_ATPM": 6.86,
+       "v_ATPS4rpp": 50.43300230133657
+      }
+     }
+    }
+   ]
+  }
+ }
+}

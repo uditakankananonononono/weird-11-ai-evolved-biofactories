@@ -24,12 +24,12 @@
  },
  "pool_v4": "12 host + 2 target levers = 16,384 genomes/target (ERRATUM 0e72f42)",
  "files": {
-  "PRE-REGISTRATION.md": "77fd5f583d6692f18477206ea1361d8f506da50a97aa28d877c2202a6dce5fe2",
+  "PRE-REGISTRATION.md": "6bec1739bffb7c7c942758d5c8875be066de506d8a8160f37a2720ddee9fd049",
   "data/condition_battery.json": "10283ab9ac84b623132fa0e4d3b81c94af729ea43998ef81d7f5bedc20facac7",
   "data/models/iML1515.xml.gz": "2555e0f7e55a8cb8e770b9bb29cdaeb5db171941c414e7a232ff2d8e0228e308",
   "data/reaction_pool.json": "c7fdda8c7c76340f387e3e2d1bf3ccd5459ee843664d3fd67d27276fe0340254",
-  "paper/main.pdf": "41c993e8dc656b32c1c2180945785f6cea03559ae81c80990319388dbbcddd4a",
-  "paper/main.tex": "2d2a16e937320ab2ab57bbb614d5687a978dd68a066cb843e2466591beeed87c",
+  "paper/main.pdf": "629c3f74799d8026f6c545ae0242a5943759ff6154218d3cf689cb671faf4c2d",
+  "paper/main.tex": "6a9819faa456ef2de9e2209c811d1827820e6b85d4ad9f63d5ca56a9ac818bd2",
   "results/a5_runs.jsonl": "3872541022e5650eca2d357576568c6d1b5d92271ba28683044d20dca2b68277",
   "results/a5_selection_warmorder_SUPERSEDED.json": "18da13ad7798cd291a39d4cf647732ae4360d6ddc07241c05f493821ef821262",
   "results/a5_traj/14BDO_260927.json": "8f022f603b4c7891ecb80efc782ccc491192c1e83b695e96712792b02e59343f",
@@ -120,5 +120,5 @@
   "gate": "M-W exact vs repaired A0, 5v5 per target + 10k perm; 14BDO epsilon-null, ISOBUTANOL/LYCOPENE genuine",
   "selections": "15/15 battery_pass at R_tiered 1.277 (frontier parity)"
  },
- "restamp_note": "2026-09-28 22:55 IST: appendix G scope clause - agent-run verdicts count for internal progression gates only; project-level pass reserved for owner-run consultation verdict (per owner settled rule, relayed by main 22:45)"
+ "restamp_note": "2026-09-29 07:27 IST: F2 ATP-cost screen executed (amendment dd14bdf) - 0/40 flagged, null reported verbatim with structural disclosures; F2 deferral sentence replaced; filter-count and winner-count fixes"
 }
