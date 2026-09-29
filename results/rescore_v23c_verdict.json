@@ -1,0 +1,132 @@
+{
+ "amendment": "8274f9f 2026-09-29 14:35 IST",
+ "validation": "handcheck_rescore.py PASS required before this step",
+ "per_target": {
+  "14BDO": {
+   "frontier_v23c": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "zero_frontier_conditions": [
+    "GLC_LOW",
+    "GLC_MID",
+    "ANAEROBIC",
+    "GLYCEROL",
+    "ACETATE"
+   ],
+   "plateau_n": 293,
+   "plateau_max_R_tiered": 0.0,
+   "plateau_max_nominal": 0.0,
+   "a6_R_tiered_per_seed": {
+    "260927": 0.49999998405057927,
+    "261927": 0.49999998405057927,
+    "262927": 0.49999998405057927,
+    "263927": 0.49999998405057927,
+    "264927": 0.49999998405057927
+   },
+   "a0_realized_R_tiered_per_seed": {
+    "260927": 0.0,
+    "261927": 0.0,
+    "262927": 0.0,
+    "263927": 0.0,
+    "264927": 0.0
+   },
+   "degenerate_frontier_rule_used": true,
+   "a6_nominal_retention_vs_plateau": {
+    "260927": null,
+    "261927": null,
+    "262927": null,
+    "263927": null,
+    "264927": null
+   },
+   "verdict": "WIN"
+  },
+  "ISOBUTANOL": {
+   "frontier_v23c": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "zero_frontier_conditions": [
+    "GLC_LOW",
+    "GLC_MID",
+    "ANAEROBIC",
+    "GLYCEROL",
+    "ACETATE"
+   ],
+   "plateau_n": 601,
+   "plateau_max_R_tiered": 0.0,
+   "plateau_max_nominal": 0.0,
+   "a6_R_tiered_per_seed": {
+    "260927": 0.5000000269082829,
+    "261927": 0.5000000269082829,
+    "262927": 0.5000000269082829,
+    "263927": 0.5000000269082829,
+    "264927": 0.5000000269082829
+   },
+   "a0_realized_R_tiered_per_seed": {
+    "260927": 0.0,
+    "261927": 0.0,
+    "262927": 0.0,
+    "263927": 0.0,
+    "264927": 0.0
+   },
+   "degenerate_frontier_rule_used": true,
+   "a6_nominal_retention_vs_plateau": {
+    "260927": null,
+    "261927": null,
+    "262927": null,
+    "263927": null,
+    "264927": null
+   },
+   "verdict": "WIN"
+  },
+  "LYCOPENE": {
+   "frontier_v23c": {
+    "GLC_LOW": 0.0,
+    "GLC_MID": 0.0,
+    "ANAEROBIC": 0.0,
+    "GLYCEROL": 0.0,
+    "ACETATE": 0.0
+   },
+   "zero_frontier_conditions": [
+    "GLC_LOW",
+    "GLC_MID",
+    "ANAEROBIC",
+    "GLYCEROL",
+    "ACETATE"
+   ],
+   "plateau_n": 330,
+   "plateau_max_R_tiered": 0.0,
+   "plateau_max_nominal": 0.0,
+   "a6_R_tiered_per_seed": {
+    "260927": 0.4999998953988238,
+    "261927": 0.49999989539883916,
+    "263927": 0.49999989539883916,
+    "264927": 0.49999989539883916,
+    "262927": 0.4999998953988742
+   },
+   "a0_realized_R_tiered_per_seed": {
+    "260927": 0.0,
+    "261927": 0.0,
+    "263927": 0.0,
+    "264927": 0.0,
+    "262927": 0.0
+   },
+   "degenerate_frontier_rule_used": true,
+   "a6_nominal_retention_vs_plateau": {
+    "260927": null,
+    "261927": null,
+    "262927": null,
+    "263927": null,
+    "264927": null
+   },
+   "verdict": "WIN"
+  }
+ }
+}
