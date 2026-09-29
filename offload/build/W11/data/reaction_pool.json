@@ -1,0 +1,69 @@
+{
+ "locked": "2026-09-26 21:27 IST (search_design.md) BEFORE first search run",
+ "pools": {
+  "14BDO": {
+   "core_always_on": [
+    "BDO2",
+    "BDO3",
+    "BDO4",
+    "BDO5"
+   ],
+   "blocks": {
+    "routeA_kgd": {
+     "reactions": [
+      "BDO1"
+     ],
+     "provenance": "Yim 2011 route A (benchmarks.json)"
+    },
+    "routeB_sucd": {
+     "reactions": [
+      "BDO1B"
+     ],
+     "provenance": "Yim 2011 route B alt (benchmarks.json step1 note): succinyl-CoA -> SSA via sucD (P. gingivalis)",
+     "definition": "BDO1B: succoa_c + nadh_c + h_c -> sucsal_c + coa_c + nad_c"
+    }
+   }
+  },
+  "ISOBUTANOL": {
+   "core_always_on": [
+    "ALSS",
+    "KIVD"
+   ],
+   "blocks": {
+    "adh_nadh": {
+     "reactions": [
+      "IBUTDH"
+     ],
+     "provenance": "Atsumi 2008 adhA (NADH)"
+    },
+    "adh_nadph": {
+     "reactions": [
+      "IBUTDHP"
+     ],
+     "provenance": "search-design engineering choice (cofactor variant); NOT a literature-verified route - labeled as such",
+     "definition": "IBUTDHP: ibutyr_c + nadph_c + h_c -> ibut_c + nadp_c"
+    }
+   }
+  },
+  "LYCOPENE": {
+   "core_always_on": [
+    "CRTE",
+    "CRTB",
+    "CRTI"
+   ],
+   "blocks": {
+    "dxs_push": {
+     "reactions": [],
+     "provenance": "Alper 2005 dxs overexpression",
+     "definition": "enforce DXPS flux >= 1.0 mmol/gDW/h when ON"
+    },
+    "idi_push": {
+     "reactions": [],
+     "provenance": "search-design engineering choice (IPP isomerase push); NOT a literature-verified route - labeled as such",
+     "definition": "enforce IDI flux >= 0.5 when ON"
+    }
+   }
+  }
+ },
+ "note": "blocks marked 'search-design engineering choice' carry no literature claim; H2 novelty verification uses only the locked reference pathway definitions in benchmarks.json"
+}
