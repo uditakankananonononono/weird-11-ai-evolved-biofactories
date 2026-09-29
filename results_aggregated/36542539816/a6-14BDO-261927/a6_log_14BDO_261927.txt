@@ -1,0 +1,2 @@
+DONE 14BDO 261927 f= 0.746298 cache 585
+wall_s 3

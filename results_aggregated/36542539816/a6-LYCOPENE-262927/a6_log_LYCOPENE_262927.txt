@@ -1,0 +1,2 @@
+DONE LYCOPENE 262927 f= 0.812866 cache 445
+wall_s 3
