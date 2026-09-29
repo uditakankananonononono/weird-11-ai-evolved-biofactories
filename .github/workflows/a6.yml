@@ -1,12 +1,10 @@
-name: W11 A6 chunk (locked protocol)
+name: W11 A6 chunks (locked protocol)
 on:
   workflow_dispatch:
-    inputs:
-      target:
-        description: '14BDO, ISOBUTANOL or LYCOPENE'
-        required: true
-        type: choice
-        options: ['14BDO', 'ISOBUTANOL', 'LYCOPENE']
+  push:
+    branches: ['a6-dispatch']
+permissions:
+  contents: write
 jobs:
   a6-seed:
     runs-on: ubuntu-latest
@@ -14,29 +12,42 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        target: ['14BDO', 'ISOBUTANOL', 'LYCOPENE']
         seed: [260927, 261927, 262927, 263927, 264927]
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: a6-dispatch
+      - name: skip if target not dispatched
+        id: gate
+        run: |
+          if grep -qx '${{ matrix.target }}' dispatch/targets.txt; then echo "run=yes" >> "$GITHUB_OUTPUT"; else echo "run=no" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'yes'
         with:
           python-version: '3.12'
-      - run: pip install cobra==0.32.1 scipy==1.15.3 numpy==2.2.6 optlang==1.9.1 swiglpk==5.0.13
+      - if: steps.gate.outputs.run == 'yes'
+        run: pip install cobra==0.32.1 scipy==1.15.3 numpy==2.2.6 optlang==1.9.1 swiglpk==5.0.13
       - name: restore checkpoint cache
+        if: steps.gate.outputs.run == 'yes'
         uses: actions/cache@v4
         with:
           path: results/
-          key: a6-${{ inputs.target }}-${{ matrix.seed }}-${{ github.run_attempt }}
-          restore-keys: a6-${{ inputs.target }}-${{ matrix.seed }}-
+          key: a6-${{ matrix.target }}-${{ matrix.seed }}-${{ github.run_attempt }}
+          restore-keys: a6-${{ matrix.target }}-${{ matrix.seed }}-
       - name: run seed (bit-exact resume on re-run)
-        run: python src/search_a6.py ${{ inputs.target }} ${{ matrix.seed }}
-      - name: upload results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: a6-${{ inputs.target }}-${{ matrix.seed }}-attempt${{ github.run_attempt }}
-          path: |
-            results/a6_runs.jsonl
-            results/a6_cache_*.json
-            results/a6_ckpt/*
-            results/a6_log_*
-          retention-days: 14
+        if: steps.gate.outputs.run == 'yes'
+        run: python src/search_a6.py ${{ matrix.target }} ${{ matrix.seed }}
+      - name: commit results back to a6-dispatch
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          git config user.name 'w11-a6-bot'
+          git config user.email 'a6-bot@localhost'
+          mkdir -p results_runs
+          [ -f results/a6_runs.jsonl ] && cp results/a6_runs.jsonl results_runs/a6_runs_${{ matrix.target }}_${{ matrix.seed }}.jsonl || true
+          git add results/ results_runs/ || true
+          git commit -m 'a6 ${{ matrix.target }} ${{ matrix.seed }} attempt ${{ github.run_attempt }}' || echo 'nothing to commit'
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin a6-dispatch && git push origin HEAD:a6-dispatch && break
+            sleep 10
+          done
