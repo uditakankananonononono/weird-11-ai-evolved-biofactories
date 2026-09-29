@@ -1,0 +1,132 @@
+{
+ "amendment": "2026-09-29 16:45 IST (commit 42c6ffb)",
+ "validation": "handcheck_a7_selections PASS required before this step",
+ "frontier_note": "v23c frontier is zero in all five severe conditions on every target (locked zero-frontier rule): R_shift = 0 for all genomes; R_tiered comparisons reduce to R_pert (locked disclosure).",
+ "per_target": {
+  "14BDO": {
+   "a7_selections": {
+    "260927": {
+     "R_tiered": 0.5,
+     "R_pert": 1.0,
+     "nom": 6.798554216868908,
+     "fitness_nominal": 6.798554216868908
+    },
+    "261927": {
+     "R_tiered": 0.5,
+     "R_pert": 1.0,
+     "nom": 6.798554216868908,
+     "fitness_nominal": 6.798554216868908
+    },
+    "262927": {
+     "R_tiered": 0.5,
+     "R_pert": 1.0,
+     "nom": 6.798554216868656,
+     "fitness_nominal": 6.798554216868656
+    },
+    "263927": {
+     "R_tiered": 0.5,
+     "R_pert": 1.0,
+     "nom": 6.798554216868908,
+     "fitness_nominal": 6.798554216868908
+    },
+    "264927": {
+     "R_tiered": 0.5,
+     "R_pert": 1.0,
+     "nom": 6.798554216868908,
+     "fitness_nominal": 6.798554216868908
+    }
+   },
+   "a6_best_R_tiered": 0.49999998405057927,
+   "a7_best_R_tiered": 0.5,
+   "a6_selection_nominals": [
+    6.798554216866004
+   ],
+   "degenerate_band_rule_used": false,
+   "verdict": "SURPRISE"
+  },
+  "ISOBUTANOL": {
+   "a7_selections": {
+    "260927": {
+     "R_tiered": 0.5000000254011024,
+     "R_pert": 1.0000000508022049,
+     "nom": 6.561395348839848,
+     "fitness_nominal": 6.561395348839848
+    },
+    "261927": {
+     "R_tiered": 0.5000000254011024,
+     "R_pert": 1.0000000508022049,
+     "nom": 6.561395348839848,
+     "fitness_nominal": 6.561395348839848
+    },
+    "262927": {
+     "R_tiered": 0.5000000254011024,
+     "R_pert": 1.0000000508022049,
+     "nom": 6.561395348839848,
+     "fitness_nominal": 6.561395348839848
+    },
+    "263927": {
+     "R_tiered": 0.5000000254011024,
+     "R_pert": 1.0000000508022049,
+     "nom": 6.561395348839848,
+     "fitness_nominal": 6.561395348839848
+    },
+    "264927": {
+     "R_tiered": 0.5000000254011024,
+     "R_pert": 1.0000000508022049,
+     "nom": 6.5613953488391985,
+     "fitness_nominal": 6.5613953488391985
+    }
+   },
+   "a6_best_R_tiered": 0.5000000269082829,
+   "a7_best_R_tiered": 0.5000000254011024,
+   "a6_selection_nominals": [
+    6.477981651377274
+   ],
+   "degenerate_band_rule_used": false,
+   "verdict": "NECESSITY-WIN"
+  },
+  "LYCOPENE": {
+   "a7_selections": {
+    "260927": {
+     "R_tiered": 0.4999997942617969,
+     "R_pert": 0.9999995885235938,
+     "nom": 0.810090707651533,
+     "fitness_nominal": 0.810090707651533
+    },
+    "261927": {
+     "R_tiered": 0.4999997942617969,
+     "R_pert": 0.9999995885235938,
+     "nom": 0.810090707651533,
+     "fitness_nominal": 0.810090707651533
+    },
+    "262927": {
+     "R_tiered": 0.4999997942617969,
+     "R_pert": 0.9999995885235938,
+     "nom": 0.810090707651533,
+     "fitness_nominal": 0.810090707651533
+    },
+    "263927": {
+     "R_tiered": 0.4999997942617969,
+     "R_pert": 0.9999995885235938,
+     "nom": 0.810090707651533,
+     "fitness_nominal": 0.810090707651533
+    },
+    "264927": {
+     "R_tiered": 0.4999997942617969,
+     "R_pert": 0.9999995885235938,
+     "nom": 0.810090707651533,
+     "fitness_nominal": 0.810090707651533
+    }
+   },
+   "a6_best_R_tiered": 0.4999998953988742,
+   "a7_best_R_tiered": 0.4999997942617969,
+   "a6_selection_nominals": [
+    0.8100881694722691,
+    0.8100881694723259,
+    0.8100881694723507
+   ],
+   "degenerate_band_rule_used": false,
+   "verdict": "NECESSITY-WIN"
+  }
+ }
+}
