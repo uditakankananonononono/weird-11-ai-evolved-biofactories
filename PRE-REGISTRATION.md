@@ -282,3 +282,29 @@ ENGINEERING (not protocol): per-genome fitness cache shared across seeds within 
 VALIDATION (locked): before any paper fold-in, every A6 selection's battery is re-validated by fresh-process independently written code (54-leg style, tolerance 1e-9), and every nominal value must agree with the search's recorded fitness within 1e-9 relative; mismatches disclosed verbatim, not patched.
 
 COST AND LAUNCH RULE: worst case approx. 784k small LPs (2,904 evaluations x 18 LPs x 15 runs), reducible by the shared cache. Launch ONLY on main's explicit capacity green-light; an honest pilot-measured duration accompanies the launch request.
+
+## Amendment 2026-09-29 14:35 IST — v23c re-score of the pool-v4 comparison sets (battery-semantics audit; locked before any evaluation)
+
+BACKGROUND: the A6 comparison (results/a6_comparison.json, commit 44cc9c3) found the locked comparison crosses two battery semantics: battery_v6/pool-v4-era rows admit product-at-zero-growth and carry a per-condition exchange-bounds leak (EX_glyc_e/EX_ac_e persisting from the GLYCEROL and ACETATE legs into the ACETATE and all three PERT legs), while A6 fitness uses locked leak-free v23c semantics. The A6 verdict (BELOW-PLATEAU) is therefore partly a semantic artifact. This amendment locks an apples-to-apples re-score of every comparison set under the v23c semantics, with the locked comparison rules then re-applied mechanically. No re-score evaluation has been run or inspected (only committed files read to enumerate inputs).
+
+SEMANTICS (identical to the A6-locked metric): per-condition fresh state (no cross-condition mutation carry-over); unpin biomass, maximize growth; if condition max growth <= 0 or infeasible, the leg value is 0.0; else fix biomass at 0.5 x the condition-specific maximum and maximize product; scipy HiGHS linprog on the exported stoichiometric matrix; no carried solver state. Runner code path: the validated A6Eval semantics of src/search_a6.py (proven bitwise-identical to the v23c reference at commit 1086a4c). Before any scoring, the runner is re-proven bitwise-identical to that reference on the fixed probe set (3 genomes x 9 conditions x 3 targets); a failed proof halts the run and is disclosed.
+
+INPUT SETS (exact, from committed files; deduplicated across the union by genome bit-tuple, first-encounter order):
+1. Plateau members, per target and seed: re-enumerated deterministically from results/a5_traj/{tid}_{seed}.json eval_hist by the identical rule battery_v6 used (threshold = best fitness x (1 - 1e-6), first-encounter dedupe by bit-tuple); bits = HOST14 + POOL[target] blocks (14 bits).
+2. A0-A4 evaluated pool: the 25 best genomes (5 arms x 5 seeds) from results/ea_v4_runs.jsonl.
+3. A6 selections: the 15 best genomes from results/a6_runs.jsonl (re-evaluated through the same runner for uniformity; their committed leak-free legs remain the primary record).
+
+FRONTIER (v23c): F_k per severe condition = max over the re-scored A0-A4 evaluated set (mirrors the original evaluated-set frontier rule, semantics-swapped). If F_k = 0 for a condition, that condition contributes 0.0 to R_shift for every genome (same rule shape as the A6-locked fitness) and the zero frontier is disclosed verbatim. R_tiered = 0.5 x R_pert + 0.5 x mean over the five severe conditions of v_k/F_k, computed on the re-scored rows.
+
+COMPARISON RULES (locked outcome-blind, per target, applied mechanically to the re-scored values):
+- WIN: any A6 selection R_tiered strictly above the maximum plateau-member R_tiered by more than 1e-9 relative.
+- TIE-BREAK-LEVEL: A6 selections exceed A0's realized same-seed R_tiered by more than 1e-9 relative but do not exceed the plateau maximum.
+- NULL: every A6 selection lands within 1e-9 relative of the plateau maximum.
+- BELOW-PLATEAU (closes the band gap found in the A6 comparison): otherwise; recorded verbatim as a negative result at the same prominence as a win.
+- DEGENERATE-FRONTIER rule: if the plateau maximum R_tiered is 0, the relative test is undefined and an absolute 1e-9 test is used instead, disclosed verbatim.
+- SECONDARY (nominal cost): each A6 selection's nominal flux verbatim against the re-scored plateau nominal maximum; sacrifices disclosed at the same prominence.
+- All re-scored rows (per genome: 9 legs, nominal, R_pert, R_shift, R_tiered) are reported verbatim; nulls at the same prominence as wins.
+
+VALIDATION (locked): after scoring, every re-scored genome's row is re-validated by fresh-process independently written code (same 1e-9 relative tolerance as handcheck_a6_selections); mismatches disclosed verbatim, not patched.
+
+COST AND LAUNCH: <= (unique plateau genomes + 25 + 15) x 18 small LPs after dedupe (expected < 30k LPs, single GitHub Actions job, free compute). Launch authorized by main's explicit green-light (2026-09-29 14:27 IST). Results fold into the paper as a correction of the A6 comparison section; the frozen battery_v6 frontier remains the committed historical record and is not rewritten.
