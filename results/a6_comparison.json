@@ -1,0 +1,122 @@
+{
+ "comparison": "A6 robust-fitness selections vs A5 nominal-plateau, per locked amendment 2026-09-29 07:31 IST (commit 5c397ca)",
+ "generated": "2026-09-29 14:26 IST, outcome-blind rules applied mechanically to committed data",
+ "runs": {
+  "source": "results/a6_runs.jsonl (15 records, GitHub Actions run 36542539816, all hist_len 61)",
+  "validation": "src/handcheck_a6_selections.py fresh-process re-validation: 165/165 checks PASS (135 legs + 15 fitness + 15 nominal, 1e-9 rel)"
+ },
+ "per_target": {
+  "14BDO": {
+   "a6_fitness_per_seed": {
+    "260927": 0.7462977885433342,
+    "261927": 0.7462977885433342,
+    "262927": 0.7462977885433342,
+    "263927": 0.7462977885433342,
+    "264927": 0.7462977885433342
+   },
+   "a6_fitness_distinct": [
+    0.7462977885433342
+   ],
+   "plateau_max_R_tiered": 1.2770270270270683,
+   "plateau_n": 475,
+   "a0_realized_R_tiered": 1.277027027027037,
+   "a6_vs_plateau_max_rel_gap": 0.4155974989184662
+  },
+  "ISOBUTANOL": {
+   "a6_fitness_per_seed": {
+    "260927": 0.7780849880935305,
+    "261927": 0.7780849880935305,
+    "262927": 0.7780849880935305,
+    "263927": 0.7780849880935305,
+    "264927": 0.7780849880935305
+   },
+   "a6_fitness_distinct": [
+    0.7780849880935305
+   ],
+   "plateau_max_R_tiered": 1.2770270270270783,
+   "plateau_n": 686,
+   "a0_realized_R_tiered": 1.277027027027037,
+   "a6_vs_plateau_max_rel_gap": 0.3907059352495349
+  },
+  "LYCOPENE": {
+   "a6_fitness_per_seed": {
+    "260927": 0.8128659699355602,
+    "261927": 0.8128659699355758,
+    "262927": 0.8128659699355647,
+    "263927": 0.8128659699355758,
+    "264927": 0.8128659699355758
+   },
+   "a6_fitness_distinct": [
+    0.8128659699355602,
+    0.8128659699355647,
+    0.8128659699355758
+   ],
+   "plateau_max_R_tiered": 1.2770270270270885,
+   "plateau_n": 462,
+   "a0_realized_R_tiered": 1.277027027027037,
+   "a6_vs_plateau_max_rel_gap": 0.3634700341245655
+  }
+ },
+ "locked_rule_application": {
+  "WIN": false,
+  "TIE_BREAK_LEVEL": false,
+  "NULL_as_defined": false,
+  "outcome": "BELOW-PLATEAU on all three targets: every A6 selection R_tiered is strictly below the plateau maximum by far more than 1e-9 relative. None of the three locked bands names this case; recorded verbatim as a negative result."
+ },
+ "semantic_comparability_finding": {
+  "summary": "The locked comparison crosses two battery semantics. Plateau/frontier data (battery_v6.json, amendment f4738d6) use pool-v4-era semantics: (a) zero-growth genomes evaluate product at zero growth (floor non-binding); (b) per-condition exchange mutations accumulate across conditions within a genome row (EX_glyc_e/EX_ac_e uptake bounds set by GLYCEROL and ACETATE legs persist into ACETATE and all three PERT legs - same defect class as withdrawn A6 v1 runner). A6 fitness uses locked v23c semantics: no-growth legs zeroed, per-condition fresh state (leak-free).",
+  "evidence": {
+   "plateau_champions_zero_growth": "A0 seed-260927 champions (plateau members, R_tiered 1.277027) have gmax = 0.0 in GLC_AEROBIC on ALL three targets (battery_row-exact replication reproduces battery_v6.json committed values to 12 decimals, e.g. 14BDO 13.454545454545496). Under the A6-locked v23c metric these designs score 0.0.",
+   "leak_leg_evidence_14BDO_seed260927_A6_selection": {
+    "ACETATE": {
+     "battery_v6_semantics": 4.5937,
+     "a6_locked_leak_free": 2.6419
+    },
+    "GLC_PERT_MINUS20": {
+     "battery_v6_semantics": 9.1239,
+     "a6_locked_leak_free": 5.666
+    },
+    "GLC_PERT_PLUS20": {
+     "battery_v6_semantics": 11.3889,
+     "a6_locked_leak_free": 7.9311
+    },
+    "O2_PERT_MINUS50": {
+     "battery_v6_semantics": 10.2564,
+     "a6_locked_leak_free": 6.7986
+    },
+    "note": "during battery_v6-style evaluation of ACETATE and all PERT legs, EX_glyc_e=-10 and EX_ac_e=-10 persist from earlier legs (verified directly)"
+   },
+   "a6_selections_under_battery_v6_semantics": {
+    "14BDO": 1.0201222335552846,
+    "ISOBUTANOL": 1.0575272738762354,
+    "LYCOPENE": 1.0662267653317687
+   },
+   "ordering_per_semantics": {
+    "v23c_leak_free": "A6 selections (0.746298/0.778085/0.812866) >> plateau champions (0.0, no growth)",
+    "battery_v6_poolv4_era": "plateau max (1.277027) > A6 selections (1.020122/1.057527/1.066227)"
+   }
+  },
+  "scope_note": "zero-growth verified only for A0 seed-260927 champions (3 genomes). Other plateau members (n=475/686/462) not individually re-evaluated; f_tie=1.0 (all plateau members tie under battery_v6 semantics) is consistent with the same zero-growth class but not proof per member."
+ },
+ "secondary_nominal_cost": {
+  "14BDO": {
+   "a6_nominal": 6.798554216866004,
+   "plateau_nominal": 13.454545454545723,
+   "nominal_retention": 0.5052979485508415
+  },
+  "ISOBUTANOL": {
+   "a6_nominal": 6.477981651377274,
+   "plateau_nominal": 12.333333333333343,
+   "nominal_retention": 0.5252417555170759
+  },
+  "LYCOPENE": {
+   "a6_nominal": 0.8100881694723507,
+   "plateau_nominal": 1.370370370370379,
+   "nominal_retention": 0.5911454209663063
+  }
+ },
+ "not_done": [
+  "re-scoring plateau members under v23c semantics (new compute item - needs its own locked amendment before evaluation)",
+  "paper fold-in (deferred pending main steer on presentation of the semantic finding)"
+ ]
+}
