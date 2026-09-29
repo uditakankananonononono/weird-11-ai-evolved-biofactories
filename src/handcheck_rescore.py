@@ -49,12 +49,17 @@ def legs_of(tid, genome):
     return out
 
 def main():
+    shard, shards = 0, 1
+    if '--shard' in sys.argv:
+        shard = int(sys.argv[sys.argv.index('--shard') + 1])
+        shards = int(sys.argv[sys.argv.index('--shards') + 1])
     d = json.load(open('results/rescore_v23c.json'))
     checks = fails = 0
     bad = []
     for tid in TARGETS:
         bits = ea.HOST14 + list(ea.POOL[tid]['blocks'])
         for row in d['per_target'][tid]['rows']:
+            if hash((tid, row['genome_key'])) % shards != shard: continue
             genome = {b: row['genome_key'][i] == '1' for i, b in enumerate(sorted(bits))}
             got = legs_of(tid, genome)
             for c, want in row['legs'].items():
@@ -62,7 +67,7 @@ def main():
                 if abs(got[c] - want) > 1e-9 * max(1.0, abs(want)):
                     fails += 1
                     bad.append((tid, row['genome_key'][:24], c, got[c], want))
-    print('CHECKS', checks, 'FAILS', fails)
+    print(f'SHARD {shard}/{shards} CHECKS', checks, 'FAILS', fails)
     for b in bad[:20]: print('MISMATCH', b)
     print('VALIDATION', 'PASS' if fails == 0 else 'FAIL')
     sys.exit(2 if fails else 0)
