@@ -308,3 +308,27 @@ COMPARISON RULES (locked outcome-blind, per target, applied mechanically to the 
 VALIDATION (locked): after scoring, every re-scored genome's row is re-validated by fresh-process independently written code (same 1e-9 relative tolerance as handcheck_a6_selections); mismatches disclosed verbatim, not patched.
 
 COST AND LAUNCH: <= (unique plateau genomes + 25 + 15) x 18 small LPs after dedupe (expected < 30k LPs, single GitHub Actions job, free compute). Launch authorized by main's explicit green-light (2026-09-29 14:27 IST). Results fold into the paper as a correction of the A6 comparison section; the frozen battery_v6 frontier remains the committed historical record and is not rewritten.
+
+## Amendment 2026-09-29 16:45 IST — A7 nominal-search control under corrected v23c semantics (locked before any evaluation)
+
+BACKGROUND: the v23c re-score (amendment 2026-09-29 14:35 IST; verdict commit 378b878) found every pool-v4 legacy design is zero-growth non-viable and the A6 robust-fitness selections are the only growing designs in the record (WIN x3 under the locked degenerate-frontier rule). That re-opens the question A6 was built to answer: was the ROBUST objective necessary, or would plain nominal-max search under the corrected semantics have found equally robust viable designs? No A7 evaluation has been run or inspected.
+
+EXPERIMENT: new arm A7 at pool v4 (same 2^14 genome space). Identical locked (mu+lambda) EA configuration as A6: MU=24, LAM=48, GENS=60, tournament k=3, bitflip p=1/n, (mu+lambda) truncation, 2,904 evaluations per run, the same five locked seeds 260927-264927, three targets = 15 runs.
+
+SOLE PROTOCOL CHANGE (fitness): A7 fitness = the GLC_AEROBIC leg value under the locked v23c semantics (per-condition fresh state; unpin biomass, maximize growth; if max growth <= 0 or infeasible the leg is 0.0; else pin biomass at 0.5 x the condition-specific maximum and maximize product; scipy HiGHS on the exported stoichiometric matrix; no carried solver state). Viability is implicit: non-growing genomes score 0. Only the nominal leg drives selection; other legs are recorded but unused by the search.
+
+SELECTION RECORDED: per run, the final best genome by A7 fitness; ties (equal within 1e-12) broken by first-encounter order (deterministic, locked).
+
+COMPARISON RULES (locked outcome-blind, per target; R_tiered computed under the corrected semantics with the recomputed v23c frontier of the re-score amendment, including its locked zero-frontier rule - R_shift is therefore 0 for all genomes and comparisons reduce to R_pert, disclosed):
+- NECESSITY-WIN (robust objective was necessary): the best A7 selection's R_tiered is below the best A6 selection's R_tiered by more than 1e-9 relative.
+- NULL (nominal search suffices): best A7 and best A6 selections' R_tiered within 1e-9 relative.
+- SURPRISE: best A7 selection's R_tiered exceeds best A6's by more than 1e-9 relative; recorded verbatim at the same prominence.
+- Degenerate-band rule: if a best value is 0, the relative test is replaced by an absolute 1e-9 test, disclosed verbatim.
+- SECONDARY (nominal cost/inversion): nominal flux of all selections of both arms reported verbatim side by side; A7 is expected to find higher-nominal growing designs - expected, disclosed, not a win condition.
+- All 15 selected genomes with full per-condition legs, R_tiered, and nominal flux are reported verbatim; nulls at the same prominence as wins.
+
+ENGINEERING (not protocol): per-genome leg cache shared across seeds within a target (keyed by genome bit-tuple; cache stores legs only - fitness derives from the nominal leg); per-generation checkpointing for bit-exact resume; GitHub Actions matrix execution (free compute); results committed back to a dispatch branch; home-box merge only after verification.
+
+VALIDATION (locked): before any verdict, the A7 runner's nominal-leg path is proven bitwise-identical to the v23c context-manager reference on the fixed probe set (3 genomes x 9 conditions x 3 targets); after scoring, every selection's legs are re-validated by fresh-process independently written code at stored precision (bitwise at the cache's 6-decimal storage, the maximal meaningful check at record precision - disclosed, same as the re-score validation); mismatches disclosed verbatim, not patched.
+
+COST AND LAUNCH RULE: worst case 15 x 2,904 x 18 small LPs (~784k), reducible by shared caches; runs on GitHub Actions free compute. Launch authorized by main's candidate steer (2026-09-29 16:35 IST). The A7 verdict is a committed gated record; the W11 paper remains frozen in its verified state and is not touched by this arm.
