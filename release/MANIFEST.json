@@ -1,5 +1,5 @@
 {
- "amendment_lock": "176a26d (battery supersession + A5 fold-in; deterministic HiGHS metric; amendments through 2026-09-28 16:46 IST)",
+ "amendment_lock": "378b878+paper (A6 robust-fitness arm + benchmark-semantics audit + corrected v23c re-score WIN x3; amendments through 2026-09-29 14:35 IST)",
  "ea_rows_at_assembly": 83,
  "seeds": [
   260927,
@@ -24,12 +24,12 @@
  },
  "pool_v4": "12 host + 2 target levers = 16,384 genomes/target (ERRATUM 0e72f42)",
  "files": {
-  "PRE-REGISTRATION.md": "6bec1739bffb7c7c942758d5c8875be066de506d8a8160f37a2720ddee9fd049",
+  "PRE-REGISTRATION.md": "755d24b8c5c2da955fdcfbda5807b1dd15228aa35694cf2763367e0198b78f3a",
   "data/condition_battery.json": "10283ab9ac84b623132fa0e4d3b81c94af729ea43998ef81d7f5bedc20facac7",
   "data/models/iML1515.xml.gz": "2555e0f7e55a8cb8e770b9bb29cdaeb5db171941c414e7a232ff2d8e0228e308",
   "data/reaction_pool.json": "c7fdda8c7c76340f387e3e2d1bf3ccd5459ee843664d3fd67d27276fe0340254",
-  "paper/main.pdf": "629c3f74799d8026f6c545ae0242a5943759ff6154218d3cf689cb671faf4c2d",
-  "paper/main.tex": "6a9819faa456ef2de9e2209c811d1827820e6b85d4ad9f63d5ca56a9ac818bd2",
+  "paper/main.pdf": "0563a3ff8ed5f443d978aa1d8fcf788f1c8495b375d631dba51f0fe9af37ee5d",
+  "paper/main.tex": "81dcef638d38ab5007fd713ec403007abf043f472e22160532742adae338cf7b",
   "results/a5_runs.jsonl": "3872541022e5650eca2d357576568c6d1b5d92271ba28683044d20dca2b68277",
   "results/a5_selection_warmorder_SUPERSEDED.json": "18da13ad7798cd291a39d4cf647732ae4360d6ddc07241c05f493821ef821262",
   "results/a5_traj/14BDO_260927.json": "8f022f603b4c7891ecb80efc782ccc491192c1e83b695e96712792b02e59343f",
@@ -99,7 +99,26 @@
   "judge/round2_verdict_chatgpt.txt": "df7aeb3cdd5c98e5e8ba59a6caa5578ecb0c555839c316191ad5be95adaad622",
   "judge/round2_evidence_packet_battery_supersession_a5.txt": "10e822d0b9d5a8affcb8c6ed372a9f8418603813f41d728b27304f23204f082b",
   "results/a5_plateau_tiebreak_control.json": "21bb7092f29c5ea6f89d8aa3289f6c446c2c7a885d8fd44b0ed38dad9d14ed2a",
-  "src/a5_plateau_tiebreak_control.py": "6c7d5ac6385150228dc9cd56b315effbd53561ded8150f31ba2614b76cc795ff"
+  "src/a5_plateau_tiebreak_control.py": "6c7d5ac6385150228dc9cd56b315effbd53561ded8150f31ba2614b76cc795ff",
+  "results/a6_runs.jsonl": "d0322480ad6626fac37b531953b8340b0e3d7afb00143c3cf598b5d1453e4be1",
+  "results/a6_comparison.json": "ee039108091da8b42f3bace443ce6f091359ce6e89654602e76bc7efa2f4669a",
+  "results/a6_cache_14BDO_merged.json": "07a02858ded05e9f0b5ee553b5dd34706f8ff9e3c762f43765d377cb6f50cdf4",
+  "results/a6_cache_ISOBUTANOL_merged.json": "3534aa32b22e1f282101388d7f5fd2494fdd390811cac796c01cf0fed376e9e8",
+  "results/a6_cache_LYCOPENE_merged.json": "62fdd10ecd659c3181c093f3a5074cb4442c147fea78a36eb76f213b493fc826",
+  "results/rescore_v23c.json": "94076b4f3fe48a19d7ed988888237ed69ecfa03fde95f609bac52cf953195cbb",
+  "results/rescore_v23c_verdict.json": "19ffe1fd3579be0aadb0eec1723019b4d20ed40c4db52ba513552aa66d100bc7",
+  "results/rescore_handcheck_s0.log": "b2081794f21d16c987d11d6ff6326868bd1047583d15b41fa25e8d07321ac824",
+  "results/rescore_handcheck_s1.log": "4bb8f006157a9360901b42b9c2d3d2f99cd490d51dbb375932dd9113d38a98d7",
+  "results/rescore_handcheck_s2.log": "3824ce1d27efd92aec37e423ac8d607be2ca80a1fec4c11c1ea045b754b90ca2",
+  "results/rescore_handcheck_s3.log": "52d2fff2df5ea6220fc3a93d3e2cf10bc4048fb28b48af3645d85c5c5c363605",
+  "src/search_a6.py": "863c77c81407761d5f2c2f9188adde7bdead0626415bf60d46cc93e5291d0a07",
+  "src/handcheck_a6_selections.py": "d0d1074f16c3d342f943c5949dabcef903745075c990821f0b6b48e938b98bd9",
+  "src/rescore_v23c.py": "7251e5baf335ae99702745b1419f2357e6bada11414536cc1c22aa3d1399c850",
+  "src/handcheck_rescore.py": "6be1dfff967e6aaf6b720f2140b0f88b3b4c6e1d793b68b4882e63a4953ebb3c",
+  "src/rescore_verdict.py": "21abda9656cfbe6a8eca1fba36ef76235347ab55193b170daf73f2928f385487",
+  ".github/workflows/a6.yml": "dec92067df5deb2f5e8f902be7335d50fcc8b3e29a34a5c33e43a7737388ba92",
+  ".github/workflows/rescore.yml": "d18285c2f5fe3f1d40a3d1e8d6e4c897bb96f5b6286c19ba4f43b36efb6a37e5",
+  ".github/workflows/validate.yml": "90c1efd825abe8ecff484ef8cc848b7e96b2767c05791bc25d588bd70d7bc40e"
  },
  "ea_primary_complete": "75/75 primary rows (5 seeds x 5 arms x 3 targets), 8 labeled extension rows, 0 duplicate keys",
  "analysis": {
@@ -120,5 +139,11 @@
   "gate": "M-W exact vs repaired A0, 5v5 per target + 10k perm; 14BDO epsilon-null, ISOBUTANOL/LYCOPENE genuine",
   "selections": "15/15 battery_pass at R_tiered 1.277 (frontier parity)"
  },
- "restamp_note": "2026-09-29 07:27 IST: F2 ATP-cost screen executed (amendment dd14bdf) - 0/40 flagged, null reported verbatim with structural disclosures; F2 deferral sentence replaced; filter-count and winner-count fixes"
+ "restamp_note": "2026-09-29 16:36 IST: A6 complete (defect withdrawal + fixed runner, 15/15), BELOW-PLATEAU negative under locked cross-semantics comparison recorded verbatim; comparability audit finds pool-v4-era battery admits zero-growth production + per-condition bounds leak (Appendix H); corrected v23c re-score (amendment 8274f9f) validated 11412/11412 and verdict WIN on all three targets via locked degenerate-frontier rule; paper 19->21pp",
+ "a6": {
+  "design": "direct robust-fitness search (R_tiered-scale objective), same (mu+lambda) config, 15 runs on hosted runners",
+  "verdict_cross_semantics": "BELOW-PLATEAU negative (gaps 41.6/39.1/36.3%) - recorded verbatim; cross-semantics, not a biological ordering",
+  "verdict_corrected": "WIN x3 under v23c re-score (degenerate-frontier rule, disclosed): legacy record is zero-growth; A6 selections are the only growing designs",
+  "validation": "A6 handcheck 165/165; re-score handcheck 11412/11412 (4 shards, Actions)"
+ }
 }
