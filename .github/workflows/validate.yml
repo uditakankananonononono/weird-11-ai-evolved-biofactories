@@ -23,8 +23,8 @@ jobs:
         run: |
           set -euo pipefail
           git fetch origin rescore-dispatch
-          git show origin/rescore-dispatch:results_aggregated/${{ github.run_id }}/rescore_v23c.json > results/rescore_v23c.json || \
-          git show origin/rescore-dispatch:$(git ls-tree origin/rescore-dispatch results_aggregated/ | awk '{print $3}' | head -1)/rescore_v23c.json > results/rescore_v23c.json
+          git show origin/rescore-dispatch:results_aggregated/36546803876/rescore_v23c.json > results/rescore_v23c.json
+          test -s results/rescore_v23c.json
       - name: validate shard (fresh process, independent code)
         run: |
           set -o pipefail
