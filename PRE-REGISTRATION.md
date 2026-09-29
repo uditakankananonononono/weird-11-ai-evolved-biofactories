@@ -247,3 +247,15 @@ PRIMARY TEST (locked): WIN if median f_tie over the 15 runs <= 0.2 (in most runs
 SECONDARY (locked): per-target median f_tie and median gap; the realized A0 (luck) selections' R_tiered against their own runs' plateau distributions (already-published values only).
 NO RNG: full enumeration; no sampling, no seed.
 REPORTING (locked): all 15 per-run rows verbatim; the locked win/null call; the result folds into the paper in ONE change together with the 14BDO-asymmetry sentence (main 20:05 #2). Page count and gate claims untouched (held for the user).
+
+## Amendment 2026-09-29 07:26 IST — F2 ATP-cost screen execution (locked before computation)
+
+Supersedes the line-112 deferral ("computing them is new FBA compute queued behind this amendment"). Locked BEFORE any F2 flux vector is computed.
+
+SCOPE: the union of (a) the top-ten genomes by R_tiered per target at pool v3 from results/battery_tiered_v23c_highs.json (deterministic HiGHS re-evaluation, corrected semantics) and (b) the three per-target winners. Ties at the rank-10 boundary are all included.
+
+COMPUTATION: for each genome x each of the 9 locked battery conditions, solve the locked battery LP with the v23c corrected semantics (unpin biomass; maximize growth; fix biomass at 0.5 x the condition-specific maximum; maximize product; scipy HiGHS on the exported stoichiometric matrix, no carried solver state) and record the full flux vector.
+
+METRICS per condition: v_ATPM (non-growth maintenance flux; model lower bound 6.86 mmol/gDW/h), v_ATPS4rpp (oxidative ATP production), and, at the nominal condition, the ratio v_ATPS4rpp / v_product. REFERENCE: the same quantities for each target's locked literature benchmark pathway (data/benchmarks.json, locked 2026-09-26), computed under the identical battery LP semantics (0.5x max-growth floor, nominal condition).
+
+SCREEN RULE (report-only; no re-ranking, no design removal): FLAG a design if at the nominal condition BOTH (a) v_ATPM equals its lower bound within 1e-9 (zero maintenance headroom under product maximization) AND (b) v_ATPS4rpp/v_product exceeds the benchmark's ratio by more than 1.5x. All values are reported verbatim regardless of flag status. A null (zero flags) is reported as a null with the same prominence as a flagged result.
