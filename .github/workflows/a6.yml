@@ -38,23 +38,39 @@ jobs:
       - name: run seed (bit-exact resume on re-run)
         if: steps.gate.outputs.run == 'yes'
         run: python src/search_a6.py ${{ matrix.target }} ${{ matrix.seed }} > results/a6_log_${{ matrix.target }}_${{ matrix.seed }}.txt 2>&1
-      - name: commit results back to a6-dispatch
+      - name: upload results artifact
         if: steps.gate.outputs.run == 'yes'
+        uses: actions/upload-artifact@v4
+        with:
+          name: a6-${{ matrix.target }}-${{ matrix.seed }}
+          path: |
+            results/a6_runs.jsonl
+            results/a6_cache_${{ matrix.target }}_*.json
+            results/a6_log_${{ matrix.target }}_${{ matrix.seed }}.txt
+          retention-days: 14
+  aggregate:
+    needs: a6-seed
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: a6-dispatch
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts/
+      - name: single-writer commit
         run: |
           git config user.name 'w11-a6-bot'
           git config user.email 'a6-bot@localhost'
-          mkdir -p results_runs
-          [ -f results/a6_runs.jsonl ] && cp results/a6_runs.jsonl results_runs/a6_runs_${{ matrix.target }}_${{ matrix.seed }}.jsonl || true
-          # seed-suffix cache files: fresh runners reuse low pids, so same-target jobs collide on a6_cache_<tid>_<pid>.json
-          for f in results/a6_cache_${{ matrix.target }}_*.json; do
-            case "$f" in *_${{ matrix.seed }}_*) ;; *) mv "$f" "results/a6_cache_${{ matrix.target }}_${{ matrix.seed }}_$(basename "$f")" 2>/dev/null || true;; esac
-          done
-          # disjoint per-job paths only - results/a6_runs.jsonl is shared and would add/add conflict
-          git add results_runs/ results/a6_cache_* results/a6_ckpt/ results/a6_log_* 2>/dev/null || true
-          git commit -m 'a6 ${{ matrix.target }} ${{ matrix.seed }} attempt ${{ github.run_attempt }}' || echo 'nothing to commit'
+          dest=results_aggregated/${{ github.run_id }}
+          mkdir -p "$dest"
+          cp -r artifacts/* "$dest"/ 2>/dev/null || true
+          git add "$dest"
+          git commit -m 'aggregate a6 run ${{ github.run_id }}' || { echo 'nothing to commit'; exit 0; }
           ok=0
-          for i in 1 2 3 4 5 6 7 8; do
-            if git pull --rebase origin a6-dispatch && git push origin HEAD:a6-dispatch; then ok=1; break; fi
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin a6-dispatch && git push origin HEAD:a6-dispatch && { ok=1; break; }
             git rebase --abort 2>/dev/null || true
             sleep 7
           done
