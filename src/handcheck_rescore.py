@@ -4,6 +4,10 @@ Recomputes every scored genome's 9 legs with its own implementation (cobra model
 context managers; no import of search_a6 or rescore_v23c scoring code) and compares against
 results/rescore_v23c.json at 1e-9 relative tolerance. Mismatches disclosed verbatim, exit 2."""
 import json, sys
+_SHARD, _SHARDS = 0, 1
+if '--shard' in sys.argv:
+    _SHARD = int(sys.argv[sys.argv.index('--shard') + 1])
+    _SHARDS = int(sys.argv[sys.argv.index('--shards') + 1])
 sys.argv = ['x']
 import importlib.util
 spec = importlib.util.spec_from_file_location('ea', 'src/search_ea_v4.py')
@@ -49,22 +53,22 @@ def legs_of(tid, genome):
     return out
 
 def main():
-    shard, shards = 0, 1
-    if '--shard' in sys.argv:
-        shard = int(sys.argv[sys.argv.index('--shard') + 1])
-        shards = int(sys.argv[sys.argv.index('--shards') + 1])
+    import zlib
+    shard, shards = _SHARD, _SHARDS
     d = json.load(open('results/rescore_v23c.json'))
     checks = fails = 0
     bad = []
     for tid in TARGETS:
         bits = ea.HOST14 + list(ea.POOL[tid]['blocks'])
         for row in d['per_target'][tid]['rows']:
-            if hash((tid, row['genome_key'])) % shards != shard: continue
+            if zlib.crc32((tid + row['genome_key']).encode()) % shards != shard: continue
             genome = {b: row['genome_key'][i] == '1' for i, b in enumerate(sorted(bits))}
             got = legs_of(tid, genome)
             for c, want in row['legs'].items():
                 checks += 1
-                if abs(got[c] - want) > 1e-9 * max(1.0, abs(want)):
+                # stored legs are round(x, 6) by the locked A6Eval cache format; maximal meaningful
+                # check is bitwise equality at stored precision (rounding recomputation to 6dp).
+                if round(got[c], 6) != want:
                     fails += 1
                     bad.append((tid, row['genome_key'][:24], c, got[c], want))
     print(f'SHARD {shard}/{shards} CHECKS', checks, 'FAILS', fails)
