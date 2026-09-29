@@ -1,0 +1,42 @@
+name: W11 v23c re-score validation (locked amendment 8274f9f)
+on:
+  workflow_dispatch:
+  push:
+    branches: ['validate-dispatch']
+permissions:
+  contents: write
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install cobra==0.32.1 scipy==1.15.3 numpy==2.2.6 optlang==1.9.1 swiglpk==5.0.13
+      - name: fetch scored results from rescore-dispatch
+        run: |
+          set -euo pipefail
+          git fetch origin rescore-dispatch
+          git show origin/rescore-dispatch:results_aggregated/${{ github.run_id }}/rescore_v23c.json > results/rescore_v23c.json || \
+          git show origin/rescore-dispatch:$(git ls-tree origin/rescore-dispatch results_aggregated/ | awk '{print $3}' | head -1)/rescore_v23c.json > results/rescore_v23c.json
+      - name: validate shard (fresh process, independent code)
+        run: |
+          set -o pipefail
+          python src/handcheck_rescore.py --shard ${{ matrix.shard }} --shards 4 2>&1 | tee val_s${{ matrix.shard }}.log
+      - name: push shard report to its own branch (no shared writers)
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "instinct-agent"
+          git config user.email "agent@instinct.com"
+          git checkout -B val-${{ github.run_id }}-s${{ matrix.shard }}
+          git add val_s${{ matrix.shard }}.log
+          git commit -m "validation shard ${{ matrix.shard }}/4 (run ${{ github.run_id }})" --allow-empty
+          git push -f origin val-${{ github.run_id }}-s${{ matrix.shard }}
+          echo "SHARD-REPORT-PUSHED"
