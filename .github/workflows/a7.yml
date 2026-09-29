@@ -1,0 +1,38 @@
+name: W11 A7 nominal-search control (locked amendment 2026-09-29 16:45 IST)
+on:
+  workflow_dispatch:
+  push:
+    branches: ['a7-dispatch']
+permissions:
+  contents: write
+jobs:
+  a7-all:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install cobra==0.32.1 scipy==1.15.3 numpy==2.2.6 optlang==1.9.1 swiglpk==5.0.13
+      - name: run all 15 A7 runs sequentially
+        run: |
+          set -euo pipefail
+          for tid in 14BDO ISOBUTANOL LYCOPENE; do
+            for seed in 260927 261927 262927 263927 264927; do
+              python src/search_a7.py "$tid" "$seed"
+            done
+          done
+      - name: commit results back to a7-dispatch branch
+        run: |
+          set -euo pipefail
+          git config user.name "instinct-agent"
+          git config user.email "agent@instinct.com"
+          git checkout -B a7-dispatch
+          mkdir -p "results_aggregated/${{ github.run_id }}"
+          cp results/a7_runs.jsonl "results_aggregated/${{ github.run_id }}/"
+          cp results/a7_cache_*.json "results_aggregated/${{ github.run_id }}/" || true
+          git add "results_aggregated/${{ github.run_id }}/"
+          git commit -m "A7 results (run ${{ github.run_id }})"
+          git push origin a7-dispatch
+          echo "COMMIT-BACK OK"
