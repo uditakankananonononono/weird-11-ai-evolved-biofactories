@@ -259,3 +259,26 @@ COMPUTATION: for each genome x each of the 9 locked battery conditions, solve th
 METRICS per condition: v_ATPM (non-growth maintenance flux; model lower bound 6.86 mmol/gDW/h), v_ATPS4rpp (oxidative ATP production), and, at the nominal condition, the ratio v_ATPS4rpp / v_product. REFERENCE: the same quantities for each target's locked literature benchmark pathway (data/benchmarks.json, locked 2026-09-26), computed under the identical battery LP semantics (0.5x max-growth floor, nominal condition).
 
 SCREEN RULE (report-only; no re-ranking, no design removal): FLAG a design if at the nominal condition BOTH (a) v_ATPM equals its lower bound within 1e-9 (zero maintenance headroom under product maximization) AND (b) v_ATPS4rpp/v_product exceeds the benchmark's ratio by more than 1.5x. All values are reported verbatim regardless of flag status. A null (zero flags) is reported as a null with the same prominence as a flagged result.
+
+## Amendment 2026-09-29 07:31 IST — A6 robust-fitness search at pool v4 (locked before computation)
+
+BACKGROUND: the paper records "a follow-up amendment searching directly under robust fitness (or a robustness tie-break at nominal ties) is the natural next experiment; it is proposed, not yet pre-registered, and no outcome under it has been touched." This amendment locks the direct robust-fitness arm. No A6 evaluation has been run or inspected.
+
+EXPERIMENT: new arm A6 at pool v4 (2^14 = 16,384 genomes per target; twelve host levers plus two target-specific route levers, unchanged). Identical locked (mu+lambda) EA configuration as the operator race: MU=24, LAM=48, GENS=60, tournament k=3, bitflip p=1/n, (mu+lambda) truncation, 2,904 evaluations per run, the same five locked seeds 260927-264927, three targets = 15 runs.
+
+SOLE PROTOCOL CHANGE (fitness): A6 fitness = 0.5 x R_pert + 0.5 x mean over the five severe conditions of v_p,k / F_k, where R_pert and v_p,k are computed under the corrected deterministic HiGHS battery semantics (v23c: unpin biomass, maximize growth, fix biomass at 0.5 x the condition-specific maximum, maximize product; scipy HiGHS on the exported stoichiometric matrix, no carried solver state), and F_k is the FROZEN committed severe frontier from the pool-v4 primary-cohort battery (the same frontier used for all A0-A5 battery scores; a committed constant, not recomputed, not adaptive). If a searched genome exceeds F_k in a condition the ratio exceeds 1 and is reported verbatim. A6's objective is therefore on exactly the R_tiered scale the operator race is scored on.
+
+SELECTION RECORDED: per run, the final best genome by A6 fitness; ties (equal within 1e-12) broken by first-encounter order (deterministic, locked).
+
+COMPARISON RULES (locked outcome-blind, per target):
+- WIN (robust-search necessity): any A6 selection with R_tiered strictly above the maximum plateau-member R_tiered in that target (plateau data: results/a5_plateau_tiebreak_control.json) by more than 1e-9 relative - a robust optimum OFF the nominal plateau.
+- TIE-BREAK-LEVEL: A6 selections exceed A0's realized selections on the same seeds in R_tiered by more than 1e-9 relative but do not exceed the plateau maximum.
+- NULL: every A6 selection lands within 1e-9 relative of the plateau maximum R_tiered - robustness-aware search adds nothing beyond plateau membership at pool v4.
+- SECONDARY (nominal cost): each A6 selection's nominal flux is reported verbatim against the plateau nominal; any nominal sacrifice is disclosed at the same prominence.
+- All 15 selected genomes with full per-condition legs, R_tiered, and nominal flux are reported verbatim; nulls at the same prominence as wins.
+
+ENGINEERING (not protocol): per-genome fitness cache shared across seeds within a target (keyed by the genome bit-tuple); per-generation checkpointing for bit-exact resume (same pattern as the committed runs).
+
+VALIDATION (locked): before any paper fold-in, every A6 selection's battery is re-validated by fresh-process independently written code (54-leg style, tolerance 1e-9), and every nominal value must agree with the search's recorded fitness within 1e-9 relative; mismatches disclosed verbatim, not patched.
+
+COST AND LAUNCH RULE: worst case approx. 784k small LPs (2,904 evaluations x 18 LPs x 15 runs), reducible by the shared cache. Launch ONLY on main's explicit capacity green-light; an honest pilot-measured duration accompanies the launch request.
