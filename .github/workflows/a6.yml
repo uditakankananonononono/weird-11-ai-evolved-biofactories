@@ -1,0 +1,42 @@
+name: W11 A6 chunk (locked protocol)
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: '14BDO, ISOBUTANOL or LYCOPENE'
+        required: true
+        type: choice
+        options: ['14BDO', 'ISOBUTANOL', 'LYCOPENE']
+jobs:
+  a6-seed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        seed: [260927, 261927, 262927, 263927, 264927]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install cobra==0.32.1 scipy==1.15.3 numpy==2.2.6 optlang==1.9.1 swiglpk==5.0.13
+      - name: restore checkpoint cache
+        uses: actions/cache@v4
+        with:
+          path: results/
+          key: a6-${{ inputs.target }}-${{ matrix.seed }}-${{ github.run_attempt }}
+          restore-keys: a6-${{ inputs.target }}-${{ matrix.seed }}-
+      - name: run seed (bit-exact resume on re-run)
+        run: python src/search_a6.py ${{ inputs.target }} ${{ matrix.seed }}
+      - name: upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: a6-${{ inputs.target }}-${{ matrix.seed }}-attempt${{ github.run_attempt }}
+          path: |
+            results/a6_runs.jsonl
+            results/a6_cache_*.json
+            results/a6_ckpt/*
+            results/a6_log_*
+          retention-days: 14
