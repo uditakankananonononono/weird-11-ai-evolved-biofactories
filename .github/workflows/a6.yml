@@ -45,9 +45,14 @@ jobs:
           git config user.email 'a6-bot@localhost'
           mkdir -p results_runs
           [ -f results/a6_runs.jsonl ] && cp results/a6_runs.jsonl results_runs/a6_runs_${{ matrix.target }}_${{ matrix.seed }}.jsonl || true
-          git add results/ results_runs/ || true
+          # disjoint per-job paths only - results/a6_runs.jsonl is shared and would add/add conflict
+          git add results_runs/ results/a6_cache_* results/a6_ckpt/ results/a6_log_* 2>/dev/null || true
           git commit -m 'a6 ${{ matrix.target }} ${{ matrix.seed }} attempt ${{ github.run_attempt }}' || echo 'nothing to commit'
-          for i in 1 2 3 4 5; do
-            git pull --rebase origin a6-dispatch && git push origin HEAD:a6-dispatch && break
-            sleep 10
+          ok=0
+          for i in 1 2 3 4 5 6 7 8; do
+            git fetch -q origin a6-dispatch
+            if git rebase origin/a6-dispatch && git push origin HEAD:a6-dispatch; then ok=1; break; fi
+            git rebase --abort 2>/dev/null || true
+            sleep 7
           done
+          [ "$ok" = 1 ] || { echo 'PUSH FAILED'; exit 1; }
