@@ -1,0 +1,38 @@
+name: W11 v23c re-score (locked amendment 8274f9f)
+on:
+  workflow_dispatch:
+  push:
+    branches: ['rescore-dispatch']
+permissions:
+  contents: write
+jobs:
+  rescore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install cobra==0.32.1 scipy==1.15.3 numpy==2.2.6 optlang==1.9.1 swiglpk==5.0.13
+      - name: equivalence proof + scoring (halts loud on proof failure)
+        run: python src/rescore_v23c.py
+      - name: commit results back to rescore-dispatch branch
+        run: |
+          set -euo pipefail
+          git config user.name "instinct-agent"
+          git config user.email "agent@instinct.com"
+          git checkout -B rescore-dispatch
+          mkdir -p "results_aggregated/${{ github.run_id }}"
+          cp results/rescore_v23c.json "results_aggregated/${{ github.run_id }}/"
+          git add "results_aggregated/${{ github.run_id }}/rescore_v23c.json"
+          git commit -m "v23c re-score results (run ${{ github.run_id }})"
+          git push origin rescore-dispatch
+          echo "COMMIT-BACK OK"
+      - name: upload results artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rescore-v23c-${{ github.run_id }}
+          path: results/rescore_v23c.json
+          retention-days: 14
